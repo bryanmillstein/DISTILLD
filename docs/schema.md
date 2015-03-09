@@ -35,7 +35,7 @@ column name | data type | details
 id          | integer   | not null, primary key
 user_id     | integer   | not null, foreign key (references users)
 friend_id   | integer   | not null, foreign key (references users)
-status      | string    | not null, (options 'accepted', 'denied', 'pending')
+status      | integer   | default: 0, not null, (options 'pending', 'accepted', 'denied')
 
 *******BONUS*******
 
