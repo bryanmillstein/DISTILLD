@@ -5,7 +5,6 @@ window.DISTILLD = {
   Routers: {},
   initialize: function() {
     alert('Hello from Backbone!');
-    DISTILLD.currentUserId = <%= current_user.try(:id) || "null" %>
     new DISTILLD.Routers.Router({ $rootEl: $('#content') });
 
 
