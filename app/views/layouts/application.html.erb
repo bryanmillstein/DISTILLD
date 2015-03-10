@@ -10,7 +10,7 @@
 
 <% if logged_in? %>
 <%= current_user.user_name %>
-<form class="<% session_url %>" method="post">
+<form action="<%= session_url %>" method="post">
   <%= auth_form %>
     <input type="hidden" name="_method" value="delete">
   <button>Sign Out</button>
