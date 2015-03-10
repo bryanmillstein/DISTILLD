@@ -6,10 +6,7 @@ class User < ActiveRecord::Base
 
   attr_reader :password
 
-  has_many :posts,
-    class: 'Post',
-    foreign_key: :user_id,
-    inverse_of: :user
+  has_many :posts
 
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)

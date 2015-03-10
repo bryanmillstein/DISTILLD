@@ -6737,3 +6737,94 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 
+  [1m[36mActiveRecord::SchemaMigration Load (16.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "users" ("email", "user_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "bryanmillstein@gmail.com"], ["user_name", "bmillstein"], ["password_digest", "$2a$10$38krOWXZRiY5lKf0KMi60enchj8yyccMabTW3BjWLx7lNtyFHr25K"], ["session_token", "QTl-mgnwwpVqvgf74wZ20w"], ["created_at", "2015-03-10 21:40:04.504914"], ["updated_at", "2015-03-10 21:40:04.504914"]]
+  [1m[35m (23.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "user_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["email", "bryanmillstein@gmail.com"], ["user_name", "bmillstein"], ["password_digest", "$2a$10$4Uv4Pxrt2fhRsWScmpv1N.1XUGUFnybU59HDHcbU2Srw6AlvHbq4y"], ["session_token", "_V15ZxghfiqGpCFBMWgACQ"], ["created_at", "2015-03-10 21:40:04.625841"], ["updated_at", "2015-03-10 21:40:04.625841"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("email", "user_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "bryanmillstein@gmail.com"], ["user_name", "bmillstein"], ["password_digest", "$2a$10$MQZbWzESJFpHwvTnPEvnwelecza4N99egjuUuWk.Hz.npPMBujm3u"], ["session_token", "1nZbmEv6jQyTX4WTP22vOQ"], ["created_at", "2015-03-10 21:42:45.339888"], ["updated_at", "2015-03-10 21:42:45.339888"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "user_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["email", "bryanmillstein@gmail.com"], ["user_name", "bmillstein"], ["password_digest", "$2a$10$j1sGGAvHmHUpLPSBcdmqieuTt/9HGAF7GY6dmJS3KyS5lgpAoEVfC"], ["session_token", "nJaSPl354jJDAD0dGV3tRA"], ["created_at", "2015-03-10 21:42:45.435877"], ["updated_at", "2015-03-10 21:42:45.435877"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("email", "user_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "bryanmillstein@gmail.com"], ["user_name", "bmillstein"], ["password_digest", "$2a$10$a3Hp9rOgkeiy27CMax.Ht.fNmrS57/f5pjZpDrtTebMTUY7T8m.wC"], ["session_token", "z6duKTG7U3eNHQt8KCwcgA"], ["created_at", "2015-03-10 21:43:23.864499"], ["updated_at", "2015-03-10 21:43:23.864499"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "user_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["email", "bryanmillstein@gmail.com"], ["user_name", "bmillstein"], ["password_digest", "$2a$10$PMIwf4kGGZhKX4qQdg/Ur.13xvKFzY.1iAUBZNsWJPoF1mXO0HKwe"], ["session_token", "_KNAUMXxXi5eb_eg2Krn0w"], ["created_at", "2015-03-10 21:43:23.962094"], ["updated_at", "2015-03-10 21:43:23.962094"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mPost Load (37.5ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("email", "user_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "bryanmillstein@gmail.com"], ["user_name", "bmillstein"], ["password_digest", "$2a$10$xWtGaM8XyVFm3pwXgby7a.xBWCWaXGAZZM4P9XIqm.1uok3D1P1Ie"], ["session_token", "rrsK-hwm3tXWMl4LzOhXNQ"], ["created_at", "2015-03-10 21:44:52.811761"], ["updated_at", "2015-03-10 21:44:52.811761"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "user_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["email", "kevin@gmail.com"], ["user_name", "kevingale"], ["password_digest", "$2a$10$IQv3fy3W4OxcP6ugeCn.jObnOtKAsl54EVd7HL0bKT.KZ9xGwc1.q"], ["session_token", "ciyGBaa1MB9yOZ9jjLf7zA"], ["created_at", "2015-03-10 21:44:52.892895"], ["updated_at", "2015-03-10 21:44:52.892895"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1  [["user_id", 13]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("email", "user_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "bryanmillstein@gmail.com"], ["user_name", "bmillstein"], ["password_digest", "$2a$10$HNQi4Rzh6OfS5Glr7u5ii.yAdDCvxsoIs1onopijPrnvm.CdwxiO2"], ["session_token", "KOS6nurFqP0KWv5ahdr5kA"], ["created_at", "2015-03-10 21:46:42.477959"], ["updated_at", "2015-03-10 21:46:42.477959"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "user_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["email", "kevin@gmail.com"], ["user_name", "kevingale"], ["password_digest", "$2a$10$jFemBx1nxvoG.yLuPbBNTOebMKQYRZL1OOcKqJLIRrdb.bLwUYVge"], ["session_token", "h6UtFbTHvKz3BeJrT7SNUw"], ["created_at", "2015-03-10 21:46:42.566765"], ["updated_at", "2015-03-10 21:46:42.566765"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1  [["user_id", 15]]
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("email", "user_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "bryanmillstein@gmail.com"], ["user_name", "bmillstein"], ["password_digest", "$2a$10$.hKHxwcLlY0fLxIzg7dwoezm1tvOZz5xrk0sEHT9M65Gk7kZKaZtK"], ["session_token", "q5hxKFr_6ndmql_qWQug1g"], ["created_at", "2015-03-10 21:48:05.975541"], ["updated_at", "2015-03-10 21:48:05.975541"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "user_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["email", "kevin@gmail.com"], ["user_name", "kevingale"], ["password_digest", "$2a$10$vePk8XfPKx7qnSv4CQppbeQ9A1I75tJ7TAzl0ydqCCdIMcTy60D9a"], ["session_token", "Eh61YaY-HTOP3l1HPdK6dw"], ["created_at", "2015-03-10 21:48:06.059443"], ["updated_at", "2015-03-10 21:48:06.059443"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("drink", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drink", "Whiskey"], ["user_id", 16], ["created_at", "2015-03-10 21:48:06.084654"], ["updated_at", "2015-03-10 21:48:06.084654"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("drink", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["drink", "Scotch"], ["user_id", 16], ["created_at", "2015-03-10 21:48:06.088220"], ["updated_at", "2015-03-10 21:48:06.088220"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("drink", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["drink", "Bourbon"], ["user_id", 17], ["created_at", "2015-03-10 21:48:06.091119"], ["updated_at", "2015-03-10 21:48:06.091119"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("drink", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["drink", "Irish Whiskey"], ["user_id", 17], ["created_at", "2015-03-10 21:48:06.093764"], ["updated_at", "2015-03-10 21:48:06.093764"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1  [["user_id", 17]]
