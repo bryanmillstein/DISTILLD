@@ -3,10 +3,10 @@ window.DISTILLD = {
   Collections: {},
   Views: {},
   Routers: {},
+  Utils: {},
   initialize: function() {
-    alert('Hello from Backbone!');
-    new DISTILLD.Routers.Router({ $rootEl: $('#content') });
-    DISTILLD.user = new DISTILLD.Models.Users();
+    DISTILLD.users = new DISTILLD.Collections.Users();
+    new DISTILLD.Routers.Router({ $rootEl: $('#main') });
     Backbone.history.start();
 
   }
