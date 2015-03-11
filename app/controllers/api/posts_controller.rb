@@ -13,6 +13,13 @@ module Api
     end
 
     def update
+      @post = current_user.posts.find(params[:id])
+
+      if @post.update(post_params)
+        render json: @post
+      else
+        render json: @post.errors.full_messages, status: :unprocessable_entity
+      end
     end
 
     def destroy

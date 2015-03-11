@@ -1,7 +1,4 @@
 DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
-  routes: {
-    'click .submit': 'submitPost'
-  },
 
   template: JST['users/show'],
 
@@ -33,7 +30,7 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
   addPostForm: function () {
     var post = new DISTILLD.Models.Post();
     var formView = new DISTILLD.Views.PostForm({ model: post, collection: this.collection });
-    this.$el.append(formView.render().$el)
+    this.addSubview('.post-form', formView)
   },
 
 

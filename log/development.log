@@ -20814,3 +20814,1892 @@ Processing by Api::UsersController#show as JSON
   [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
   Rendered api/users/show.json.jbuilder (1.7ms)
 Completed 200 OK in 8ms (Views: 3.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 12:17:56 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 644ms (Views: 627.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 12:17:57 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.2ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 12:17:57 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (2.4ms)
+Completed 200 OK in 57ms (Views: 17.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 12:21:34 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 537ms (Views: 535.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 12:21:35 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.2ms)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 12:21:35 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (2.6ms)
+Completed 200 OK in 19ms (Views: 12.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 12:21:45 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 494ms (Views: 492.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 12:21:46 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.2ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 12:21:46 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (3.0ms)
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 12:22:19 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 541ms (Views: 539.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 12:22:20 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 12:22:20 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (2.0ms)
+Completed 200 OK in 20ms (Views: 15.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 12:23:25 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 250ms (Views: 247.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 12:23:25 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.3ms)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 12:23:25 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (2.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (3.5ms)
+Completed 200 OK in 17ms (Views: 6.4ms | ActiveRecord: 3.0ms)
+
+
+Started DELETE "/api/posts/13" for ::1 at 2015-03-11 12:23:40 -0400
+Processing by Api::PostsController#destroy as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 13]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 13]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 12:23:46 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 238ms (Views: 236.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 12:23:46 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.2ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 12:23:46 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (3.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (1.9ms)
+Completed 200 OK in 14ms (Views: 4.0ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 12:24:54 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 241ms (Views: 240.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 12:24:55 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 12:24:55 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (3.7ms)
+Completed 200 OK in 12ms (Views: 6.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 12:28:04 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 260ms (Views: 259.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 12:28:04 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 12:28:04 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (1.9ms)
+Completed 200 OK in 8ms (Views: 3.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 12:32:53 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 248ms (Views: 247.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 12:32:53 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 12:32:53 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (1.5ms)
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/posts" for ::1 at 2015-03-11 13:39:37 -0400
+Processing by Api::PostsController#create as JSON
+  Parameters: {"drink"=>"sfg", "body"=>"h", "post"=>{"drink"=>"sfg", "body"=>"h"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("drink", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["drink", "sfg"], ["body", "h"], ["user_id", 5], ["created_at", "2015-03-11 17:39:37.810211"], ["updated_at", "2015-03-11 17:39:37.810211"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/api/posts/30" for ::1 at 2015-03-11 13:39:39 -0400
+Processing by Api::PostsController#destroy as JSON
+  Parameters: {"id"=>"30"}
+  [1m[36mPost Load (0.8ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 30]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 13:42:17 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 513ms (Views: 511.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 13:42:18 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.2ms)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 13:42:18 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (1.9ms)
+Completed 200 OK in 22ms (Views: 16.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 13:47:33 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 156ms (Views: 155.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 13:47:34 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.2ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 13:47:40 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (1.9ms)
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 13:49:15 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 229ms (Views: 227.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 13:49:16 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 13:49:16 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (1.5ms)
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 13:49:40 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 231ms (Views: 230.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 13:49:40 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 13:49:40 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (1.5ms)
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 13:51:00 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 236ms (Views: 234.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 13:51:01 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.2ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 13:51:01 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (1.4ms)
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 13:54:01 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 258ms (Views: 256.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 13:54:01 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 13:54:01 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (1.8ms)
+Completed 200 OK in 9ms (Views: 3.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 13:54:10 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 227ms (Views: 225.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 13:54:11 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.2ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 13:54:11 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (1.5ms)
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 13:58:06 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 249ms (Views: 247.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 13:58:07 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 13:58:07 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (2.5ms)
+Completed 200 OK in 11ms (Views: 5.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 13:58:40 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 237ms (Views: 236.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 13:58:41 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 13:58:41 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (1.5ms)
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 13:58:47 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 223ms (Views: 221.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 13:58:48 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.2ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 13:58:48 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (1.5ms)
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 13:59:25 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 226ms (Views: 224.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 13:59:25 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 13:59:25 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (1.7ms)
+Completed 200 OK in 10ms (Views: 4.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 13:59:31 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 229ms (Views: 228.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 13:59:31 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.2ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 13:59:31 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (1.6ms)
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/posts" for ::1 at 2015-03-11 13:59:34 -0400
+Processing by Api::PostsController#create as JSON
+  Parameters: {"drink"=>"sdf", "body"=>"sdf", "post"=>{"drink"=>"sdf", "body"=>"sdf"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("drink", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["drink", "sdf"], ["body", "sdf"], ["user_id", 5], ["created_at", "2015-03-11 17:59:34.223024"], ["updated_at", "2015-03-11 17:59:34.223024"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/api/posts/31" for ::1 at 2015-03-11 13:59:35 -0400
+Processing by Api::PostsController#destroy as JSON
+  Parameters: {"id"=>"31"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 31]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 14:00:43 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 260ms (Views: 258.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:00:44 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:00:44 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (1.8ms)
+Completed 200 OK in 15ms (Views: 3.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 14:00:52 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 237ms (Views: 235.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:00:53 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:00:53 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (1.4ms)
+Completed 200 OK in 7ms (Views: 3.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 14:01:09 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 225ms (Views: 223.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:01:09 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.2ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:01:09 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (4.4ms)
+Completed 200 OK in 13ms (Views: 7.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 14:01:21 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 243ms (Views: 241.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:01:22 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:01:22 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (1.6ms)
+Completed 200 OK in 9ms (Views: 3.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 14:02:01 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 237ms (Views: 234.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:02:02 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.9ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:02:02 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (1.6ms)
+Completed 200 OK in 10ms (Views: 3.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 14:02:50 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 229ms (Views: 227.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:02:51 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:02:51 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (4.3ms)
+Completed 200 OK in 11ms (Views: 7.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 14:03:06 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 223ms (Views: 221.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:03:06 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.2ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:03:06 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (1.8ms)
+Completed 200 OK in 10ms (Views: 3.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 14:03:32 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 238ms (Views: 237.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:03:32 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:03:32 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (2.0ms)
+Completed 200 OK in 9ms (Views: 3.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 14:04:16 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 241ms (Views: 239.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:04:16 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:04:16 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (3.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (2.1ms)
+Completed 200 OK in 12ms (Views: 4.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 14:04:50 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 242ms (Views: 241.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:04:50 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:04:50 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (1.6ms)
+Completed 200 OK in 11ms (Views: 3.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 14:05:01 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 234ms (Views: 232.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:05:01 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:05:01 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (3.5ms)
+Completed 200 OK in 12ms (Views: 6.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 14:10:42 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 249ms (Views: 248.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:10:42 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:10:42 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (1.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (1.7ms)
+Completed 200 OK in 14ms (Views: 5.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 14:10:52 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 239ms (Views: 237.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:10:52 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:10:52 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (1.9ms)
+Completed 200 OK in 10ms (Views: 3.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 14:11:11 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 247ms (Views: 245.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:11:11 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:11:11 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (3.1ms)
+Completed 200 OK in 13ms (Views: 5.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 14:11:17 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 236ms (Views: 234.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:11:18 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:11:18 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (1.6ms)
+Completed 200 OK in 9ms (Views: 4.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 14:12:19 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 670ms (Views: 668.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:12:20 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:12:20 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (1.5ms)
+Completed 200 OK in 31ms (Views: 25.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 14:12:38 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 528ms (Views: 526.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:12:38 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:12:38 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (1.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (1.9ms)
+Completed 200 OK in 10ms (Views: 4.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 14:12:43 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 550ms (Views: 548.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:12:44 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:12:44 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (2.0ms)
+Completed 200 OK in 38ms (Views: 31.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 14:13:10 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 248ms (Views: 246.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:13:10 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:13:10 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (1.5ms)
+Completed 200 OK in 10ms (Views: 3.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 14:13:16 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 241ms (Views: 239.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:13:17 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:13:17 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (1.5ms)
+Completed 200 OK in 8ms (Views: 3.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-03-11 14:13:38 -0400
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 237ms (Views: 235.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:13:38 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:13:38 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (1.7ms)
+Completed 200 OK in 9ms (Views: 3.9ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/api/posts" for ::1 at 2015-03-11 14:13:44 -0400
+Processing by Api::PostsController#create as JSON
+  Parameters: {"drink"=>"asdf", "body"=>"asdf", "post"=>{"drink"=>"asdf", "body"=>"asdf"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("drink", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["drink", "asdf"], ["body", "asdf"], ["user_id", 5], ["created_at", "2015-03-11 18:13:44.830038"], ["updated_at", "2015-03-11 18:13:44.830038"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/api/posts/32" for ::1 at 2015-03-11 14:13:45 -0400
+Processing by Api::PostsController#destroy as JSON
+  Parameters: {"id"=>"32"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = $1  [["id", 32]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/?id=&drink=&body=" for ::1 at 2015-03-11 14:13:46 -0400
+Processing by StaticPagesController#root as HTML
+  Parameters: {"id"=>"", "drink"=>"", "body"=>""}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 231ms (Views: 229.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:13:47 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:13:47 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (3.0ms)
+Completed 200 OK in 12ms (Views: 5.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/?id=&drink=&body=" for ::1 at 2015-03-11 14:13:52 -0400
+Processing by StaticPagesController#root as HTML
+  Parameters: {"id"=>"", "drink"=>"", "body"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 184ms (Views: 182.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:13:52 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:13:52 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (2.7ms)
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/posts" for ::1 at 2015-03-11 14:14:05 -0400
+Processing by Api::PostsController#create as JSON
+  Parameters: {"drink"=>"asdf", "body"=>"asdf", "post"=>{"drink"=>"asdf", "body"=>"asdf"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("drink", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["drink", "asdf"], ["body", "asdf"], ["user_id", 5], ["created_at", "2015-03-11 18:14:05.146461"], ["updated_at", "2015-03-11 18:14:05.146461"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/?id=33&drink=hhhh&body=hhhhhh" for ::1 at 2015-03-11 14:14:11 -0400
+Processing by StaticPagesController#root as HTML
+  Parameters: {"id"=>"33", "drink"=>"hhhh", "body"=>"hhhhhh"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 162ms (Views: 160.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:14:11 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:14:11 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (2.7ms)
+Completed 200 OK in 13ms (Views: 6.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/?id=33&drink=lll&body=lllll" for ::1 at 2015-03-11 14:14:28 -0400
+Processing by StaticPagesController#root as HTML
+  Parameters: {"id"=>"33", "drink"=>"lll", "body"=>"lllll"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 168ms (Views: 167.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:14:28 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:14:28 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (1.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (2.7ms)
+Completed 200 OK in 11ms (Views: 5.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/?id=33&drink=l%3Bl%3B&body=l%3Bl%3B" for ::1 at 2015-03-11 14:15:17 -0400
+Processing by StaticPagesController#root as HTML
+  Parameters: {"id"=>"33", "drink"=>"l;l;", "body"=>"l;l;"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 247ms (Views: 246.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:15:18 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:15:18 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (1.5ms)
+Completed 200 OK in 9ms (Views: 3.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/?id=33&drink=l%3Bl%3B&body=l%3Bl%3B" for ::1 at 2015-03-11 14:16:07 -0400
+Processing by StaticPagesController#root as HTML
+  Parameters: {"id"=>"33", "drink"=>"l;l;", "body"=>"l;l;"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 220ms (Views: 218.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:16:08 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.4ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:16:08 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (1.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (3.0ms)
+Completed 200 OK in 14ms (Views: 6.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/?id=33&drink=l%3Bl%3B&body=l%3Bl%3B" for ::1 at 2015-03-11 14:16:18 -0400
+Processing by StaticPagesController#root as HTML
+  Parameters: {"id"=>"33", "drink"=>"l;l;", "body"=>"l;l;"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 233ms (Views: 231.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:16:18 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:16:18 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (3.0ms)
+Completed 200 OK in 15ms (Views: 7.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/?id=33&drink=l%3Bl%3B&body=l%3Bl%3B" for ::1 at 2015-03-11 14:22:08 -0400
+Processing by StaticPagesController#root as HTML
+  Parameters: {"id"=>"33", "drink"=>"l;l;", "body"=>"l;l;"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 280ms (Views: 279.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:22:09 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:22:09 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (2.6ms)
+Completed 200 OK in 11ms (Views: 5.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/?id=33&drink=l%3Bl%3B&body=l%3Bl%3B" for ::1 at 2015-03-11 14:23:15 -0400
+Processing by StaticPagesController#root as HTML
+  Parameters: {"id"=>"33", "drink"=>"l;l;", "body"=>"l;l;"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 245ms (Views: 243.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:23:15 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:23:15 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (3.5ms)
+Completed 200 OK in 14ms (Views: 6.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/?id=33&drink=l%3Bl%3B&body=l%3Bl%3B" for ::1 at 2015-03-11 14:24:24 -0400
+Processing by StaticPagesController#root as HTML
+  Parameters: {"id"=>"33", "drink"=>"l;l;", "body"=>"l;l;"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 247ms (Views: 245.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:24:24 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.2ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:24:24 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (2.0ms)
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/?id=33&drink=l%3Bl%3B&body=l%3Bl%3B" for ::1 at 2015-03-11 14:24:50 -0400
+Processing by StaticPagesController#root as HTML
+  Parameters: {"id"=>"33", "drink"=>"l;l;", "body"=>"l;l;"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 227ms (Views: 225.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:24:50 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:24:50 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (3.2ms)
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/?id=33&drink=l%3Bl%3B&body=l%3Bl%3B" for ::1 at 2015-03-11 14:25:02 -0400
+Processing by StaticPagesController#root as HTML
+  Parameters: {"id"=>"33", "drink"=>"l;l;", "body"=>"l;l;"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 222ms (Views: 220.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:25:02 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:25:02 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (2.1ms)
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/?id=33&drink=l%3Bl%3B&body=l%3Bl%3B" for ::1 at 2015-03-11 14:25:38 -0400
+Processing by StaticPagesController#root as HTML
+  Parameters: {"id"=>"33", "drink"=>"l;l;", "body"=>"l;l;"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 249ms (Views: 247.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:25:38 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:25:38 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (2.5ms)
+Completed 200 OK in 10ms (Views: 5.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/?id=33&drink=l%3Bl%3B&body=l%3Bl%3B" for ::1 at 2015-03-11 14:25:44 -0400
+Processing by StaticPagesController#root as HTML
+  Parameters: {"id"=>"33", "drink"=>"l;l;", "body"=>"l;l;"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 225ms (Views: 223.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:25:44 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:25:44 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (2.1ms)
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/?id=33&drink=l%3Bl%3B&body=l%3Bl%3B" for ::1 at 2015-03-11 14:26:41 -0400
+Processing by StaticPagesController#root as HTML
+  Parameters: {"id"=>"33", "drink"=>"l;l;", "body"=>"l;l;"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 237ms (Views: 235.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:26:42 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:26:42 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (2.4ms)
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/?id=33&drink=l%3Bl%3B&body=l%3Bl%3B" for ::1 at 2015-03-11 14:27:23 -0400
+Processing by StaticPagesController#root as HTML
+  Parameters: {"id"=>"33", "drink"=>"l;l;", "body"=>"l;l;"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 233ms (Views: 231.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:27:24 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.2ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:27:24 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (1.8ms)
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/?id=33&drink=l%3Bl%3B&body=l%3Bl%3B" for ::1 at 2015-03-11 14:27:33 -0400
+Processing by StaticPagesController#root as HTML
+  Parameters: {"id"=>"33", "drink"=>"l;l;", "body"=>"l;l;"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 231ms (Views: 229.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:27:33 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:27:33 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (3.5ms)
+Completed 200 OK in 11ms (Views: 6.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/?id=33&drink=l%3Bl%3B&body=l%3Bl%3B" for ::1 at 2015-03-11 14:28:09 -0400
+Processing by StaticPagesController#root as HTML
+  Parameters: {"id"=>"33", "drink"=>"l;l;", "body"=>"l;l;"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 237ms (Views: 235.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:28:10 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:28:10 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (1.9ms)
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/posts" for ::1 at 2015-03-11 14:28:29 -0400
+Processing by Api::PostsController#create as JSON
+  Parameters: {"post"=>{"id"=>33, "user_id"=>5, "drink"=>"asdf", "body"=>"asdf", "created_at"=>"2015-03-11T18:14:05.146Z", "updated_at"=>"2015-03-11T18:14:05.146Z"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+Unpermitted parameters: id, created_at, updated_at
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("user_id", "drink", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 5], ["drink", "asdf"], ["body", "asdf"], ["created_at", "2015-03-11 18:28:29.765966"], ["updated_at", "2015-03-11 18:28:29.765966"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/api/posts/34" for ::1 at 2015-03-11 14:28:42 -0400
+Processing by Api::PostsController#destroy as JSON
+  Parameters: {"id"=>"34"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 34]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = $1  [["id", 34]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/api/posts/33" for ::1 at 2015-03-11 14:28:43 -0400
+Processing by Api::PostsController#destroy as JSON
+  Parameters: {"id"=>"33"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = $1  [["id", 33]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/api/posts" for ::1 at 2015-03-11 14:28:48 -0400
+Processing by Api::PostsController#create as JSON
+  Parameters: {"drink"=>"opop", "body"=>"opop", "post"=>{"drink"=>"opop", "body"=>"opop"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("drink", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["drink", "opop"], ["body", "opop"], ["user_id", 5], ["created_at", "2015-03-11 18:28:48.131759"], ["updated_at", "2015-03-11 18:28:48.131759"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/api/posts" for ::1 at 2015-03-11 14:28:51 -0400
+Processing by Api::PostsController#create as JSON
+  Parameters: {"post"=>{"drink"=>"opop", "body"=>"opop", "id"=>35, "user_id"=>5, "created_at"=>"2015-03-11T18:28:48.131Z", "updated_at"=>"2015-03-11T18:28:48.131Z"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+Unpermitted parameters: id, created_at, updated_at
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("user_id", "drink", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 5], ["drink", "opop"], ["body", "opop"], ["created_at", "2015-03-11 18:28:51.130462"], ["updated_at", "2015-03-11 18:28:51.130462"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/api/posts" for ::1 at 2015-03-11 14:29:01 -0400
+Processing by Api::PostsController#create as JSON
+  Parameters: {"post"=>{"post"=>{"drink"=>"opop", "body"=>"opop", "id"=>35, "user_id"=>5, "created_at"=>"2015-03-11T18:28:48.131Z", "updated_at"=>"2015-03-11T18:28:48.131Z"}, "id"=>36, "user_id"=>5, "drink"=>"opop", "body"=>"opop", "created_at"=>"2015-03-11T18:28:51.130Z", "updated_at"=>"2015-03-11T18:28:51.130Z"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+Unpermitted parameters: post, id, created_at, updated_at
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("user_id", "drink", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 5], ["drink", "opop"], ["body", "opop"], ["created_at", "2015-03-11 18:29:01.154442"], ["updated_at", "2015-03-11 18:29:01.154442"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/api/posts/37" for ::1 at 2015-03-11 14:29:06 -0400
+Processing by Api::PostsController#destroy as JSON
+  Parameters: {"id"=>"37"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 37]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = $1  [["id", 37]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/api/posts/35" for ::1 at 2015-03-11 14:29:07 -0400
+Processing by Api::PostsController#destroy as JSON
+  Parameters: {"id"=>"35"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 35]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = $1  [["id", 35]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/api/posts/36" for ::1 at 2015-03-11 14:29:08 -0400
+Processing by Api::PostsController#destroy as JSON
+  Parameters: {"id"=>"36"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 36]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = $1  [["id", 36]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/?id=33&drink=l%3Bl%3B&body=l%3Bl%3B" for ::1 at 2015-03-11 14:29:47 -0400
+Processing by StaticPagesController#root as HTML
+  Parameters: {"id"=>"33", "drink"=>"l;l;", "body"=>"l;l;"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 247ms (Views: 244.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:29:48 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:29:48 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (2.3ms)
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/?id=33&drink=l%3Bl%3B&body=l%3Bl%3B" for ::1 at 2015-03-11 14:30:30 -0400
+Processing by StaticPagesController#root as HTML
+  Parameters: {"id"=>"33", "drink"=>"l;l;", "body"=>"l;l;"}
+  [1m[36mUser Load (2.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 243ms (Views: 239.6ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/api/posts" for ::1 at 2015-03-11 14:30:30 -0400
+Processing by Api::PostsController#create as JSON
+  Parameters: {"post"=>{"id"=>15, "user_id"=>5, "drink"=>"Water", "body"=>"Extra boring", "created_at"=>"2015-03-11T15:11:59.319Z", "updated_at"=>"2015-03-11T15:11:59.319Z"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+Unpermitted parameters: id, created_at, updated_at
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("user_id", "drink", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 5], ["drink", "Water"], ["body", "Extra boring"], ["created_at", "2015-03-11 18:30:30.856496"], ["updated_at", "2015-03-11 18:30:30.856496"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:30:31 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:30:31 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (1.8ms)
+Completed 200 OK in 8ms (Views: 3.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/posts" for ::1 at 2015-03-11 14:30:47 -0400
+Processing by Api::PostsController#create as JSON
+  Parameters: {"post"=>{"id"=>38, "user_id"=>5, "drink"=>"Water", "body"=>"Extra boring", "created_at"=>"2015-03-11T18:30:30.856Z", "updated_at"=>"2015-03-11T18:30:30.856Z"}, "drink"=>"lll", "body"=>"llll"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+Unpermitted parameters: id, created_at, updated_at
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("user_id", "drink", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 5], ["drink", "Water"], ["body", "Extra boring"], ["created_at", "2015-03-11 18:30:47.984893"], ["updated_at", "2015-03-11 18:30:47.984893"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/?id=33&drink=l%3Bl%3B&body=l%3Bl%3B" for ::1 at 2015-03-11 14:31:29 -0400
+Processing by StaticPagesController#root as HTML
+  Parameters: {"id"=>"33", "drink"=>"l;l;", "body"=>"l;l;"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 157ms (Views: 155.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:31:30 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:31:30 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (1.9ms)
+Completed 200 OK in 8ms (Views: 4.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/?id=33&drink=l%3Bl%3B&body=l%3Bl%3B" for ::1 at 2015-03-11 14:31:35 -0400
+Processing by StaticPagesController#root as HTML
+  Parameters: {"id"=>"33", "drink"=>"l;l;", "body"=>"l;l;"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 217ms (Views: 215.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:31:36 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:31:36 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (3.3ms)
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/posts" for ::1 at 2015-03-11 14:31:42 -0400
+Processing by Api::PostsController#create as JSON
+  Parameters: {"post"=>{"id"=>39, "user_id"=>5, "drink"=>"Water", "body"=>"Extra boring", "created_at"=>"2015-03-11T18:30:47.984Z", "updated_at"=>"2015-03-11T18:30:47.984Z"}, "drink"=>"jkjl", "body"=>"jkjkjk"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+Unpermitted parameters: id, created_at, updated_at
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("user_id", "drink", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 5], ["drink", "Water"], ["body", "Extra boring"], ["created_at", "2015-03-11 18:31:42.064010"], ["updated_at", "2015-03-11 18:31:42.064010"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/?id=33&drink=l%3Bl%3B&body=l%3Bl%3B" for ::1 at 2015-03-11 14:35:37 -0400
+Processing by StaticPagesController#root as HTML
+  Parameters: {"id"=>"33", "drink"=>"l;l;", "body"=>"l;l;"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 172ms (Views: 159.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:35:37 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:35:37 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (2.2ms)
+Completed 200 OK in 19ms (Views: 3.7ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/api/posts" for ::1 at 2015-03-11 14:35:47 -0400
+Processing by Api::PostsController#create as JSON
+  Parameters: {"post"=>{"id"=>40, "user_id"=>5, "drink"=>"Water", "body"=>"Extra boring", "created_at"=>"2015-03-11T18:31:42.064Z", "updated_at"=>"2015-03-11T18:31:42.064Z"}, "drink"=>"popp", "body"=>"opopop"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+Unpermitted parameters: id, created_at, updated_at
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("user_id", "drink", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 5], ["drink", "Water"], ["body", "Extra boring"], ["created_at", "2015-03-11 18:35:47.521915"], ["updated_at", "2015-03-11 18:35:47.521915"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/api/posts/41" for ::1 at 2015-03-11 14:38:35 -0400
+Processing by Api::PostsController#destroy as JSON
+  Parameters: {"id"=>"41"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 41]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 41]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/api/posts/40" for ::1 at 2015-03-11 14:38:37 -0400
+Processing by Api::PostsController#destroy as JSON
+  Parameters: {"id"=>"40"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 40]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 40]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/api/posts/39" for ::1 at 2015-03-11 14:38:37 -0400
+Processing by Api::PostsController#destroy as JSON
+  Parameters: {"id"=>"39"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 39]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 39]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/api/posts/38" for ::1 at 2015-03-11 14:38:43 -0400
+Processing by Api::PostsController#destroy as JSON
+  Parameters: {"id"=>"38"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 38]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 38]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/api/posts" for ::1 at 2015-03-11 14:38:53 -0400
+Processing by Api::PostsController#create as JSON
+  Parameters: {"post"=>{"id"=>15, "user_id"=>5, "drink"=>"Water", "body"=>"Extra boring", "created_at"=>"2015-03-11T15:11:59.319Z", "updated_at"=>"2015-03-11T15:11:59.319Z"}, "drink"=>"popop", "body"=>"opopop"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+Unpermitted parameters: id, created_at, updated_at
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("user_id", "drink", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 5], ["drink", "Water"], ["body", "Extra boring"], ["created_at", "2015-03-11 18:38:53.408650"], ["updated_at", "2015-03-11 18:38:53.408650"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/?id=33&drink=l%3Bl%3B&body=l%3Bl%3B" for ::1 at 2015-03-11 14:41:03 -0400
+Processing by StaticPagesController#root as HTML
+  Parameters: {"id"=>"33", "drink"=>"l;l;", "body"=>"l;l;"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 519ms (Views: 516.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:41:04 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.3ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:41:04 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)[0m
+  Rendered api/users/show.json.jbuilder (2.8ms)
+Completed 200 OK in 22ms (Views: 16.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/?id=33&drink=l%3Bl%3B&body=l%3Bl%3B" for ::1 at 2015-03-11 14:42:21 -0400
+Processing by StaticPagesController#root as HTML
+  Parameters: {"id"=>"33", "drink"=>"l;l;", "body"=>"l;l;"}
+  [1m[35mUser Load (1.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 257ms (Views: 254.3ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/api/posts" for ::1 at 2015-03-11 14:42:21 -0400
+Processing by Api::PostsController#create as JSON
+  Parameters: {"post"=>{"id"=>42, "user_id"=>5, "drink"=>"Water", "body"=>"Extra boring", "created_at"=>"2015-03-11T18:38:53.408Z", "updated_at"=>"2015-03-11T18:38:53.408Z"}, "drink"=>";hjl;", "body"=>"hjl;hjl;"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+Unpermitted parameters: id, created_at, updated_at
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("user_id", "drink", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 5], ["drink", "Water"], ["body", "Extra boring"], ["created_at", "2015-03-11 18:42:21.825712"], ["updated_at", "2015-03-11 18:42:21.825712"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/users" for ::1 at 2015-03-11 14:42:22 -0400
+Processing by Api::UsersController#index as JSON
+  Rendered api/users/index.json.jbuilder (0.1ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/5" for ::1 at 2015-03-11 14:42:22 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (5)
+  Rendered api/users/show.json.jbuilder (3.1ms)
+Completed 200 OK in 11ms (Views: 6.2ms | ActiveRecord: 0.8ms)
+
+
+Started PUT "/api/posts/43" for ::1 at 2015-03-11 14:42:28 -0400
+Processing by Api::PostsController#update as JSON
+  Parameters: {"id"=>"43", "user_id"=>5, "drink"=>"kjlk", "body"=>"jkljk", "created_at"=>"2015-03-11T18:42:21.825Z", "updated_at"=>"2015-03-11T18:42:21.825Z", "post"=>{"id"=>"43", "user_id"=>5, "drink"=>"kjlk", "body"=>"jkljk", "created_at"=>"2015-03-11T18:42:21.825Z", "updated_at"=>"2015-03-11T18:42:21.825Z"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT 1  [["user_id", 5], ["id", 43]]
+Unpermitted parameters: id, created_at, updated_at
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "posts" SET "drink" = $1, "body" = $2, "updated_at" = $3 WHERE "posts"."id" = $4  [["drink", "kjlk"], ["body", "jkljk"], ["updated_at", "2015-03-11 18:42:28.488508"], ["id", 43]]
+  [1m[36m (41.2ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 49ms (Views: 0.9ms | ActiveRecord: 42.3ms)
+
+
+Started PUT "/api/posts/42" for ::1 at 2015-03-11 14:42:31 -0400
+Processing by Api::PostsController#update as JSON
+  Parameters: {"id"=>"42", "user_id"=>5, "drink"=>"jklkjl", "body"=>"jkljkl", "created_at"=>"2015-03-11T18:38:53.408Z", "updated_at"=>"2015-03-11T18:38:53.408Z", "post"=>{"id"=>"42", "user_id"=>5, "drink"=>"jklkjl", "body"=>"jkljkl", "created_at"=>"2015-03-11T18:38:53.408Z", "updated_at"=>"2015-03-11T18:38:53.408Z"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "u_tWgHcu-KKxc2tKkPTt2Q"]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT 1[0m  [["user_id", 5], ["id", 42]]
+Unpermitted parameters: id, created_at, updated_at
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "posts" SET "drink" = $1, "body" = $2, "updated_at" = $3 WHERE "posts"."id" = $4[0m  [["drink", "jklkjl"], ["body", "jkljkl"], ["updated_at", "2015-03-11 18:42:31.494096"], ["id", 42]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/api/posts/43" for ::1 at 2015-03-11 14:43:20 -0400
+Processing by Api::PostsController#destroy as JSON
+  Parameters: {"id"=>"43"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 43]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 43]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/api/posts/42" for ::1 at 2015-03-11 14:43:21 -0400
+Processing by Api::PostsController#destroy as JSON
+  Parameters: {"id"=>"42"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 42]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 42]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 1.0ms)
