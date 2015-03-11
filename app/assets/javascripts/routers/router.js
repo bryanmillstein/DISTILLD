@@ -11,13 +11,14 @@ DISTILLD.Routers.Router = Backbone.Router.extend({
   },
 
   index: function () {
-    this.$el.html("Home")
-
+    // var indexView = new DISTILLD.Views.UsersIndex({ model: this.model });
+    // this._swapView(indexView);
+    this.$rootEl.html("HOME");
   },
 
   userShow: function (id) {
     var user = DISTILLD.Collections.users.getOrFetch(id),
-        view = new DISTILLD.Views.UserShow({ model: user });
+        view = new DISTILLD.Views.UserShow({ model: user, collection: DISTILLD.Collections.users });
 
     this._swapView(view);
   },

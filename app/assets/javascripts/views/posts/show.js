@@ -3,9 +3,11 @@ DISTILLD.Views.PostShow = Backbone.View.extend ({
   className: 'post-display',
 
   initialize: function () {
-    this.listenTo(this.model, 'sync', this.render)
+    this.listenTo(this.model, 'sync', this.render);
+    // this.listenTo(this.collection, 'add', this.render);
+
   },
-  
+
   render: function () {
     var content = this.template({ post: this.model });
     this.$el.html(content);
