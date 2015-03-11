@@ -3,7 +3,7 @@ DISTILLD.Models.User = Backbone.Model.extend ({
 
     posts: function () {
       if (!this._posts) {
-        this._posts = DISTILLD.Collections.Posts( [],{ user: this });
+        this._posts = new DISTILLD.Collections.Posts( [],{ user: this });
       }
 
       return this._posts;

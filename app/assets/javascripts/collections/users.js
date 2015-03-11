@@ -18,3 +18,5 @@ DISTILLD.Collections.Users = Backbone.Collection.extend ({
       return model;
     }
 });
+
+DISTILLD.Collections.users = new DISTILLD.Collections.Users();

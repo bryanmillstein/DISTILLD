@@ -1,24 +1,23 @@
 DISTILLD.Routers.Router = Backbone.Router.extend({
   initialize: function (options) {
     this.$rootEl = options.$rootEl;
-    DISTILLD.users.fetch();
+    DISTILLD.Collections.users.fetch();
   },
 
   routes: {
     "": "index",
     "users/:id": "userShow",
-    
+
   },
 
   index: function () {
-    var view = new DISTILLD.Views.UsersIndex({ collection: DISTILLD.users });
-    this._swapView(view);
+    this.$el.html("Home")
 
   },
 
   userShow: function (id) {
-    var user = DISTILLD.users.getOrFetch(id),
-        view = new DISTILLD.Views.UserShow({ collection: DISTILLD.users, model: user });
+    var user = DISTILLD.Collections.users.getOrFetch(id),
+        view = new DISTILLD.Views.UserShow({ model: user });
 
     this._swapView(view);
   },

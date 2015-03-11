@@ -16,6 +16,7 @@
 //= require backbone
 //= require distilld
 //= require_tree ../templates
+//= require_tree ./utils
 //= require_tree ./models
 //= require_tree ./collections
 //= require_tree ./views
