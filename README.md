@@ -9,9 +9,9 @@ DISTILLD is a clone of UNTAPPD built on Rails and Backbone. Users can:
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
-- [ ] Create accounts
-- [ ] Create sessions (log in)
-- [ ] Create posts
+- [x] Create accounts
+- [x] Create sessions (log in)
+- [x] Create posts
 - [ ] User search
 - [ ] Create friendships
 - [ ] View a feed of all friends' posts
