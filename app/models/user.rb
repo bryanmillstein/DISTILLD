@@ -8,8 +8,8 @@ class User < ActiveRecord::Base
 
   has_many :posts
   has_many :friendships,
-    class_name: "Friendship",
-    foreign_key: :user_id
+    class_name: "Friendship"
+
 
   has_many :friends, through: :friendships, source: :friend
 
