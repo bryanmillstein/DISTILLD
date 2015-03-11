@@ -8,7 +8,7 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
   initialize: function () {
     this.collection = this.model.posts();
     this.listenTo(this.model, 'sync', this.render);
-    this.listenTo(this.collection, 'add', this.render);
+    this.listenTo(this.collection, 'add remove', this.render);
 
   },
 

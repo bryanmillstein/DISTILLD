@@ -16,6 +16,9 @@ module Api
     end
 
     def destroy
+      @post = Post.find(params[:id])
+      @post.destroy
+      render json: {}
     end
 
     private
