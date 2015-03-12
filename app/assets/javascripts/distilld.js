@@ -5,8 +5,8 @@ window.DISTILLD = {
   Routers: {},
   Utils: {},
   initialize: function(options) {
-    currentUser = new DISTILLD.Models.User({ id: options.currentUserId })
-    new DISTILLD.Routers.Router({ $rootEl: $('#main'), model: currentUser });
+    DISTILLD.currentUser = new DISTILLD.Models.User({ id: options.currentUserId })
+    new DISTILLD.Routers.Router({ $rootEl: $('#main'), model: DISTILLD.currentUser });
     Backbone.history.start();
 
   }
