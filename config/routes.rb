@@ -9,7 +9,6 @@ Rails.application.routes.draw do
     resources :users, only: [:show, :index, :update]
     resources :posts, only: [:create, :update, :destroy]
     resources :friendships, only: [:create, :destroy]
-
   end
 
 
