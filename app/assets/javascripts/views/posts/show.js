@@ -4,7 +4,6 @@ DISTILLD.Views.PostShow = Backbone.CompositeView.extend ({
 
   initialize: function (options) {
     this.listenTo(this.model, 'sync', this.render);
-    this.user = options.model;
   },
 
   render: function () {

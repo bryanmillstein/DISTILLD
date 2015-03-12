@@ -6,10 +6,5 @@ module Api
       render :show
     end
 
-    def index
-
-    end
-
   end
-
 end

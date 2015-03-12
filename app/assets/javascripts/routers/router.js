@@ -1,23 +1,24 @@
 DISTILLD.Routers.Router = Backbone.Router.extend({
   initialize: function (options) {
     this.$rootEl = options.$rootEl;
-    DISTILLD.Collections.users.fetch();
   },
 
   routes: {
-    "": "feed",
+    "posts": "feed",
     "users/:id": "userShow",
 
   },
 
   feed: function () {
-    this.model.fetch();
-    friends = this.model.friends();
-    var feedView = new DISTILLD.Views.FriendsPosts({ model: this.model, collection: friends });
+    var friendsPosts = new DISTILLD.Collections.Posts({ user: DISTILLD.currentUser });
+    friendsPosts.fetch();
+
+    var feedView = new DISTILLD.Views.PostsIndex({ collection: friendsPosts });
     this._swapView(feedView);
   },
 
   userShow: function (id) {
+    DISTILLD.Collections.users.fetch();
     var user = DISTILLD.Collections.users.getOrFetch(id),
         view = new DISTILLD.Views.UserShow({ model: user, collection: DISTILLD.Collections.users });
 

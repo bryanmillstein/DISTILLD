@@ -2,6 +2,11 @@ module Api
 
   class PostsController < ApplicationController
 
+    def index
+      @posts = Post.get_friends_posts(current_user)
+      render :posts
+    end
+
     def create
       @post = current_user.posts.new(post_params)
 

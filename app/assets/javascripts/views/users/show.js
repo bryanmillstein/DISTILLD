@@ -14,7 +14,10 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
     this.$el.html(content);
 
     this.renderPosts();
-    this.addPostForm();
+
+    if (DISTILLD.currentUser.id === this.model.id) {
+      this.addPostForm();
+    }
     return this;
   },
 

@@ -16,7 +16,11 @@ DISTILLD.Views.PostEdit = Backbone.View.extend ({
     var attrs = this.$el.serializeJSON(),
         that = this;
 
-    this.model.save(attrs);
+    this.model.save(attrs, {
+      success: function () {
+        that.collection.add(that.model, { merge: true })
+      }
+    });
   }
 
 });
