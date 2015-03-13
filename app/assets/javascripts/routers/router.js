@@ -10,10 +10,12 @@ DISTILLD.Routers.Router = Backbone.Router.extend({
   },
 
   feed: function () {
+    DISTILLD.Collections.users.fetch();
     var friendsPosts = new DISTILLD.Collections.Posts();
     friendsPosts.fetch();
 
-    var feedView = new DISTILLD.Views.PostsIndex({ collection: friendsPosts });
+    var feedView = new DISTILLD.Views.PostsIndex({ collection: friendsPosts, users: DISTILLD.Collections.users });
+
     this._swapView(feedView);
   },
 
@@ -23,6 +25,12 @@ DISTILLD.Routers.Router = Backbone.Router.extend({
         view = new DISTILLD.Views.UserShow({ model: user, collection: DISTILLD.Collections.users });
 
     this._swapView(view);
+  },
+
+  addPostForm: function () {
+    var post = new DISTILLD.Models.Post();
+    var formView = new DISTILLD.Views.PostForm({ model: post, collection: this.collection });
+    this.addSubview('.post-form', formView);
   },
 
   _swapView: function (view) {

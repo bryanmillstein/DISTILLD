@@ -8,7 +8,7 @@ DISTILLD.Views.PostShow = Backbone.CompositeView.extend ({
   },
 
   render: function () {
-    var content = this.template({ post: this.model });
+    var content = this.template({ post: this.model, user: this.user });
     this.$el.html(content);
 
     return this;
