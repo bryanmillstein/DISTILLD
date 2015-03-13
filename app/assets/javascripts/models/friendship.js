@@ -1,3 +1,3 @@
-DISTILLD.Models.Friendship = Backbone.View.extend({
-  urlRoot: 'api/friendships'
+DISTILLD.Models.Friendship = Backbone.Model.extend({
+  urlRoot: 'api/friendships',
 });

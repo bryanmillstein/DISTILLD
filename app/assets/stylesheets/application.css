@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+
+/*body {
+  display: block;
+  position: absolute;
+  background: green;
+  width: 900px;
+}
+
+.sign-out {
+  background: blue;
+
+}*/

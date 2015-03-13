@@ -6,7 +6,7 @@
 <form action="<%= session_url %>" method="post">
   <%= auth_form %>
     <input type="hidden" name="_method" value="delete">
-  <button>Sign Out</button>
+  <button class="sign-out">Sign Out</button>
 </form>
-<p class="greeting">Current User: <%= current_user.user_name %></p>
+<p class="greeting">Hi, <%= current_user.user_name %></p><a href="">Feed</a>
 <% end %>

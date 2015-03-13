@@ -5,26 +5,48 @@ DISTILLD.Views.FriendshipButton = Backbone.View.extend({
     'submit': 'changeFriendship'
   },
 
-  initialize: function (options) {
-    this.message = options.message;
+  initialize: function () {
+    this.listenTo(this.model, 'request', this.render)
   },
 
   render: function () {
-    var content = this.template({ action: this.message });
+    if (this.model.get('is_friend')) {
+      message = "Remove As Friend"
+    } else {
+      message = "Add As Friend"
+    }
+
+    var content = this.template({ action: message });
     this.$el.html(content);
     return this;
   },
 
   changeFriendship: function () {
-    var friendId = this.model.id
+    var friendId = this.model.id,
+        that = this;
 
     $.ajax({
-      url: "/friendships",
+      url: "api/friendships",
       type: "POST",
       data: {
         friend_id: friendId,
+      },
+      success: function () {
+        that.model.fetch();
       }
     });
+
   }
 
 });
+
+// changeFriendship: function () {
+//   var friendId = this.model.id;
+//
+//   if (!this.friendship) {
+//     this.friendship.set({ friend_id: friendId });
+//     this.friendship.save({});
+//   } else {
+//     this.friendship.destroy();
+//   }
+// }
