@@ -39,14 +39,3 @@ DISTILLD.Views.FriendshipButton = Backbone.View.extend({
   }
 
 });
-
-// changeFriendship: function () {
-//   var friendId = this.model.id;
-//
-//   if (!this.friendship) {
-//     this.friendship.set({ friend_id: friendId });
-//     this.friendship.save({});
-//   } else {
-//     this.friendship.destroy();
-//   }
-// }

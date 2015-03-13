@@ -54,20 +54,3 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
   },
 
 });
-
-
-// addFriendButton: function () {
-//   var message, friendship;
-//   if (this.model.friendship()) {
-//     message = "Remove As Friend"
-//     friendship = this.model.friendship();
-//   } else {
-//     message = "Add As Friend"
-//     friendship = this.model.friendship();
-//
-//   }
-//   var view = new DISTILLD.Views.FriendshipButton({ model: this.model,
-//                                                    message: message,
-//                                                    friendship: this.model.friendship()});
-//   this.addSubview('.friend-button', view);
-// },

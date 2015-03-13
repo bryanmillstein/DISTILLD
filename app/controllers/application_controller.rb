@@ -11,12 +11,6 @@ class ApplicationController < ActionController::Base
 
   def is_friend(user)
     current_user.friends.include?(user)
-    # friendship = Friendship.where({ user_id: current_user.id, friend_id: user.id })
-    # if friendship.first
-    #   return friendship.first.id
-    # else
-    #   return "null"
-    # end
   end
 
   def current_user

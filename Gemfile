@@ -29,6 +29,8 @@ gem 'rspec', "~> 3.1.0"
 
 gem 'backbone-on-rails'
 
+gem 'pg_search'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

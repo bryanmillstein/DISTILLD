@@ -10,7 +10,8 @@ Rails.application.routes.draw do
     resources :users, only: [:show, :index, :update]
     resources :posts, only: [:create, :update, :destroy, :index]
     resources :friendships, only: [:create]
-    
+    get "search", to: "searches#index"
+
 
   end
 

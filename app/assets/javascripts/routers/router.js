@@ -6,6 +6,7 @@ DISTILLD.Routers.Router = Backbone.Router.extend({
   routes: {
     "": "feed",
     "users/:id": "userShow",
+    "search": "search"
 
   },
 
@@ -25,6 +26,13 @@ DISTILLD.Routers.Router = Backbone.Router.extend({
         view = new DISTILLD.Views.UserShow({ model: user, collection: DISTILLD.Collections.users });
 
     this._swapView(view);
+  },
+
+  search: function () {
+    DISTILLD.Collections.users.fetch();
+    
+    var searchView = new DISTILLD.Views.Search();
+    this._swapView(searchView);
   },
 
   _swapView: function (view) {
