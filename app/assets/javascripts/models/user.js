@@ -41,6 +41,14 @@ DISTILLD.Models.User = Backbone.Model.extend ({
         delete response.friendships;
       }
 
+      if (response.is_current_user) {
+        this.set({ is_current_user: "true" })
+        delete response.is_current_user
+      } else {
+        this.set({ is_current_user: null })
+        delete response.is_current_user
+      }
+
       return response;
     }
 });

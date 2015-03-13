@@ -3,6 +3,7 @@ DISTILLD.Views.PostShow = Backbone.CompositeView.extend ({
   className: 'post-display',
 
   initialize: function (options) {
+    this.user = options.user
     this.listenTo(this.model, 'sync', this.render);
   },
 
@@ -10,24 +11,25 @@ DISTILLD.Views.PostShow = Backbone.CompositeView.extend ({
     var content = this.template({ post: this.model });
     this.$el.html(content);
 
-    if (DISTILLD.currentUser.id === this.model.get('user_id')) {
-      this.addEditForm();
-      this.addDeleteButton();
-
-    }
+    // if (DISTILLD.currentUser.id === this.model.get('user_id')) {
+    // if (this.user.get('is_current_user')) {
+    //   this.addEditForm();
+    //   this.addDeleteButton();
+    //
+    // }
     return this;
   },
 
-  addEditForm: function () {
-    var formView = new DISTILLD.Views.PostEdit({ model: this.model, collection: this.collection });
-    this.addSubview('.edit-form', formView);
-
-  },
-
-  addDeleteButton: function () {
-    var formView = new DISTILLD.Views.PostDelete({ model: this.model, collection: this.collection });
-    this.addSubview('.delete-btn', formView);
-
-  },
+  // addEditForm: function () {
+  //   var formView = new DISTILLD.Views.PostEdit({ model: this.model, collection: this.collection });
+  //   this.addSubview('.edit-form', formView);
+  //
+  // },
+  //
+  // addDeleteButton: function () {
+  //   var formView = new DISTILLD.Views.PostDelete({ model: this.model, collection: this.collection });
+  //   this.addSubview('.delete-btn', formView);
+  //
+  // },
 
 });

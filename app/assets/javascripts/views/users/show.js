@@ -13,10 +13,10 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
     var content = this.template({ user: this.model });
     this.$el.html(content);
 
-    this.renderPosts();
-
-    if (DISTILLD.currentUser.id === this.model.id) {
-      this.addPostForm();
+    if (this.model.get('is_current_user')) {
+      this.renderUserPosts();
+    } else {
+      this.renderPosts();
     }
     return this;
   },
@@ -26,7 +26,17 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
   },
 
   addPost: function (post) {
-    var view = new DISTILLD.Views.PostShow({ model: post, collection: this.collection, user: this.model })
+    var view = new DISTILLD.Views.PostShow({ model: post, collection: this.collection })
+    this.addSubview('.posts', view);
+  },
+
+  renderUserPosts: function () {
+    this.collection.each(this.addUserPost.bind(this));
+    this.addPostForm();
+  },
+
+  addUserPost: function (post) {
+    var view = new DISTILLD.Views.UserPostShow({ model: post, collection: this.collection })
     this.addSubview('.posts', view);
   },
 
