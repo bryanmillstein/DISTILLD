@@ -17,7 +17,11 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
       this.renderUserPosts();
     } else {
       this.renderPosts();
+      this.addFriendButton();
     }
+
+
+
     return this;
   },
 
@@ -26,7 +30,7 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
   },
 
   addPost: function (post) {
-    var view = new DISTILLD.Views.PostShow({ model: post, collection: this.collection })
+    var view = new DISTILLD.Views.PostShow({ model: post, collection: this.collection });
     this.addSubview('.posts', view);
   },
 
@@ -36,14 +40,26 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
   },
 
   addUserPost: function (post) {
-    var view = new DISTILLD.Views.UserPostShow({ model: post, collection: this.collection })
+    var view = new DISTILLD.Views.UserPostShow({ model: post, collection: this.collection });
     this.addSubview('.posts', view);
   },
 
   addPostForm: function () {
     var post = new DISTILLD.Models.Post();
     var formView = new DISTILLD.Views.PostForm({ model: post, collection: this.collection });
-    this.addSubview('.post-form', formView)
+    this.addSubview('.post-form', formView);
+  },
+
+  addFriendButton: function () {
+    var message
+    if (this.model.get('is_friend')) {
+      message = "Remove As Friend"
+    } else {
+      message = "Add As Friend"
+    }
+
+    var view = new DISTILLD.Views.FriendshipButton({ model: this.model, message: message });
+    this.addSubview('.friend-button', view);
   },
 
 

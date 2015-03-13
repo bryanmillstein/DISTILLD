@@ -6,6 +6,9 @@ end
 
 json.is_current_user is_current_user?(@user)
 
+json.is_friend is_friend?(@user)
+
+
 # json.friendships @user.friendships do |friendship|
 #   json.extract! friendship, :id, :user_id, :friend_id, :created_at, :updated_at
 # end

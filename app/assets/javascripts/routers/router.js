@@ -10,7 +10,7 @@ DISTILLD.Routers.Router = Backbone.Router.extend({
   },
 
   feed: function () {
-    var friendsPosts = new DISTILLD.Collections.Posts({ user: DISTILLD.currentUser });
+    var friendsPosts = new DISTILLD.Collections.Posts();
     friendsPosts.fetch();
 
     var feedView = new DISTILLD.Views.PostsIndex({ collection: friendsPosts });
