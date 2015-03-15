@@ -2,19 +2,23 @@
   <ul class="sign-in-elements">
     <h1 class="greeting">Log in to DISTILLD</h1>
 
-    <form action="<%= session_url %>" method="post">
-      <%= auth_form %>
-
-      <label>Email
-        <input type="text" name="user[email]" value="">
-      </label>
-      <label>Password
-        <input type="password" name="user[password]" value="">
-      </label>
-      <button>Submit</button>
+    <form action="<%= session_url %>" method="post" class="session-new-form group">
+        <%= auth_form %>
+      <fieldset class="session-form-fieldset">
+        <div class="session-input">
+          <label for="form-email">Email address</label>
+            <input id="form-email" name="user[email]" value="">
+        </div>
+        <div class="session-input">
+          <label for="form-password">Password</label>
+            <input id="form-password" name="user[password]" value="">
+        </div>
+        <div class="submit">
+          <button>Log In</button>
+        </div>
+      </fieldset>
     </form>
 
-
-    <p>Not yet a user? <a href="/users/new">Sign Up</a></p>
+    <p class="new-user">Not yet a user? <a href="/users/new">Sign Up</a></p>
   </ul>
 </section>

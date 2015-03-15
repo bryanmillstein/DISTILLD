@@ -46,9 +46,11 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
   },
 
   addPostForm: function () {
-    var post = new DISTILLD.Models.Post();
-    var formView = new DISTILLD.Views.PostForm({ model: post, collection: this.collection });
-    this.addSubview('.post-form', formView);
+    if (!this.formView) {
+      var post = new DISTILLD.Models.Post();
+      this.formView = new DISTILLD.Views.PostForm({ model: post, collection: this.collection });
+      this.addSubview('.post-form', this.formView);
+    }
   },
 
   addFriendButton: function () {
