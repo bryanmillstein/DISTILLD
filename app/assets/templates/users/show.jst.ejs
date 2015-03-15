@@ -1,9 +1,10 @@
-Current Page: <%= user.escape('user_name') %>'s User Show   <article class="friend-button"></article>
-<br>
-<br>
-Current Subview: <%= user.escape('user_name') %>'s Posts
-<ul class="posts">
+<section>
 
-</ul>
+  <h1 class="user-name"><%= user.escape('user_name') %></h1>
+  <button class="friend-button"></button>
+  <h3 class="headline">Recent Activity</h3>
+  
+  <ul class="posts"></ul>
 
-<article class="post-form"></article>
+  <form class="post-form"></form>
+</section>

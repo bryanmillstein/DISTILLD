@@ -9,20 +9,20 @@ DISTILLD.Models.User = Backbone.Model.extend ({
       return this._posts;
     },
 
+    // comments: function () {
+    //   if (!this.comments) {
+    //     this.comments = new DISTILLD.Collections.Comments();
+    //   }
+    //
+    //   return this.comments;
+    // },
+
     friends: function () {
       if (!this._friends) {
         this._friends = new DISTILLD.Collections.Friends( [],{ user: this });
       }
 
       return this._friends;
-    },
-
-    friendship: function () {
-      if (!this._friendship) {
-        this._friendship = new DISTILLD.Models.Friendship();
-      }
-
-      return this._friendship;
     },
 
     parse: function (response) {
@@ -36,6 +36,11 @@ DISTILLD.Models.User = Backbone.Model.extend ({
         delete response.friends;
       }
 
+      // if (response.comments) {
+      //   this.comments().set(response.comments);
+      //   delete response.comments;
+      // }
+
       if (response.is_current_user) {
         this.set({ is_current_user: "true" })
         delete response.is_current_user
@@ -43,20 +48,6 @@ DISTILLD.Models.User = Backbone.Model.extend ({
         this.set({ is_current_user: null })
         delete response.is_current_user
       }
-
-      // if (response.friendship_id) {
-      //   this.set({ friendship_id: response.friendship_id })
-      //   delete response.friendship_id
-      // } else {
-      //   this.set({ friendship_id: null })
-      //   delete response.friendship
-      // }
-
-      // if (response.friendship) {
-      //   this.friendship().set(response.friendship);
-      //   delete response.friendship;
-      // }
-      //
 
       if (response.is_friend) {
         this.set({ is_friend: "true" })

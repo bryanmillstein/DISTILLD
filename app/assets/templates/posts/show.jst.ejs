@@ -1,2 +1,6 @@
-<h4>Drink: <%= post.escape('drink') %> Body: <%= post.escape('body') %> </h4><article class="delete-btn"></article>
+<p class="post-description"><%= post.escape('user_name') %> is drinking <%= post.escape('drink') %></p>
+
+<%= post.escape('body') %> </h4>
+
+<button class="delete-btn"></button>
 <form class="edit-form"></form>

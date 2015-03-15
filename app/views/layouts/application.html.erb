@@ -6,10 +6,11 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+<%= render "layouts/errors" %>
+
 <body>
 
 <%= render "layouts/header" %>
-
 <%= yield %>
 
 </body>

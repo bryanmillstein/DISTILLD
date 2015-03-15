@@ -15,14 +15,172 @@
  */
 
 
-/*body {
-  display: block;
-  position: absolute;
-  background: green;
-  width: 900px;
+ /* RESET */
+ html, body, header, nav, h1, a,
+ ul, li, strong, main, button, i,
+ section, img, div, h2, p, form,
+ fieldset, label,
+ span, article, footer, time, small {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   outline: 0;
+   font: inherit;
+   color: inherit;
+   text-align: inherit;
+   text-decoration: inherit;
+   vertical-align: inherit;
+   box-sizing: inherit;
+   background: transparent;
+ }
+
+ ul {
+   list-style: none;
+ }
+
+ img {
+   display: block;
+   width: 100%;
+   height: auto;
+ }
+
+ input,
+ button,
+ textarea {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+ }
+
+
+
+ /* CLEARFIX */
+
+ .group:after {
+   content: "";
+   display: block;
+   clear: both;
+ }
+
+ /* STYLING */
+
+ /* HEADER */
+
+
+.header {
+ background: #FA6900;
+ border-bottom: 1px solid black;
+}
+
+.header a {
+ display: block;
+ padding: 10px 10px;
+}
+
+.header form {
+ display: block;
+ padding: 10px 10px;
+}
+
+.header-nav {
+ margin: 0 auto;
+ width: 900px;
+}
+
+.header-logo {
+  float: left;
+  font-weight: 900;
+  font-size: 28px;
+  color: white;
+}
+
+.header-list {
+  float: right;
+}
+
+.header-list > li {
+  float: left;
 }
 
 .sign-out {
-  background: blue;
+  color: black;
+  border:
+}
 
-}*/
+
+/* CONTENT */
+
+body {
+  background: #69D2E7;
+
+}
+
+.backdrop {
+  margin: 0 auto;
+  margin-top: 10px;
+  background: #E0E4CC;
+  width: 900px;
+  border: 2px solid gray;
+  padding: 0 10px 0 10px;
+}
+
+.feed-title {
+  padding: 5px 0 0 10px;
+  font-size: 24px;
+  border-bottom: 1px solid gray;
+}
+
+/* FORM */
+.get-form {
+  background: #FA6900;
+  margin: 10px;
+  color: white;
+  border: 1px solid black;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+.post-new-form {
+  background: green;
+}
+
+.form-fieldset {
+  margin: 0 0 0 50px;
+  padding: 20px;
+  width: 500px;
+  background: white;
+  border: 1px solid black;
+}
+
+.input {
+  margin: 0 0 10px 0;
+}
+
+.input > label {
+  display: block;
+  font-weight: bold;
+  padding: 0 0 5px 0;
+}
+
+.input > input {
+  background: lightgray;
+  height: 10px;
+  width: 200px;
+  padding: 5px;
+  border: 1px solid gray;
+}
+
+.input > textarea {
+  background: lightgray;
+  height: 25px;
+  width: 300px;
+  padding: 5px;
+  border: 1px solid gray;
+}
+
+.submit > button {
+  background: #FA6900;
+  color: white;
+  border: 1px solid black;
+  padding: 5px 10px;
+  font-weight: bold;
+}

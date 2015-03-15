@@ -1,15 +1,20 @@
-<%= flash[:errors].join('<br>').html_safe if flash[:errors] %>
-<br>
-<br>
+<header class="header">
+  <nav class="header-nav group">
+    <h1 class="header-logo"><a href="">DISTILLD</a></h1>
 
-<% if logged_in? %>
-<form action="<%= session_url %>" method="post">
-  <%= auth_form %>
-    <input type="hidden" name="_method" value="delete">
-  <button class="sign-out">Sign Out</button>
-</form>
-<p class="greeting">Hi, <%= current_user.user_name %></p><a href="">Feed</a>
-<br>
-<br>
-<a href="/#search">Find A Friend</a>
-<% end %>
+
+    <% if logged_in? %>
+    <ul class="header-list group">
+      <li><a href="#/users/<%= current_user.id %>"><%= current_user.user_name %></li></a>
+      <li><a href="/#search">Find A Friend</a></li>
+      <li>
+        <form action="<%= session_url %>" method="post">
+          <%= auth_form %>
+            <input type="hidden" name="_method" value="delete">
+          <button class="sign-out">Sign Out</button>
+        </form>
+      </li>
+
+    <% end %>
+  </nav>
+</header>

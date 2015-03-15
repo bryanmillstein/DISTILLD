@@ -9,25 +9,33 @@
 User.delete_all
 Post.delete_all
 Friendship.delete_all
+Comment.delete_all
 
 
 u1 = User.create(email: "bryanmillstein@gmail.com", user_name: "Bryan Millstein", password: "password")
 u2 = User.create(email: "james@gmail.com", user_name: "James Bond", password: "password")
 u3 = User.create(email: "bobby@gmail.com", user_name: "bobby", password: "password")
-u4 = User.create(email: "james@gmail.com", user_name: "Alice", password: "password")
+u4 = User.create(email: "alice@gmail.com", user_name: "Alice", password: "password")
 
 
 p1 = u1.posts.create(drink: "Whiskey", body: "Great after a long day.")
 p2 = u1.posts.create(drink: "Scotch", body: "Best drink ever.")
 p3 = u2.posts.create(drink: "Bourbon", body: "Delicious.")
-p6 = u2.posts.create(drink: "Macallan", body: "Best")
+p4 = u2.posts.create(drink: "Macallan", body: "Best")
 p5 = u3.posts.create(drink: "Laphroaig", body: "Delicious.")
-p4 = u4.posts.create(drink: "Irish Whiskey", body: "Need more...")
+p6 = u4.posts.create(drink: "Irish Whiskey", body: "Need more...")
+
+c1 = u1.comments.create(post_id: 3, body: "Cool post.")
+c2 = u2.comments.create(post_id: 5, body: "Cooler post.")
+c3 = u3.comments.create(post_id: 4, body: "Coolest post.")
+c4 = u4.comments.create(post_id: 5, body: "Fine.")
+c5 = u3.comments.create(post_id: 6, body: "Coolest post.")
+
+
 
 
 f1 = u1.friendships.create(friend_id: u2.id)
 f2 = u1.friendships.create(friend_id: u3.id)
-f3 = u1.friendships.create(friend_id: u4.id)
 f4 = u2.friendships.create(friend_id: u1.id)
 f5 = u3.friendships.create(friend_id: u1.id)
 f6 = u4.friendships.create(friend_id: u1.id)

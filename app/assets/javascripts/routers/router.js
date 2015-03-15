@@ -11,7 +11,6 @@ DISTILLD.Routers.Router = Backbone.Router.extend({
   },
 
   feed: function () {
-    DISTILLD.Collections.users.fetch();
     var friendsPosts = new DISTILLD.Collections.Posts();
     friendsPosts.fetch();
 
@@ -21,7 +20,6 @@ DISTILLD.Routers.Router = Backbone.Router.extend({
   },
 
   userShow: function (id) {
-    DISTILLD.Collections.users.fetch();
     var user = DISTILLD.Collections.users.getOrFetch(id),
         view = new DISTILLD.Views.UserShow({ model: user, collection: DISTILLD.Collections.users });
 
@@ -29,8 +27,6 @@ DISTILLD.Routers.Router = Backbone.Router.extend({
   },
 
   search: function () {
-    DISTILLD.Collections.users.fetch();
-    
     var searchView = new DISTILLD.Views.Search();
     this._swapView(searchView);
   },

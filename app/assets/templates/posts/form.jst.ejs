@@ -1,15 +1,15 @@
-Current Form: Add A New Post
-<br>
-<br>
-
-<form class="post-new-form">
-  <label>Drink
-    <input name="drink" value="">
-  </label>
-
-  <label>Body
-    <input name="body" value="">
-  </label>
-
-  <button class="submit">Add Post</button>
+<form class="post-new-form group">
+  <fieldset class="form-fieldset">
+    <div class="input">
+      <label for="form-drink">What did you have?</label>
+        <input id="form-drink" name="drink" value="">
+    </div>
+    <div class="input">
+      <label for="form-textarea">How was it?</label>
+        <textarea id="form-textarea" name="body" value=""></textarea>
+    </div>
+    <div class="submit">
+      <button class="submit">Add Post</button>
+    </div>
+  </fieldset>
 </form>
