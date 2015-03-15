@@ -2,6 +2,10 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
 
   template: JST['users/show'],
 
+  events: {
+    'click .get-form': 'addPostForm',
+  },
+
   initialize: function () {
     this.collection = this.model.posts();
     this.listenTo(this.model, 'sync', this.render);
@@ -34,7 +38,6 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
 
   renderUserPosts: function () {
     this.collection.each(this.addUserPost.bind(this));
-    this.addPostForm();
   },
 
   addUserPost: function (post) {

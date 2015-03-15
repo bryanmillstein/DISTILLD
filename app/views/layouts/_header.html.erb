@@ -1,9 +1,6 @@
 <header class="header">
   <nav class="header-nav group">
     <h1 class="header-logo"><a href="">DISTILLD</a></h1>
-
-
-    <% if logged_in? %>
     <ul class="header-list group">
       <li><a href="#/users/<%= current_user.id %>"><%= current_user.user_name %></li></a>
       <li><a href="/#search">Find A Friend</a></li>
@@ -14,7 +11,5 @@
           <button class="sign-out">Sign Out</button>
         </form>
       </li>
-
-    <% end %>
   </nav>
 </header>

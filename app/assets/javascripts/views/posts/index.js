@@ -26,7 +26,6 @@ DISTILLD.Views.PostsIndex = Backbone.CompositeView.extend({
 
   addPost: function (post) {
     var userId = post.get('user_id');
-    debugger
     var user = this.users.get(userId);
 
     var view = new DISTILLD.Views.PostShow({ model: post, collection: this.collection, user: user })

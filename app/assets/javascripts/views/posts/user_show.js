@@ -1,6 +1,9 @@
-DISTILLD.Views.UserPostShow = Backbone.CompositeView.extend ({
+ DISTILLD.Views.UserPostShow = Backbone.CompositeView.extend ({
   template: JST['posts/show'],
   className: 'post-display',
+  events: {
+    'click .post-options': 'addOptions',
+  },
 
   initialize: function (options) {
     this.user = options.user
@@ -11,10 +14,15 @@ DISTILLD.Views.UserPostShow = Backbone.CompositeView.extend ({
     var content = this.template({ post: this.model });
     this.$el.html(content);
 
-    this.addEditForm();
-    this.addDeleteButton();
-
     return this;
+  },
+
+  addOptions: function () {
+    if (!this.editDelete) {
+      this.addEditForm();
+      this.addDeleteButton();
+      this.editDelete = 1
+    }
   },
 
   addEditForm: function () {

@@ -9,8 +9,11 @@
 <%= render "layouts/errors" %>
 
 <body>
-
-<%= render "layouts/header" %>
+  <% if logged_in? %>
+    <%= render "layouts/header" %>
+  <% else %>
+    <%= render "layouts/session" %>
+  <% end %>
 <%= yield %>
 
 </body>

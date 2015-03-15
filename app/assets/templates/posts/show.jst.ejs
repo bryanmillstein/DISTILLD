@@ -1,6 +1,11 @@
-<p class="post-description"><%= post.escape('user_name') %> is drinking <%= post.escape('drink') %></p>
-
-<%= post.escape('body') %> </h4>
-
-<button class="delete-btn"></button>
-<form class="edit-form"></form>
+<section class="post-description group">
+  <ul class="post-items">
+    <li class="post-user"><a href="#/users/">Bryan </a></li>
+    <li>is drinking</li>
+    <li><a href="#"><%= post.escape('drink') %> </a></li>
+    <li class="post-body"><%= post.escape('body') %></li>
+    <li class="post-options"><button>Options</button></li>
+    <li><button class="delete-btn"></button></li>
+    <li><form class="edit-form"></form></li>
+  </ul>
+</section>
