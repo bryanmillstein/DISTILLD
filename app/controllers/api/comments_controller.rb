@@ -2,10 +2,10 @@ module Api
   class CommentsController < ApplicationController
 
       def create
-        @comment = current_user.new(comments_params)
+        @comment = current_user.comments.new(comments_params)
 
         if @comment.save
-          render @comment
+          render json: @comment
         else
           render json: @comment.errors.full_message, status: :unprocessable_entity
         end

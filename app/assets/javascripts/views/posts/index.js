@@ -1,7 +1,8 @@
 DISTILLD.Views.PostsIndex = Backbone.CompositeView.extend({
   template: JST['posts/index'],
   events: {
-    'click .get-form': 'addPostForm'
+    'click .get-form': 'addPostForm',
+    'click .post-options': 'addCommentForm',
   },
 
   initialize: function (options) {

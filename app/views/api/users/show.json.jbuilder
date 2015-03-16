@@ -8,6 +8,8 @@ json.posts @user.posts do |post|
   json.comments post.comments do |comment|
     json.extract! comment, :id, :user_id, :post_id, :body, :created_at, :updated_at
     json.user_name comment.user.user_name
+    json.is_current_user is_current_user?(comment.user)
+    
   end
 end
 

@@ -5,8 +5,13 @@
     <li><a href="#"><%= post.escape('drink') %> </a></li>
   </ul>
     <p class="post-body"><%= post.escape('body') %></p>
+    <form class="comment-form" action="index.html" method="post"></form>
     <ul class="comments"></ul>
-    <button class="post-options">Options</button>
+    <% if (options) { %>
+      <button class="post-options">Options</button>
+    <% } else { %>
+      <button class="post-options" id="comment-form">Comment</button>
+    <% } %>
     <button class="delete-btn"></button>
     <form class="edit-form"></form>
 </section>

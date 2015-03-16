@@ -11,7 +11,7 @@
   },
 
   render: function () {
-    var content = this.template({ post: this.model });
+    var content = this.template({ post: this.model, options: true });
     this.$el.html(content);
 
     this.renderComments();
@@ -31,7 +31,7 @@
   },
 
   addComment: function (comment) {
-    var view = new DISTILLD.Views.CommentShow({ model: comment, collection: this.collection })
+    var view = new DISTILLD.Views.CommentShow({ model: comment, collection: this.collection, user: this.user })
     this.addSubview('.comments', view);
   },
 

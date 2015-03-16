@@ -12,7 +12,6 @@ DISTILLD.Views.PostForm = Backbone.View.extend({
   },
 
   submitPost: function () {
-
     event.preventDefault();
     var attrs = this.$el.serializeJSON(),
         that = this;
