@@ -8,6 +8,7 @@
   initialize: function (options) {
     this.user = options.user
     this.listenTo(this.model, 'sync', this.render);
+    this.listenTo(this.collection, 'remove', this.render);
   },
 
   render: function () {
