@@ -7,6 +7,14 @@ DISTILLD.Views.FriendsIndex = Backbone.CompositeView.extend ({
 
 
   render: function () {
+    var content = this.template();
+    this.$el.html(content);
+
+    this.renderFriends();
+    return this;
+  },
+
+  renderFriends: function () {
     this.collection.each(this.addFriend.bind(this));
   },
 

@@ -12,11 +12,11 @@ DISTILLD is a clone of UNTAPPD built on Rails and Backbone. Users can:
 - [x] Create accounts
 - [x] Create sessions (log in)
 - [x] Create posts
-- [ ] User search
-- [ ] Create friendships
-- [ ] View a feed of all friends' posts
-- [ ] View friend's profile page
-- [ ] Comment on posts
+- [x] User search
+- [x] Create friendships
+- [x] View a feed of all friends' posts
+- [x] View friend's profile page
+- [x] Comment on posts
 
 
 

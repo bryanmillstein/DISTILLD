@@ -28,8 +28,15 @@ DISTILLD.Routers.Router = Backbone.Router.extend({
   },
 
   friends: function () {
-    var friendsView = new DISTILLD.Views.FriendsIndex({ friends: DISTILLD.Collections.friends });
-    this._swapView(searchView);
+    var friends = new DISTILLD.Collections.Friends();
+    friends.fetch({
+      success: function () {
+        console.log(friends);
+      }
+    });
+    var friendsView = new DISTILLD.Views.FriendsIndex({ collection: friends });
+
+    this._swapView(friendsView);
   },
 
   search: function () {

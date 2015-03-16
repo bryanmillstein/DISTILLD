@@ -1,9 +1,12 @@
 DISTILLD.Collections.Friends = Backbone.Collection.extend({
   url: 'api/friends',
-  model: DISTILLD.Models.Friends,
+  model: DISTILLD.Models.Friend,
 
-  initialize: function (models, options) {
-    this.user = options.user
+  parse: function (response) {
+    console.log(response);
+    return response;
   }
 
 });
+
+DISTILLD.Collections.friends = new DISTILLD.Collections.Friends();

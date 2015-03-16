@@ -1,3 +1,3 @@
-DISTILLD.Models.Friend = Backbone.View.extend({
+DISTILLD.Models.Friend = Backbone.Model.extend({
   urlRoot: 'api/friends'
 });
