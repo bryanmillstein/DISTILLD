@@ -11,8 +11,7 @@
 <body>
   <% if logged_in? %>
     <%= render "layouts/header" %>
-  <% else %>
-    <%= render "layouts/session" %>
+
   <% end %>
 <%= yield %>
 

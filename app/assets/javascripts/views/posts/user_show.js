@@ -6,7 +6,8 @@
   },
 
   initialize: function (options) {
-    this.user = options.user
+    this.user = options.user;
+    this.comments = options.comments;
     this.listenTo(this.model, 'sync', this.render);
     this.listenTo(this.collection, 'remove', this.render);
   },
@@ -28,11 +29,11 @@
   },
 
   renderComments: function () {
-    this.collection.each(this.addComment.bind(this));
+    this.comments.each(this.addComment.bind(this));
   },
 
   addComment: function (comment) {
-    var view = new DISTILLD.Views.CommentShow({ model: comment, collection: this.collection, user: this.user })
+    var view = new DISTILLD.Views.CommentShow({ model: comment, collection: this.comments, user: this.user })
     this.addSubview('.comments', view);
   },
 

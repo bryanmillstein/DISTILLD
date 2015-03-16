@@ -7,9 +7,9 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
   },
 
   initialize: function () {
-    this.collection = this.model.posts();
+    this.posts = this.model.posts();
     this.listenTo(this.model, 'sync', this.render);
-    this.listenTo(this.collection, 'add remove', this.render);
+    this.listenTo(this.posts, 'add remove', this.render);
 
   },
 
@@ -33,24 +33,24 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
 
   addPost: function (post) {
     var comments = post.comments();
-    var view = new DISTILLD.Views.PostShow({ model: post, collection: comments, user: this.model });
+    var view = new DISTILLD.Views.PostShow({ model: post, collection: this.posts, comments: comments, user: this.model });
     this.addSubview('.posts', view);
   },
 
   renderUserPosts: function () {
-    this.collection.each(this.addUserPost.bind(this));
+    this.posts.each(this.addUserPost.bind(this));
   },
 
   addUserPost: function (post) {
     var comments = post.comments();
-    var view = new DISTILLD.Views.UserPostShow({ model: post, collection: comments, user: this.model });
+    var view = new DISTILLD.Views.UserPostShow({ model: post, collection: this.posts, comments: comments, user: this.model });
     this.addSubview('.posts', view);
   },
 
   addPostForm: function () {
     if (!this.formView) {
       var post = new DISTILLD.Models.Post();
-      this.formView = new DISTILLD.Views.PostForm({ model: post, collection: this.collection });
+      this.formView = new DISTILLD.Views.PostForm({ model: post, collection: this.posts });
       this.addSubview('.post-form', this.formView);
     }
   },
