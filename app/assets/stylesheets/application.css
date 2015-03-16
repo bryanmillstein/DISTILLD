@@ -77,6 +77,7 @@ button {
   width: 400px;
   height: 400px;
   border-radius: 10px;
+  padding: 1px 0 0 0;
 }
 
 .sign-in-elements {
@@ -85,8 +86,8 @@ button {
 }
 
 .greeting {
-  margin: 40px;
-  padding: 20px;
+  margin: 45px;
+  padding: 10px;
   font-size: 32px;
   border-bottom: 1px solid lightgray;
   color: #FA6900;
@@ -151,9 +152,8 @@ button {
   font-weight: 900;
 }
 
-
-
-
+/*PINK-#FF319A
+ORANGE-#FA6900*/
 
  /* HEADER */
 
@@ -297,7 +297,8 @@ body {
 
 .post-description {
   background: white;
-  margin: 5px;
+  position: relative;
+  margin: 10px;
   padding: 10px 20px;
   width: 600px;
   border: 1px solid gray;
@@ -305,6 +306,8 @@ body {
 
 .post-items {
   position: relative;
+  margin: 5px 0;
+  padding: 5px 0;
 }
 
 .post-items > li {
@@ -316,28 +319,36 @@ body {
   color: blue;
 }
 
-.post-items .post-body {
-  background: lightgray;
-
+.post-body {
+  background: #E0E4CC;
+  margin: 25px 5px;
+  width: 300px;
+  height: 50px;
   border: 1px solid gray;
   padding: 5px 10px;
+  border-radius: 2px;
 }
 
-.post-items .post-options {
+.post-options {
   background: #FA6900;
-  color: white;
+  position: absolute;
   float: right;
+  right: 10px;
+  top: 15px;
+  color: white;
   border: 1px solid black;
-  margin: 0 5px 0 5px;
+  margin: 5px;
   padding: 5px 10px;
   font-weight: bold;
   border-radius: 6px;
 
 }
 
-.post-items .post-options:hover {
-  background: yellow;
+.post-options:hover {
+  background: #69D2E7;
   color: black;
+  border: none;
+
 }
 
 /*.delete-btn {
@@ -347,3 +358,14 @@ body {
   padding: 5px 10px;
   font-weight: bold;
 }*/
+
+
+/*COMMENT*/
+
+.comments {
+}
+
+.comments > li {
+  background: green;
+  margin: 5px;
+}

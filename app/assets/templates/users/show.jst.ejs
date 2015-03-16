@@ -1,7 +1,9 @@
 <section class="user-show">
   <ul>
     <li class="user-name"><%= user.escape('user_name') %></li>
-    <button class="get-form">Have a drink?</button>
+    <% if (this.model.get('is_current_user')) { %>
+      <button class="get-form">Have a drink?</button>
+    <% } %>
     <form class="post-form"></form>
     <button class="friend-button"></button>
     <h3 class="headline">Recent Activity</h3>

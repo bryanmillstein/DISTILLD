@@ -8,8 +8,6 @@ DISTILLD.Views.PostsIndex = Backbone.CompositeView.extend({
     this.users = options.users
     this.listenTo(this.collection, 'sync', this.render);
     this.listenTo(this.users, 'sync', this.render);
-
-
   },
 
   render: function () {
@@ -25,10 +23,9 @@ DISTILLD.Views.PostsIndex = Backbone.CompositeView.extend({
   },
 
   addPost: function (post) {
-    var userId = post.get('user_id');
-    var user = this.users.get(userId);
+    var comments = post.comments();
 
-    var view = new DISTILLD.Views.PostShow({ model: post, collection: this.collection, user: user })
+    var view = new DISTILLD.Views.PostShow({ model: post, collection: comments })
     this.addSubview('.posts', view);
   },
 

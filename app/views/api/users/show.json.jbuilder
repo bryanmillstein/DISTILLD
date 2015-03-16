@@ -12,12 +12,6 @@ json.is_current_user is_current_user?(@user)
 
 json.is_friend is_friend(@user)
 
-
-# json.friendship_id friendship_id(@user)
-
-# Add friendship ID instead of friendship status and create new model of the friendship
-
-
 # json.friendships @user.friendships do |friendship|
 #   json.extract! friendship, :id, :user_id, :friend_id, :created_at, :updated_at
 # end
