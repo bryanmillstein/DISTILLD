@@ -14,6 +14,16 @@
  *= require_self
  */
 
+ /*COLOR COMBOS*/
+
+ /*PINK-#FF319A
+ BLUE- #15ABFF
+ YELLOW- #FBB03B
+
+ ORANGE-#FA6900
+ BLUE- #69D2E7
+ GRAY- #E0E4CC*/
+
 
  /* RESET */
  html, body, header, nav, h1, a,
@@ -65,7 +75,7 @@
 
 button {
     cursor: pointer;
- }
+}
 
 
  /*NEW SESSION*/
@@ -152,8 +162,6 @@ button {
   font-weight: 900;
 }
 
-/*PINK-#FF319A
-ORANGE-#FA6900*/
 
  /* HEADER */
 
@@ -363,9 +371,37 @@ body {
 /*COMMENT*/
 
 .comments {
+  margin: 0 5px;
 }
 
 .comments > li {
-  background: green;
-  margin: 5px;
+  background: #E0E4CC;
+  margin: 5px 10px;
+  width: 250px;
+  padding: 0 10px;
+  border: 1px solid black;
+
+}
+
+.comment-content > p{
+  color: black;
+  font-weight: 300;
+  font-size: 16px;
+  padding: none;
+
+}
+
+
+.comment-content .user-name {
+  margin: none;
+  border-bottom: 1px solid lightgray;
+}
+
+.comment-content .user-name > a {
+  color: blue;
+}
+
+.comment-content .comment-body {
+  margin: 10px 0 0 10px;
+  padding: 0 0 5px 0;
 }

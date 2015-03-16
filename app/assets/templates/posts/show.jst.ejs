@@ -1,6 +1,6 @@
 <section class="post-description group">
   <ul class="post-items">
-    <li class="post-user"><a href="#/users/">Bryan </a></li>
+    <li class="post-user"><a href="#/users/<%= post.escape('user_id') %>"><%= post.escape('user_name') %></a></li>
     <li>is drinking</li>
     <li><a href="#"><%= post.escape('drink') %> </a></li>
   </ul>

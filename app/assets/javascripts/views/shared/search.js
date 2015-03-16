@@ -1,4 +1,4 @@
-DISTILLD.Views.Search = Backbone.View.extend({
+DISTILLD.Views.Search = Backbone.CompositeView.extend({
 
   initialize: function () {
     this.searchResults = new DISTILLD.Collections.SearchResults();

@@ -7,7 +7,7 @@ class Post < ActiveRecord::Base
 
 
   def self.get_friends_posts(current_user)
-    friends = current_user.friends.includes(posts: :comments)
+    friends = current_user.friends.includes(posts: [:comments, :user])
     friends_posts = []
     friends.each do |friend|
       friend.posts.each do |post|

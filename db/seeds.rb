@@ -25,11 +25,13 @@ p4 = u2.posts.create(drink: "Macallan", body: "Best")
 p5 = u3.posts.create(drink: "Laphroaig", body: "Delicious.")
 p6 = u4.posts.create(drink: "Irish Whiskey", body: "Need more...")
 
-c1 = u1.comments.create(post_id: 3, body: "Cool post.")
-c2 = u2.comments.create(post_id: 5, body: "Cooler post.")
-c3 = u3.comments.create(post_id: 4, body: "Coolest post.")
-c4 = u4.comments.create(post_id: 5, body: "Fine.")
-c5 = u3.comments.create(post_id: 6, body: "Coolest post.")
+c1 = u2.comments.create(post_id: p1.id, body: "Amazing post.")
+c1 = u3.comments.create(post_id: p1.id, body: "Radical post.")
+c1 = u1.comments.create(post_id: p3.id, body: "Cool post.")
+c2 = u2.comments.create(post_id: p5.id, body: "Cooler post.")
+c3 = u3.comments.create(post_id: p4.id, body: "Coolest post.")
+c4 = u4.comments.create(post_id: p5.id, body: "Fine.")
+c5 = u3.comments.create(post_id: p6.id, body: "Coolest post.")
 
 
 

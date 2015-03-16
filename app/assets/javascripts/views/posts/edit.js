@@ -5,6 +5,10 @@ DISTILLD.Views.PostEdit = Backbone.View.extend ({
     'submit': 'updatePost'
   },
 
+  initialize: function (options) {
+    this.user = options.user
+  },
+
   render: function () {
     var content = this.template({ post: this.model });
     this.$el.html(content);
@@ -19,7 +23,8 @@ DISTILLD.Views.PostEdit = Backbone.View.extend ({
     this.model.set(attrs)
     this.model.save( {}, {
       success: function () {
-        that.collection.add(that.model, { merge: true })
+        that.collection.add(that.model, { merge: true });
+        Backbone.history.navigate('/users/'+ that.user.id, { trigger: true });
       }
     });
   }

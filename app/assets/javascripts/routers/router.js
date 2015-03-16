@@ -6,7 +6,8 @@ DISTILLD.Routers.Router = Backbone.Router.extend({
   routes: {
     "": "feed",
     "users/:id": "userShow",
-    "search": "search"
+    "search": "search",
+    "friends": 'friends'
 
   },
 
@@ -26,8 +27,13 @@ DISTILLD.Routers.Router = Backbone.Router.extend({
     this._swapView(view);
   },
 
+  friends: function () {
+    var friendsView = new DISTILLD.Views.FriendsIndex({ friends: DISTILLD.Collections.friends });
+    this._swapView(searchView);
+  },
+
   search: function () {
-    var searchView = new DISTILLD.Views.Search();
+    var searchView = new DISTILLD.Views.Search({});
     this._swapView(searchView);
   },
 

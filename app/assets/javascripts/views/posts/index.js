@@ -41,5 +41,9 @@ DISTILLD.Views.PostsIndex = Backbone.CompositeView.extend({
 
   },
 
+  // removePostForm: function () {
+  //   $('.post-form').html();
+  // }
+
 
 })

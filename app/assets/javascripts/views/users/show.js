@@ -42,7 +42,8 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
   },
 
   addUserPost: function (post) {
-    var view = new DISTILLD.Views.UserPostShow({ model: post, collection: this.collection });
+    var comments = post.comments();
+    var view = new DISTILLD.Views.UserPostShow({ model: post, collection: comments, user: this.model });
     this.addSubview('.posts', view);
   },
 

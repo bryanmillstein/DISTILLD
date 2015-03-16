@@ -15,6 +15,16 @@ DISTILLD.Models.Post = Backbone.Model.extend ({
       delete response.comments;
     }
 
+    if (response.comments) {
+      this.comments().set(response.comments);
+      delete response.comments;
+    }
+
+    if (response.user_name) {
+      this.set({ user_name: response.user_name })
+      delete response.user_name
+    }
+
     return response;
   }
 

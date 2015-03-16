@@ -6,5 +6,6 @@ module Api
         .multisearch(params[:query])
     end
 
+
   end
 end

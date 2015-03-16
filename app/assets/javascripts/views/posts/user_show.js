@@ -14,6 +14,7 @@
     var content = this.template({ post: this.model });
     this.$el.html(content);
 
+    this.renderComments();
     return this;
   },
 
@@ -25,8 +26,17 @@
     }
   },
 
+  renderComments: function () {
+    this.collection.each(this.addComment.bind(this));
+  },
+
+  addComment: function (comment) {
+    var view = new DISTILLD.Views.CommentShow({ model: comment, collection: this.collection })
+    this.addSubview('.comments', view);
+  },
+
   addEditForm: function () {
-    var formView = new DISTILLD.Views.PostEdit({ model: this.model, collection: this.collection });
+    var formView = new DISTILLD.Views.PostEdit({ model: this.model, collection: this.collection, user: this.user });
     this.addSubview('.edit-form', formView);
 
   },

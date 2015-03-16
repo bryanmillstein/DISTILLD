@@ -1,1 +1,4 @@
-<%= comment.escape('body') %>
+<section class="comment-content">
+  <p class="user-name"><a href="#users/<%= comment.escape('user_id') %>"><%= comment.escape('user_name') %></a> said</p>
+  <p class="comment-body"><%= comment.escape('body') %></p>
+</section>

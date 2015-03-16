@@ -27,7 +27,7 @@ DISTILLD.Models.User = Backbone.Model.extend ({
 
     parse: function (response) {
       if (response.posts) {
-        this.posts().set(response.posts);
+        this.posts().set(response.posts, { parse: true });
         delete response.posts;
       }
 
