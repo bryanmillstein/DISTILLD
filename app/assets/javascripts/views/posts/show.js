@@ -17,9 +17,14 @@ DISTILLD.Views.PostShow = Backbone.CompositeView.extend ({
     var content = this.template({ post: this.model, options: false });
     this.$el.html(content);
 
-
+    this.renderToast();
     this.renderComments();
     return this;
+  },
+
+  renderToast: function () {
+    var view = new DISTILLD.Views.ToastButton({ model: this.model });
+    this.addSubview('.toast-button', view);
   },
 
   renderComments: function () {

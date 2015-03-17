@@ -7,16 +7,16 @@
         <%= auth_form %>
       <fieldset class="user-form-fieldset">
         <div class="user-input">
-          <label for="form-email">User Name</label>
-            <input id="form-email" name="user[email]" value="<%= @user.user_name %>">
+          <label for="form-email"></label>
+            <input id="form-email" name="user[email]" value="<%= @user.user_name %>" placeholder="User name">
         </div>
         <div class="user-input">
-          <label for="form-email">Email address</label>
-            <input id="form-email" name="user[email]" value="<%= @user.email %>">
+          <label for="form-email"></label>
+            <input id="form-email" name="user[email]" value="<%= @user.email %>" placeholder="Email address">
         </div>
         <div class="user-input">
-          <label for="form-password">Password</label>
-            <input type ="password" id="form-password" name="user[password]" value="">
+          <label for="form-password"></label>
+            <input type ="password" id="form-password" name="user[password]" value="" placeholder="Password">
         </div>
         <div class="submit">
           <button>Sign Up</button>

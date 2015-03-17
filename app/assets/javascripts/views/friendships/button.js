@@ -6,7 +6,7 @@ DISTILLD.Views.FriendshipButton = Backbone.View.extend({
   },
 
   initialize: function () {
-    this.listenTo(this.model, 'request', this.render)
+    // this.listenTo(this.model, 'request', this.render);
   },
 
   render: function () {
@@ -18,10 +18,12 @@ DISTILLD.Views.FriendshipButton = Backbone.View.extend({
 
     var content = this.template({ action: message });
     this.$el.html(content);
+
     return this;
   },
 
   changeFriendship: function () {
+    event.preventDefault();
     var friendId = this.model.id,
         that = this;
 

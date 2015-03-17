@@ -36,15 +36,5 @@ DISTILLD.Views.PostsIndex = Backbone.CompositeView.extend({
       this.formView = new DISTILLD.Views.PostForm({ model: post, collection: this.collection });
       this.addSubview('.post-form', this.formView);
     }
-    // else {
-      // this.formView.remove();
-      // this.render();
-
   },
-
-  // removePostForm: function () {
-  //   $('.post-form').html();
-  // }
-
-
 })

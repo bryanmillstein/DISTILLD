@@ -11,7 +11,8 @@ class User < ActiveRecord::Base
 
   has_many :posts
   has_many :comments
-  has_many :toasts
+  has_many :toasts,
+    class_name: 'Toast'
   has_many :friendships,
     class_name: "Friendship"
 

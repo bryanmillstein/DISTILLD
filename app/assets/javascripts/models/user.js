@@ -9,14 +9,6 @@ DISTILLD.Models.User = Backbone.Model.extend ({
       return this._posts;
     },
 
-    // comments: function () {
-    //   if (!this._comments) {
-    //     this._comments = new DISTILLD.Collections.Comments( [], { post: this });
-    //   }
-    //
-    //   return this._comments;
-    // },
-
     friends: function () {
       if (!this._friends) {
         this._friends = new DISTILLD.Collections.Friends( [],{ user: this });
@@ -30,11 +22,6 @@ DISTILLD.Models.User = Backbone.Model.extend ({
         this.posts().set(response.posts, { parse: true });
         delete response.posts;
       }
-
-      // if (response.comments) {
-      //   this.comments().set(response.comments);
-      //   delete response.comments;
-      // }
 
       if (response.friends) {
         this.friends().set(response.friends);
