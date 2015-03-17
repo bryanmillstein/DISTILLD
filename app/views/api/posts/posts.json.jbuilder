@@ -2,6 +2,8 @@ json.array! @posts do |post|
   json.extract! post, :id, :user_id, :drink, :body, :created_at, :updated_at
   json.user_name post.user.user_name
   json.current_user_toast current_user_toast?(post)
+  json.toast_number post.toasts.count
+
 
     json.comments post.comments do |comment|
       json.extract! comment, :id, :user_id, :post_id, :body, :created_at, :updated_at

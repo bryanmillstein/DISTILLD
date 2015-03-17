@@ -8,8 +8,7 @@ module Api
         Toast.destroy(toast)
         render json: {}
       else
-        post = Post.find(params[:post_id])
-        toast = post.toasts.new(toast_params)
+        toast = current_user.toasts.new(toast_params)
 
         if toast.save
           render :@toast
@@ -23,7 +22,7 @@ module Api
     private
 
     def toast_params
-      param.require(:toast).permit(:user_id, :post_id)
+      param.require(:toast).permit(:post_id)
     end
 
   end

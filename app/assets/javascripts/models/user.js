@@ -10,11 +10,11 @@ DISTILLD.Models.User = Backbone.Model.extend ({
     },
 
     // comments: function () {
-    //   if (!this.comments) {
-    //     this.comments = new DISTILLD.Collections.Comments();
+    //   if (!this._comments) {
+    //     this._comments = new DISTILLD.Collections.Comments( [], { post: this });
     //   }
     //
-    //   return this.comments;
+    //   return this._comments;
     // },
 
     friends: function () {
@@ -31,30 +31,30 @@ DISTILLD.Models.User = Backbone.Model.extend ({
         delete response.posts;
       }
 
-      if (response.friends) {
-        this.friends().set(response.friends);
-        delete response.friends;
-      }
-
       // if (response.comments) {
       //   this.comments().set(response.comments);
       //   delete response.comments;
       // }
 
+      if (response.friends) {
+        this.friends().set(response.friends);
+        delete response.friends;
+      }
+
       if (response.is_current_user) {
-        this.set({ is_current_user: "true" })
-        delete response.is_current_user
+        this.set({ is_current_user: "true" });
+        delete response.is_current_user;
       } else {
-        this.set({ is_current_user: null })
-        delete response.is_current_user
+        this.set({ is_current_user: null });
+        delete response.is_current_user;
       }
 
       if (response.is_friend) {
-        this.set({ is_friend: "true" })
-        delete response.is_friend
+        this.set({ is_friend: "true" });
+        delete response.is_friend;
       } else {
-        this.set({ is_friend: null })
-        delete response.is_friend
+        this.set({ is_friend: null });
+        delete response.is_friend;
       }
 
       return response;

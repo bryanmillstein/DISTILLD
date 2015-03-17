@@ -28,7 +28,7 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
   },
 
   renderPosts: function () {
-    this.collection.each(this.addPost.bind(this));
+    this.posts.each(this.addPost.bind(this));
   },
 
   addPost: function (post) {

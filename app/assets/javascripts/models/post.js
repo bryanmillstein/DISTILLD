@@ -15,14 +15,22 @@ DISTILLD.Models.Post = Backbone.Model.extend ({
       delete response.comments;
     }
 
-    if (response.comments) {
-      this.comments().set(response.comments);
-      delete response.comments;
+    if (response.user_name) {
+      this.set({ user_name: response.user_name });
+      delete response.user_name;
     }
 
-    if (response.user_name) {
-      this.set({ user_name: response.user_name })
-      delete response.user_name
+    if (response.current_user_toast) {
+      this.set({ current_user_toast: "true" });
+      delete response.current_user_toast;
+    } else {
+      this.set({ current_user_toast: null });
+      delete response.current_user_toast;
+    }
+
+    if (response.toast_number) {
+      this.set({ toast_number: response.toast_number });
+      delete response.toast_number;
     }
 
     return response;
