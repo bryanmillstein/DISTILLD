@@ -476,11 +476,13 @@ body {
   background: #E0E4CC;
   margin: 5px 10px;
   width: 250px;
+  display: block;
+  height: auto;
+
 
 }
 
 .comment-content > p {
-  position: relative;
   color: black;
   font-weight: 300;
   font-size: 16px;
@@ -499,5 +501,6 @@ body {
 
 .comment-content button {
   font-size: 12px;
-  display: block;
+  margin: 10px 0 0 5px;
+  padding: 0 0 5px 0;
 }

@@ -12,6 +12,7 @@ DISTILLD.Views.CommentDelete = Backbone.View.extend ({
   },
 
   destroyComment: function (event) {
+    event.preventDefault();
     var $target = $(event.currentTarget);
     var comment = this.collection.get($target.attr('data-id'));
     comment.destroy();

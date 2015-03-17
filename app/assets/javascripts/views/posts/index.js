@@ -26,7 +26,7 @@ DISTILLD.Views.PostsIndex = Backbone.CompositeView.extend({
   addPost: function (post) {
     var comments = post.comments();
 
-    var view = new DISTILLD.Views.PostShow({ model: post, collection: comments })
+    var view = new DISTILLD.Views.PostShow({ model: post, collection: comments, posts: this.collection })
     this.addSubview('.posts', view);
   },
 

@@ -19,7 +19,7 @@ DISTILLD.Views.PostForm = Backbone.View.extend({
     this.model.set(attrs);
     this.model.save({}, {
       success: function () {
-        that.collection.add(that.model, { merge: true })
+        that.collection.fetch();
       }
     });
   }
