@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  helper_method :current_user, :auth_form, :logged_in?, :is_current_user?, :is_friend
+  helper_method :current_user, :auth_form, :logged_in?, :is_current_user?, :is_friend, :current_user_toast?
 
   def is_current_user?(user)
     current_user == user
@@ -11,6 +11,10 @@ class ApplicationController < ActionController::Base
 
   def is_friend(user)
     current_user.friends.include?(user)
+  end
+
+  def current_user_toast?(post)
+    post.toasters.include?(current_user)
   end
 
   def current_user

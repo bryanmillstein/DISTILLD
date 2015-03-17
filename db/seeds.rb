@@ -10,6 +10,7 @@ User.delete_all
 Post.delete_all
 Friendship.delete_all
 Comment.delete_all
+Toast.delete_all
 
 
 u1 = User.create(email: "bryanmillstein@gmail.com", user_name: "Bryan Millstein", password: "password")
@@ -34,13 +35,12 @@ c4 = u4.comments.create(post_id: p5.id, body: "Fine.")
 c5 = u3.comments.create(post_id: p6.id, body: "Coolest post.")
 
 
-
-
 f1 = u1.friendships.create(friend_id: u2.id)
 f2 = u1.friendships.create(friend_id: u3.id)
 f4 = u2.friendships.create(friend_id: u1.id)
 f5 = u3.friendships.create(friend_id: u1.id)
 f6 = u4.friendships.create(friend_id: u1.id)
-
 f7 = u2.friendships.create(friend_id: u4.id)
 f8 = u4.friendships.create(friend_id: u2.id)
+
+t1 = p3.toasts.create(user_id: u1.id)
