@@ -1,5 +1,5 @@
-<section class="comment-content">
-  <p class="user-name"><a href="#users/<%= comment.escape('user_id') %>"><%= comment.escape('user_name') %></a> said</p>
+<section class="comment-content group">
+  <p class="user-name"><a href="#users/<%= comment.escape('user_id') %>"><%= comment.escape('user_name') %></a>:</p>
   <p class="comment-body"><%= comment.escape('body') %></p>
   <button class="destroy-comment"></button>
 </section>

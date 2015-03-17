@@ -31,6 +31,9 @@ DISTILLD.Models.Post = Backbone.Model.extend ({
     if (response.toast_number) {
       this.set({ toast_number: response.toast_number });
       delete response.toast_number;
+    } else {
+      this.set({ toast_number: 0 });
+      delete response.toast_number;
     }
 
     return response;

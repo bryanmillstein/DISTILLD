@@ -7,7 +7,8 @@ DISTILLD.Views.ToastButton = Backbone.View.extend({
 
   initialize: function () {
     this.listenTo(this.model, 'request', this.render);
-    this.status = (this.model.get('current_user_toast'))
+    this.status = (this.model.get('current_user_toast'));
+    this.toasts = (this.model.get('toast_number'));
   },
 
   render: function () {
@@ -19,8 +20,9 @@ DISTILLD.Views.ToastButton = Backbone.View.extend({
       message = 'Toast';
     }
 
-    var content = this.template({ message: message });
+    var content = this.template({ message: message, toasts: this.toasts });
     this.$el.html(content);
+
 
     return this;
   },
@@ -37,6 +39,7 @@ DISTILLD.Views.ToastButton = Backbone.View.extend({
         post_id: postId,
       },
       success: function () {
+        that.status ? that.toasts-- : that.toasts++;
         that.status ? that.status = false : that.status = true;
         that.render();
       }

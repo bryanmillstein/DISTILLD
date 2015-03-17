@@ -412,7 +412,7 @@ body {
 
 .post-body {
   background: #E0E4CC;
-  margin: 25px 5px;
+  margin: 25px 5px 0 5px;
   width: 300px;
   height: 50px;
   border: 1px solid gray;
@@ -422,16 +422,12 @@ body {
 
 .post-options {
   background: #FA6900;
-  position: absolute;
-  float: right;
-  right: 10px;
-  top: 15px;
   color: white;
   border: 1px solid black;
-  margin: 5px;
   padding: 5px 10px;
   font-weight: bold;
   border-radius: 6px;
+  margin: 10px 10px 10px 25px;
 
 }
 
@@ -440,6 +436,25 @@ body {
   color: black;
   border: none;
 
+}
+
+.toast-elements {
+    background: #FA6900;
+    color: white;
+    border: 1px solid black;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.toast-elements .toasts {
+  float: right;
+  border-left: 1px solid white;
+  padding: 0 0 0 5px;
+}
+
+.toast-elements button {
+  padding: 0 5px 0 0;
 }
 
 /*.delete-btn {
@@ -461,29 +476,28 @@ body {
   background: #E0E4CC;
   margin: 5px 10px;
   width: 250px;
-  padding: 0 10px;
-  border: 1px solid black;
 
 }
 
-.comment-content > p{
+.comment-content > p {
+  position: relative;
   color: black;
   font-weight: 300;
   font-size: 16px;
-  padding: none;
+  padding: 5px 10px;
 
 }
 
 .comment-content .user-name {
-  margin: none;
-  border-bottom: 1px solid lightgray;
-}
-
-.comment-content .user-name > a {
+  float: left;
   color: blue;
 }
 
 .comment-content .comment-body {
-  margin: 10px 0 0 10px;
-  padding: 0 0 5px 0;
+  float: left;
+}
+
+.comment-content button {
+  font-size: 12px;
+  display: block;
 }
