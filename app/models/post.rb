@@ -3,8 +3,7 @@ class Post < ActiveRecord::Base
 
   belongs_to :user
   has_many :comments
-
-
+  has_many :toasts
 
   def self.get_friends_posts(current_user)
     friends = current_user.friends.includes(posts: [:comments, :user])

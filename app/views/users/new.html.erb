@@ -1,26 +1,29 @@
-<h1>DISTILLD</h1>
+<section class="sign-up">
 
-<h3>For Whiskey Drinkers</h3>
+  <ul class="sign-up-elements">
+    <h1 class="greeting">Sign up for DISTILLD</h1>
 
-<h5>Sign Up</h5>
+    <form action="<%= users_url %>" method="post" class="user-new-form group">
+        <%= auth_form %>
+      <fieldset class="user-form-fieldset">
+        <div class="user-input">
+          <label for="form-email">User Name</label>
+            <input id="form-email" name="user[email]" value="<%= @user.user_name %>">
+        </div>
+        <div class="user-input">
+          <label for="form-email">Email address</label>
+            <input id="form-email" name="user[email]" value="<%= @user.email %>">
+        </div>
+        <div class="user-input">
+          <label for="form-password">Password</label>
+            <input type ="password" id="form-password" name="user[password]" value="">
+        </div>
+        <div class="submit">
+          <button>Sign Up</button>
+        </div>
+      </fieldset>
+    </form>
+    <p class="new-session">Already a user? <a href="/session/new">Sign In</a></p>
 
-<form action="<%= users_url %>" method="post">
-  <%= auth_form %>
-
-  <label>User Name
-    <input type="text" name="user[user_name]" value="<%= @user.user_name %>">
-  </label>
-  <br>
-
-  <label>Email
-    <input type="text" name="user[email]" value="<%= @user.email %>">
-  </label>
-  <br>
-
-  <label>Password
-    <input type="password" name="user[password]" value="">
-  </label>
-  <br>
-
-  <button>Submit</button>
-</form>
+  </ul>
+</section>
