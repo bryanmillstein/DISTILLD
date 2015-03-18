@@ -367,9 +367,14 @@ body {
 /*USER SHOW*/
 
 .profile-picture {
+  background-repeat: no-repeat;
+  background-position: 50%;
   border-radius: 50%;
-  margin: 15px 10px 0 5px;
+  width: 100px;
+  height: 100px;
+  margin: 10px 0 0 10px;
 }
+
 
 .get-form {
   background: #FA6900;
@@ -383,7 +388,7 @@ body {
 .user-name {
   font-weight: 900;
   font-size: 28px;
-  margin: 0 0 0 75px;
+  margin: 0 0 10px 75px;
 }
 
 /*POST*/
@@ -397,10 +402,20 @@ body {
   border: 1px solid gray;
 }
 
+.post-description .thumb-picture {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  top: 10px;
+}
+
 .post-items {
   position: relative;
-  margin: 5px 0;
-  padding: 5px 0;
+  margin: 10px 0 0 45px;
+
 }
 
 .post-items > li {
@@ -408,13 +423,15 @@ body {
   padding: 0 5px 0 0;
 }
 
+
+
 .post-items a {
   color: blue;
 }
 
 .post-body {
   background: #E0E4CC;
-  margin: 25px 5px 0 5px;
+  margin: 50px 5px 0 5px;
   width: 300px;
   height: 50px;
   border: 1px solid gray;
