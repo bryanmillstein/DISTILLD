@@ -28,23 +28,9 @@ DISTILLD.Views.PostsIndex = Backbone.CompositeView.extend({
   addPost: function (post) {
     var comments = post.comments();
 
-    var view = new DISTILLD.Views.PostShow({ model: post, collection: comments, posts: this.collection })
+    var view = new DISTILLD.Views.PostShow({ model: post, collection: comments, fetch: this.collection })
     this.addSubview('.posts', view);
   },
-
-  // addPictureForm: function () {
-  //   if (!this.pictureFormView) {
-  //     this.pictureFormView = new DISTILLD.Views.PictureForm({ model: post, collection: this.collection });
-  //     this.addSubview('.picture-form', this.pictureFormView);
-  //   }
-  //
-  //   <% if (!this.model.get('has_picture')) { %>
-  //     <button class="picture-form">Add a profile picture</button>
-  //   <% } else { %>
-  //     <button class="picture-form">Change your profile picture</button>
-  //   <% } %>
-  //
-  // },
 
   addPostForm: function () {
     if (!this.postFormView) {

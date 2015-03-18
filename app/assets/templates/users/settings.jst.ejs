@@ -1,24 +1,27 @@
-<form class="user-form-fieldset" enctype="multipart/form-data">
-  <div class="user-input">
-    <label for="form-email"></label>
-      <input id="form-email" name="user[email]" value="<%= user.escape('user_name') %>">
-  </div>
-  <div class="user-input">
-    <label for="form-email"></label>
-      <input id="form-email" name="user[email]" value="<%= user.escape('email') %>">
-  </div>
-  <div class="user-input">
-    <label for="form-picture"></label>
-      <input type="file" name="picture" id="input-picture-file" value="">
-  </div>
-  <div class="user-input">
-    <label for="form-password"></label>
-      <input type ="password" id="form-password" name="user[password]" value="" placeholder="Password">
-  </div>
-  <div class="picture-preview">
-      <img src="" id="picture-preview"/>
-  </div>
-  <div class="submit">
-    <button>Submit</button>
-  </div>
-</form>
+<section class="settings-elements">
+  <img src="<%= user.escape('picture_url') %>"/>
+  <form class="user-form-fieldset" enctype="multipart/form-data">
+    <div class="user-input">
+      <label for="form-email"></label>
+        <input id="form-email" name="user[email]" value="<%= user.escape('user_name') %>">
+    </div>
+    <div class="user-input">
+      <label for="form-email"></label>
+        <input id="form-email" name="user[email]" value="<%= user.escape('email') %>">
+    </div>
+    <div class="user-input">
+      <label for="form-picture"></label>
+        <input type="file" name="picture" id="input-picture-file" value="">
+    </div>
+    <div class="user-input">
+      <label for="form-password"></label>
+        <input type ="password" id="form-password" name="user[password]" value="" placeholder="Password">
+    </div>
+    <div class="picture-preview">
+        <img src="" id="picture-preview"/>
+    </div>
+    <div class="submit">
+      <button>Submit</button>
+    </div>
+  </form>
+</section>

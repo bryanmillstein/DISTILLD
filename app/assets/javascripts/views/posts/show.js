@@ -8,7 +8,7 @@ DISTILLD.Views.PostShow = Backbone.CompositeView.extend ({
   initialize: function (options) {
     this.comments = this.model.comments();
     this.user = options.user;
-    this.posts = options.posts;
+    this.fetch = options.fetch
     this.listenTo(this.model, 'sync', this.render);
     this.listenTo(this.collection, 'add remove', this.render);
   },
@@ -38,7 +38,7 @@ DISTILLD.Views.PostShow = Backbone.CompositeView.extend ({
 
   addCommentForm: function () {
     if (!this.formView) {
-      this.formView = new DISTILLD.Views.CommentForm({ collection: this.comments, post: this.model, posts: this.posts })
+      this.formView = new DISTILLD.Views.CommentForm({ collection: this.comments, post: this.model, fetch: this.fetch })
       this.addSubview('.comment-form', this.formView);
     }
   }

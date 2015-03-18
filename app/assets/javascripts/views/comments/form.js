@@ -7,7 +7,7 @@ DISTILLD.Views.CommentForm = Backbone.View.extend ({
   initialize: function (options) {
     this.post = options.post;
     this.model = new DISTILLD.Models.Comment();
-    this.posts = options.posts;
+    this.fetch = options.fetch
 
   },
 
@@ -26,8 +26,7 @@ DISTILLD.Views.CommentForm = Backbone.View.extend ({
 
     this.model.save({}, {
       success: function () {
-        // Backbone.history.navigate("", {trigger: true});
-        that.posts.fetch();
+        that.fetch.fetch();
       }
     });
   }

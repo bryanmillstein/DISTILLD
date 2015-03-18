@@ -1,12 +1,15 @@
 <section class="user-show">
   <ul>
+    <img class="profile-picture" src="<%= user.escape('picture_url') %>"/>
     <li class="user-name"><%= user.escape('user_name') %></li>
     <% if (this.model.get('is_current_user')) { %>
       <button class="get-form">Have a drink?</button>
-    <% } %>
-    <form class="post-form"></form>
+      <form class="post-form"></form>
+      <h3 class="headline">Your Recent Activity</h3>
+    <% } else { %>
+      <h3 class="headline"><%= user.escape('user_name') %>'s' Recent Activity</h3>
+      <% } %>
     <button class="friend-button"></button>
-    <h3 class="headline">Recent Activity</h3>
     <ul class="posts"></ul>
   </ul>
 </section>
