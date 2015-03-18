@@ -17,6 +17,12 @@ DISTILLD.Models.User = Backbone.Model.extend ({
       return this._friends;
     },
 
+    toJSON: function () {
+      return {
+        user: _.clone(this.attributes)
+      };
+    },
+
     parse: function (response) {
       if (response.posts) {
         this.posts().set(response.posts, { parse: true });

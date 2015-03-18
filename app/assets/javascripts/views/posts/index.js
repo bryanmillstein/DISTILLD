@@ -3,6 +3,8 @@ DISTILLD.Views.PostsIndex = Backbone.CompositeView.extend({
   events: {
     'click .get-form': 'addPostForm',
     'click .post-options': 'addCommentForm',
+    'click .picture-form': 'addPictureForm',
+
   },
 
   initialize: function (options) {
@@ -30,11 +32,25 @@ DISTILLD.Views.PostsIndex = Backbone.CompositeView.extend({
     this.addSubview('.posts', view);
   },
 
+  // addPictureForm: function () {
+  //   if (!this.pictureFormView) {
+  //     this.pictureFormView = new DISTILLD.Views.PictureForm({ model: post, collection: this.collection });
+  //     this.addSubview('.picture-form', this.pictureFormView);
+  //   }
+  //
+  //   <% if (!this.model.get('has_picture')) { %>
+  //     <button class="picture-form">Add a profile picture</button>
+  //   <% } else { %>
+  //     <button class="picture-form">Change your profile picture</button>
+  //   <% } %>
+  //
+  // },
+
   addPostForm: function () {
-    if (!this.formView) {
+    if (!this.postFormView) {
       var post = new DISTILLD.Models.Post();
-      this.formView = new DISTILLD.Views.PostForm({ model: post, collection: this.collection });
-      this.addSubview('.post-form', this.formView);
+      this.postFormView = new DISTILLD.Views.PostForm({ model: post, collection: this.collection });
+      this.addSubview('.post-form', this.postFormView);
     }
   },
 })

@@ -7,8 +7,8 @@ DISTILLD.Routers.Router = Backbone.Router.extend({
     "": "feed",
     "users/:id": "userShow",
     "search": "search",
-    "friends": 'friends'
-
+    "friends": 'friends',
+    "users/:id/settings": 'settings'
   },
 
   feed: function () {
@@ -29,14 +29,17 @@ DISTILLD.Routers.Router = Backbone.Router.extend({
 
   friends: function () {
     var friends = new DISTILLD.Collections.Friends();
-    friends.fetch({
-      success: function () {
-        console.log(friends);
-      }
-    });
+    friends.fetch();
     var friendsView = new DISTILLD.Views.FriendsIndex({ collection: friends });
 
     this._swapView(friendsView);
+  },
+
+  settings: function (id) {
+    var user = DISTILLD.Collections.users.getOrFetch(id),
+        view = new DISTILLD.Views.UserSettings({ model: user });
+
+    this._swapView(view);
   },
 
   search: function () {
