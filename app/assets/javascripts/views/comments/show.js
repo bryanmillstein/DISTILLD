@@ -15,9 +15,7 @@ DISTILLD.Views.CommentShow = Backbone.CompositeView.extend ({
 
     if (this.user && this.user.get('is_current_user')) {
       this.destroyCommentButton();
-    }
-
-    if (this.model.get('is_current_user')) {
+    } else if (this.model.get('is_current_user')) {
       this.destroyCommentButton();
     }
 

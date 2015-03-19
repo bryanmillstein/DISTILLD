@@ -26,12 +26,12 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
     var content = this.template({ user: this.model, message: message });
     this.$el.html(content);
 
-    if (this.model.get('is_current_user')) {
-      this.renderUserPosts();
-    } else {
+    // if (this.model.get('is_current_user')) {
+    //   this.renderUserPosts();
+    // } else {
       this.renderPosts();
       this.addFriendButton();
-    }
+    // }
 
     return this;
   },
@@ -42,19 +42,19 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
 
   addPost: function (post) {
     var comments = post.comments();
-    var view = new DISTILLD.Views.PostShow({ model: post, collection: comments, user: this.model, fetch: this.model });
+    var view = new DISTILLD.Views.PostShow({ model: post, collection: this.posts, user: this.model, fetch: this.model, comments: comments });
     this.addSubview('.posts', view);
   },
 
-  renderUserPosts: function () {
-    this.posts.each(this.addUserPost.bind(this));
-  },
-
-  addUserPost: function (post) {
-    var comments = post.comments();
-    var view = new DISTILLD.Views.UserPostShow({ model: post, collection: this.posts, comments: comments, user: this.model });
-    this.addSubview('.posts', view);
-  },
+  // renderUserPosts: function () {
+  //   this.posts.each(this.addUserPost.bind(this));
+  // },
+  //
+  // addUserPost: function (post) {
+  //   var comments = post.comments();
+  //   var view = new DISTILLD.Views.UserPostShow({ model: post, collection: this.posts, comments: comments, user: this.model });
+  //   this.addSubview('.posts', view);
+  // },
 
   addPostForm: function () {
     if (!this.formView) {

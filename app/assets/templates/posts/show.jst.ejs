@@ -10,15 +10,12 @@
       <p class="triangle"></p>
     </p>
     <img class="post-picture" src="<%= post.escape('post_picture_url') %>"/>
-    <% if (options) { %>
-      <button class="post-options">Options</button>
-    <% } else { %>
-      <button class="post-options" id="comment-form">Comment</button>
-    <% } %>
+    <button class="post-options" id="comment-form">Comment</button>
     <button class="toast-button"></button>
-    <form class="comment-form" action="index.html" method="post"></form>
+    <% if (user && user.escape('is_current_user')) { %>
+      <button class="delete-post" data-id="<%= post.id %>">Delete</button>
+      <button class="edit-post">Edit</button>
+    <% } %>
     <ul class="comments"></ul>
-
-    <button class="delete-btn"></button>
-    <form class="edit-form"></form>
+    <form class="comment-form" action="index.html" method="post"></form>
 </section>
