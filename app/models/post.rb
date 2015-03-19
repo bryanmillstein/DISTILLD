@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
   has_many :toasts
   has_many :toasters, through: :toasts, source: :user
 
-  has_attached_file :picture, styles: { medium: "50x50<" }, default_url: "user_default_:style.png"
+  has_attached_file :picture, styles: { medium: "50x50<" }
   validates_attachment_content_type :picture, content_type: /\Aimage\/.*\Z/
 
 

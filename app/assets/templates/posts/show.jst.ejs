@@ -9,7 +9,9 @@
     <p class="post-body"><%= post.escape('body') %>
       <p class="triangle"></p>
     </p>
-    <img class="post-picture" src="<%= post.escape('post_picture_url') %>"/>
+    <% if (post.escape('post_picture_url')) { %>
+      <img class="post-picture" src="<%= post.escape('post_picture_url') %>"/>
+    <% } %>
     <div class="common-buttons group">
       <button class="post-options" id="comment-form">Comment</button>
       <button class="toast-button"></button>
