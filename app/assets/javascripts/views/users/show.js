@@ -20,7 +20,7 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
     if (this.model.get('is_current_user')) {
       message = 'Your'
     } else {
-      message = this.model.get('user_name') + "'s'"
+      message = this.model.get('user_name') + "'s"
     }
 
     var content = this.template({ user: this.model, message: message });

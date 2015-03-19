@@ -9,6 +9,12 @@ DISTILLD.Models.Post = Backbone.Model.extend ({
     return this._comments;
   },
 
+  toJSON: function () {
+    return {
+      post: _.clone(this.attributes)
+    };
+  },
+
   parse: function (response) {
     if (response.comments) {
       this.comments().set(response.comments);

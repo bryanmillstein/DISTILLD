@@ -2,7 +2,9 @@ DISTILLD.Views.PostForm = Backbone.View.extend({
   template: JST['posts/form'],
   tagName: 'form',
   events: {
-    'submit': 'submitPost'
+    'click .submit': 'submitPost',
+    "change #input-picture-file": "changePicture",
+    "click .add-photo": "uploadPhoto"
   },
 
   initialize: function (options) {
@@ -26,5 +28,23 @@ DISTILLD.Views.PostForm = Backbone.View.extend({
         that.fetch.fetch();
       }
     });
+  },
+
+  uploadPhoto: function (event) {
+    event.preventDefault();
+    this.$("#input-picture-file").trigger("click");
+  },
+
+  changePicture: function (event) {
+    var file = event.currentTarget.files[0],
+        fileReader = new FileReader(),
+        that = this;
+
+    fileReader.onloadend = function () {
+      that.model.set("picture", fileReader.result);
+    };
+
+    fileReader.readAsDataURL(file);
   }
-})
+
+});

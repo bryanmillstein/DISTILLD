@@ -6,6 +6,9 @@ class Post < ActiveRecord::Base
   has_many :toasts
   has_many :toasters, through: :toasts, source: :user
 
+  has_attached_file :picture, styles: { medium: "50x50<" }, default_url: "user_default_:style.png"
+  validates_attachment_content_type :picture, content_type: /\Aimage\/.*\Z/
+
 
   def self.get_friends_posts(current_user)
     friends = current_user.friends.includes(posts: [:comments, :user, :toasts])

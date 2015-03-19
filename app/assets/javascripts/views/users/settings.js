@@ -9,7 +9,7 @@ DISTILLD.Views.UserSettings = Backbone.View.extend({
   tagName: "form",
 
   events: {
-    "click .settings-submit": "submit",
+    "click .submit": "submit",
     "change #input-picture-file": "changePicture",
     "click .change-photo": "uploadPhoto"
   },

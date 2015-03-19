@@ -326,10 +326,11 @@ body {
 }
 
 .post-new-form {
-  background: green;
+
 }
 
 .form-fieldset {
+  position: relative;
   margin: 0 0 0 50px;
   padding: 20px;
   width: 500px;
@@ -363,12 +364,32 @@ body {
   border: 1px solid gray;
 }
 
+.form-fieldset #input-picture-file {
+  display: none;
+}
+
+
+.form-fieldset .add-photo {
+  position: absolute;
+  top: 40px;
+  left: 300px;
+  font-size: 24px;
+  color: #FA6900;
+}
+
+.form-fieldset .add-photo:hover {
+  font-weight: bold;
+}
+
+
 .submit > button {
   background: #FA6900;
   color: white;
   border: 1px solid black;
   padding: 5px 10px;
   font-weight: bold;
+  text-align: center;
+  width: 100px
 }
 
 /*USER SHOW*/
@@ -504,6 +525,12 @@ body {
   height: 50px;
   padding: 5px 10px;
   border-radius: 2px;
+}
+
+.post-description .post-picture {
+  margin: 10px 0 10px 12px;
+  width: 300px;
+  height: 150px;
 }
 
 .triangle {
