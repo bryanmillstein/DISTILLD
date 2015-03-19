@@ -6,7 +6,7 @@ DISTILLD.Views.Search = Backbone.CompositeView.extend({
   },
 
   events: {
-    "click .search": "search",
+    "click .search-button": "search",
   },
 
   template: JST["shared/search"],
@@ -16,22 +16,19 @@ DISTILLD.Views.Search = Backbone.CompositeView.extend({
     this.$el.html(content);
 
     this.renderSearchResults();
-
     return this;
   },
 
   renderSearchResults: function () {
-    var container = this.$(".search-results");
-
+    var container = this.$(".search-results"),
+        that = this;
     this.searchResults.each(function (model) {
-      var template = JST["users/list_item"];
-
-      container.append(template({ model: model }));
+      var view = new DISTILLD.Views.FriendShow({ model: model, collection: that.searchResults });
+      that.addSubview('.search-results', view);
     });
   },
 
   search: function (event) {
-
     event.preventDefault();
     this.searchResults._query = this.$(".query").val();
     this.searchResults.fetch({

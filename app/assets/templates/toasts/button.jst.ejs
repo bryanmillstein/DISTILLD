@@ -1,4 +1,8 @@
 <section class="toast-elements group">
-  <button class=""><%= message %></button>
+  <% if (toasted) { %>
+    <button id="toasted">Toast</button>
+  <% } else { %>
+    <button id="toast">Toast</button>
+    <% } %>
   <article class="toasts" id ="change-toast"><%= toasts %> toasts</article>
 </section>

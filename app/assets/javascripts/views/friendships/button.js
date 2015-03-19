@@ -5,18 +5,20 @@ DISTILLD.Views.FriendshipButton = Backbone.View.extend({
     'submit': 'changeFriendship'
   },
 
-  initialize: function () {
+  initialize: function (options) {
     // this.listenTo(this.model, 'request', this.render);
+    this.fetch = options.fetch;
   },
 
   render: function () {
+    var friend
     if (this.model.get('is_friend')) {
-      message = "Remove As Friend"
+      friend = true
     } else {
-      message = "Add As Friend"
+      friend = null
     }
 
-    var content = this.template({ action: message });
+    var content = this.template({ friend: friend });
     this.$el.html(content);
 
     return this;
@@ -34,7 +36,7 @@ DISTILLD.Views.FriendshipButton = Backbone.View.extend({
         friend_id: friendId,
       },
       success: function () {
-        that.model.fetch();
+        that.fetch.fetch();
       }
     });
 

@@ -1,4 +1,8 @@
+require 'action_view'
+
 class Post < ActiveRecord::Base
+  include ActionView::Helpers::DateHelper
+
   validates :user_id, :drink, presence: true
 
   belongs_to :user
@@ -19,6 +23,10 @@ class Post < ActiveRecord::Base
       end
     end
     return friends_posts
+  end
+
+  def time_ago
+    time_ago_in_words(self.created_at)
   end
 
 end

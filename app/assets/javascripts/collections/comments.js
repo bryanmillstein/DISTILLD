@@ -1,10 +1,9 @@
 DISTILLD.Collections.Comments = Backbone.Collection.extend ({
   url: 'api/comments',
   model: DISTILLD.Models.Comment,
-
-  // initialize: function (models, options) {
-  //   this.post = options.post
-  // }
+  comparator: function (comment) {
+    return -Date.parse(comment.get('created_at'));
+  }
 
 });
 

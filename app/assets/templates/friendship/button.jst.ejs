@@ -1,1 +1,5 @@
-<button class=""><%= action %></button>
+<% if (friend) { %>
+  <button id="remove-friend">-</button>
+<% } else { %>
+  <button id="add-friend">+</button>
+<% } %>

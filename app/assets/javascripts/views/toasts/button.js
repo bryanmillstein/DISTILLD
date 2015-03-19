@@ -12,15 +12,15 @@ DISTILLD.Views.ToastButton = Backbone.View.extend({
   },
 
   render: function () {
-    var message;
+    var toasted;
 
     if (this.status) {
-      message = 'Toasted';
+      toasted = true;
     } else {
-      message = 'Toast';
+      toasted = false;
     }
 
-    var content = this.template({ message: message, toasts: this.toasts });
+    var content = this.template({ toasted: toasted, toasts: this.toasts });
     this.$el.html(content);
 
 

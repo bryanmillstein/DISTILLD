@@ -84,6 +84,8 @@ button {
 body {
    background-image: url(http://www.whiskipad.com/wp-content/uploads/2013/07/barrels-background-mono.jpg);
    background-size: cover;
+   background-repeat: no-repeat;
+   background-color: #000;
  }
 
 .sign-in {
@@ -424,6 +426,30 @@ body {
   margin: 0 0 10px 75px;
 }
 
+.user-show #remove-friend {
+  position: absolute;
+  text-align: center;
+  top: 100px;
+  left: 150px;
+  background: gray;
+  color: white;
+  font-size: 36px;
+  width: 40px;
+  border-radius: 5px;
+}
+
+.user-show #add-friend {
+  position: absolute;
+  text-align: center;
+  top: 100px;
+  left: 150px;
+  background: #FA6900;
+  color: white;
+  font-size: 36px;
+  width: 40px;
+  border-radius: 5px;
+}
+
 /*SETTINGS*/
 
 .settings-elements {
@@ -485,6 +511,149 @@ body {
   border: 1px solid #69D2E7;
 }
 
+/*FRIENDS*/
+
+.friend-page {
+
+}
+
+.friend-page > h1 {
+  margin: 20px;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid gray;
+  font-size: 36px;
+}
+
+.friends-group {
+}
+
+.friend-entry {
+  position: relative;
+  border-bottom: 1px solid gray;
+  padding: 10px 0 10px 10px;
+  margin: 0 50px;
+
+}
+
+.friend-entry:first-child {
+  border-top: 2px solid gray;
+
+}
+
+.friend-info {
+  border-right: 2px solid gray;
+  width: 300px;
+
+}
+
+.friend-line #friend-name {
+
+}
+
+.friend-entry #remove-friend {
+  position: absolute;
+  text-align: center;
+  top: 10px;
+  left: 740px;
+  background: gray;
+  color: white;
+  font-size: 36px;
+  width: 40px;
+  border-radius: 5px;
+}
+
+.friend-entry #add-friend {
+  position: absolute;
+  text-align: center;
+  top: 10px;
+  left: 740px;
+  background: #FA6900;
+  color: white;
+  font-size: 36px;
+  width: 40px;
+  border-radius: 5px;
+}
+
+.friend-entry .friend-button:hover {
+  font-weight: bold;
+
+}
+
+.friend-page .friend-picture {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+
+
+/*SEARCH*/
+
+.search-page {
+
+}
+
+.search-page .search-button {
+  text-align: center;
+  background: #FA6900;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  width: 100px;
+  margin: 20px 0 10px 10px;
+  border-radius: 5px;
+}
+
+.search-page .search-button:hover {
+  filter: brightness(0.5);
+}
+
+.search-page > input {
+  padding: 5px;
+}
+
+.friend-info {
+  border-right: 2px solid gray;
+  width: 300px;
+}
+
+.search-entry #remove-friend {
+  position: absolute;
+  text-align: center;
+  top: 10px;
+  left: 740px;
+  background: gray;
+  color: white;
+  font-size: 36px;
+  width: 40px;
+  border-radius: 5px;
+}
+
+.search-entry #add-friend {
+  position: absolute;
+  text-align: center;
+  top: 10px;
+  left: 740px;
+  background: #FA6900;
+  color: white;
+  font-size: 36px;
+  width: 40px;
+  border-radius: 5px;
+}
+
+.search-entry .friend-button:hover {
+  font-weight: bold;
+
+}
+
+.friend-picture {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
 
 /*POST*/
 
@@ -525,7 +694,7 @@ body {
 .post-body {
   position: relative;
   background: #E0E4CC;
-  margin: 60px 5px 0 5px;
+  margin: 60px 5px 7px 5px;
   width: 300px;
   height: 50px;
   padding: 5px 10px;
@@ -575,8 +744,14 @@ body {
 
 }
 
+.post-description .time-stamp {
+  float: left;
+  font-size: 13px;
+  margin: 0 10px 0 15px;
+}
+
 .user-buttons {
-  margin: 0 10px 10px 12px;
+  float: left;
   font-size: 13px;
 }
 
@@ -590,42 +765,50 @@ body {
 }
 
 .toast-elements {
-    background: #FA6900;
-    color: white;
-    border: 1px solid black;
-    padding: 5px 10px;
-    font-weight: bold;
-    border-radius: 6px;
 }
 
 .toast-elements .toasts {
-  float: right;
-  border-left: 1px solid white;
-  padding: 0 0 0 5px;
-}
-
-.toast-elements button {
-  padding: 0 5px 0 0;
-}
-
-/*.delete-btn {
+  float: left;
   background: #FA6900;
+  margin: 0 0 0 5px;
   color: white;
   border: 1px solid black;
   padding: 5px 10px;
   font-weight: bold;
-}*/
+  border-radius: 6px;
+}
 
+.toast-elements #toasted {
+  float: left;
+  background: #FA6900;
+  font-weight: bold;
+  color: white;
+  border: 1px solid black;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+.toast-elements #toast {
+  float: left;
+  background: #FA6900;
+  color: white;
+  font-weight: none;
+  border: 1px solid black;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
 
 /*COMMENT*/
 
 .comments {
-  margin: 0 5px;
+}
+
+.comment-content {
 }
 
 .comments > li {
   background: #E0E4CC;
-  margin: 5px 10px;
+  margin: 30px 10px;
   width: 250px;
   display: block;
   height: auto;
@@ -634,23 +817,17 @@ body {
 
 .comment-content > p {
   color: black;
-  font-weight: 300;
   font-size: 16px;
-  padding: 5px 10px;
 
 }
 
 .comment-content .user-name {
-  float: left;
   color: blue;
 }
 
 .comment-content .comment-body {
-  float: left;
 }
 
 .comment-content button {
   font-size: 12px;
-  margin: 10px 0 0 5px;
-  padding: 0 0 5px 0;
 }

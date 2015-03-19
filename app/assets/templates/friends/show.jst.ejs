@@ -1,1 +1,7 @@
-<a href="#users/<%= friend.id %> "><%= friend.escape('user_name') %></a>
+<section class="friend-entry">
+  <article class="friend-info">
+    <img class="friend-picture" src="<%= friend.escape('user_picture_url') %>">
+    <a id="friend-name" href="#users/<%= friend.id %>"><%= friend.escape('user_name') %></a>
+  </article>
+  <button class="friend-button"></button>
+</section>

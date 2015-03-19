@@ -7,7 +7,7 @@ DISTILLD.Routers.Router = Backbone.Router.extend({
     "": "feed",
     "users/:id": "userShow",
     "search": "search",
-    "friends": 'friends',
+    "users/:id/friends": 'friends',
     "users/:id/settings": 'settings'
   },
 

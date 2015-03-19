@@ -16,6 +16,7 @@
       <button class="post-options" id="comment-form">Comment</button>
       <button class="toast-button"></button>
     </div>
+    <p class="time-stamp"><%= post.escape('time_ago') %> ago</p>
     <div class="user-buttons group">
       <% if (user && user.escape('is_current_user')) { %>
         <button class="delete-post" data-id="<%= post.id %>">Delete</button>
