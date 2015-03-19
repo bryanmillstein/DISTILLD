@@ -10,12 +10,17 @@
       <p class="triangle"></p>
     </p>
     <img class="post-picture" src="<%= post.escape('post_picture_url') %>"/>
-    <button class="post-options" id="comment-form">Comment</button>
-    <button class="toast-button"></button>
-    <% if (user && user.escape('is_current_user')) { %>
-      <button class="delete-post" data-id="<%= post.id %>">Delete</button>
-      <button class="edit-post">Edit</button>
-    <% } %>
+    <div class="common-buttons group">
+      <button class="post-options" id="comment-form">Comment</button>
+      <button class="toast-button"></button>
+    </div>
+    <div class="user-buttons group">
+      <% if (user && user.escape('is_current_user')) { %>
+        <button class="delete-post" data-id="<%= post.id %>">Delete</button>
+        <button class="edit-post">Edit</button>
+        <form class="edit-form"></form>
+      <% } %>
+    </div>
     <ul class="comments"></ul>
     <form class="comment-form" action="index.html" method="post"></form>
 </section>

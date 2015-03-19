@@ -551,8 +551,6 @@ body {
   padding: 5px 10px;
   font-weight: bold;
   border-radius: 6px;
-  margin: 10px 10px 10px 25px;
-
 }
 
 .post-options:hover {
@@ -560,6 +558,30 @@ body {
   color: black;
   border: none;
 
+}
+
+.common-buttons {
+  margin: 0 0 10px 12px;
+}
+
+.common-buttons > button {
+  float: left;
+  margin: 0 5px 0 0;
+  
+}
+
+.user-buttons {
+  margin: 0 10px 10px 12px;
+  font-size: 13px;
+}
+
+.user-buttons > button {
+  float: left;
+  margin: 0 5px 0 0;
+}
+
+.user-buttons > button:hover {
+  font-weight: bold;
 }
 
 .toast-elements {

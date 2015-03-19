@@ -26,11 +26,15 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
     var content = this.template({ user: this.model, message: message });
     this.$el.html(content);
 
+    if (!this.model.get('is_current_user')) {
+      this.addFriendButton();
+    }
+
+
     // if (this.model.get('is_current_user')) {
     //   this.renderUserPosts();
     // } else {
       this.renderPosts();
-      this.addFriendButton();
     // }
 
     return this;
