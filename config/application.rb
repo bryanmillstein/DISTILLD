@@ -27,17 +27,11 @@ module DISTILLD
       :storage => :s3,
       :path => "images/:class/:id.:style.:extension",
       :s3_credentials => {
-        # :bucket => ENV["S3_BUCKET"],
-        # :access_key_id => ENV["S3_ACCESS_KEY_ID"],
-        # :secret_access_key => ENV["S3_SECRET_ACCESS_KEY"],
-        :bucket => "distilld",
-        :access_key_id => "AKIAISUQD4IXAWPON7DQ",
-        :secret_access_key => "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",
+        :bucket => ENV["S3_BUCKET"],
+        :access_key_id => ENV["S3_ACCESS_KEY_ID"],
+        :secret_access_key => ENV["S3_SECRET_ACCESS_KEY"],
         :s3_host_name => "s3.amazonaws.com"
       }
     }
   end
 end
-
-# Access Key ID: AKIAISUQD4IXAWPON7DQ
-# Secret Access Key: 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
