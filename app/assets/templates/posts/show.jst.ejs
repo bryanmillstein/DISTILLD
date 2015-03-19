@@ -5,7 +5,10 @@
     <li>is drinking</li>
     <li><a href="#"><%= post.escape('drink') %> </a></li>
   </ul>
-    <p class="post-body"><%= post.escape('body') %></p>
+
+    <p class="post-body"><%= post.escape('body') %>
+      <p class="triangle"></p>
+    </p>
     <% if (options) { %>
       <button class="post-options">Options</button>
     <% } else { %>

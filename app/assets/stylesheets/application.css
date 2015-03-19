@@ -268,9 +268,12 @@ button {
 
 .header-logo {
   float: left;
-  font-weight: 900;
   font-size: 28px;
   color: white;
+}
+
+.header-logo:hover {
+  font-weight: bold;
 }
 
 .header-list {
@@ -279,6 +282,10 @@ button {
 
 .header-list > li {
   float: left;
+}
+
+.header-list > li:hover {
+  font-weight: bold;
 }
 
 .sign-out {
@@ -391,6 +398,68 @@ body {
   margin: 0 0 10px 75px;
 }
 
+/*SETTINGS*/
+
+.settings-elements {
+  position: relative;
+}
+
+.settings-elements > h3 {
+  margin: 10px;
+}
+
+.settings-elements .profile-picture {
+  margin: 0 0 0 14px;
+
+}
+
+.settings-elements > input {
+  background: transparent;
+}
+
+.settings-elements #form-user-name:hover {
+  border-radius: 5px;
+  border: 1px solid #69D2E7;
+}
+
+.settings-elements #form-email:hover {
+  border-radius: 5px;
+  border: 1px solid #69D2E7;
+}
+
+.settings-elements #input-picture-file {
+  display: none;
+
+}
+
+.settings-elements .change-photo {
+  position: absolute;
+  top: 50px;
+  left: 125px;
+  color: #FA6900;
+}
+
+.settings-elements .change-photo:hover {
+  font-weight: bold;
+}
+
+.settings-elements .submit > button {
+  text-align: center;
+  background: #FA6900;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  width: 100px;
+  margin: 20px 0 10px 10px;
+  border-radius: 5px;
+
+}
+
+.settings-elements .submit> button:hover {
+  border: 1px solid #69D2E7;
+}
+
+
 /*POST*/
 
 .post-description {
@@ -423,20 +492,29 @@ body {
   padding: 0 5px 0 0;
 }
 
-
-
 .post-items a {
   color: blue;
 }
 
 .post-body {
+  position: relative;
   background: #E0E4CC;
-  margin: 50px 5px 0 5px;
+  margin: 60px 5px 0 5px;
   width: 300px;
   height: 50px;
-  border: 1px solid gray;
   padding: 5px 10px;
   border-radius: 2px;
+}
+
+.triangle {
+  content: "";
+  display: block;
+  position: absolute;
+  border-bottom: 30px solid #E0E4CC;
+  border-right: 30px solid transparent;
+  border-left: 30px solid transparent;
+  top: 40px;
+  left: 75px;
 }
 
 .post-options {
@@ -497,7 +575,6 @@ body {
   width: 250px;
   display: block;
   height: auto;
-
 
 }
 

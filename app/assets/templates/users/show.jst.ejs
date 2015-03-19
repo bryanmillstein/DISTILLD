@@ -1,8 +1,10 @@
 <section class="user-show">
   <img class="profile-picture" src="<%= user.escape('picture_url') %>"/>
   <p class="user-name"><%= user.escape('user_name') %></p>
-  <button class="get-form">Have a drink?</button>
-  <form class="post-form"></form>
+  <% if (user.escape('is_current_user')) { %>
+    <button class="get-form">Have a drink?</button>
+    <form class="post-form"></form>
+  <% } %>
   <h3 class="headline"><%= message %> Recent Activity</h3>
   <button class="friend-button"></button>
   <ul class="posts"></ul>

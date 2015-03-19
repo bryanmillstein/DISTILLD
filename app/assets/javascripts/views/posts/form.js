@@ -6,7 +6,7 @@ DISTILLD.Views.PostForm = Backbone.View.extend({
   },
 
   initialize: function (options) {
-    this.user = options.user;
+    this.fetch = options.fetch;
   },
 
   render: function () {
@@ -15,7 +15,7 @@ DISTILLD.Views.PostForm = Backbone.View.extend({
     return this;
   },
 
-  submitPost: function () {
+  submitPost: function (event) {
     event.preventDefault();
     var attrs = this.$el.serializeJSON(),
         that = this;
@@ -23,7 +23,7 @@ DISTILLD.Views.PostForm = Backbone.View.extend({
     this.model.set(attrs);
     this.model.save({}, {
       success: function () {
-        that.user.fetch();
+        that.fetch.fetch();
       }
     });
   }

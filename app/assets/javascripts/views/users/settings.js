@@ -9,8 +9,9 @@ DISTILLD.Views.UserSettings = Backbone.View.extend({
   tagName: "form",
 
   events: {
-    "submit": "submit",
-    "change #input-picture-file": "changePicture"
+    "click .settings-submit": "submit",
+    "change #input-picture-file": "changePicture",
+    "click .change-photo": "uploadPhoto"
   },
 
   render: function () {
@@ -25,11 +26,17 @@ DISTILLD.Views.UserSettings = Backbone.View.extend({
     var attrs = this.$el.serializeJSON(),
         that = this;
 
-    this.model.save(attrs, {
+    this.model.set(attrs);
+    this.model.save({}, {
       success: function () {
         Backbone.history.navigate("/#users/" + that.model.id, { trigger: true })
       }
     });
+  },
+
+  uploadPhoto: function (event) {
+    event.preventDefault();
+    this.$("#input-picture-file").trigger("click");
   },
 
   changePicture: function (event) {

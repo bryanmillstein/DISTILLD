@@ -1,25 +1,25 @@
-<section class="settings-elements">
-  <img src="<%= user.escape('picture_url') %>"/>
+<section class="settings-elements group">
+  <h3>Current Photo</h3>
+  <img class="profile-picture" src="<%= user.escape('picture_url') %>"/>
   <form class="user-form-fieldset" enctype="multipart/form-data">
+    <h3>Current Info</h3>
     <div class="user-input">
-      <label for="form-email"></label>
-        <input id="form-email" name="user[email]" value="<%= user.escape('user_name') %>">
+      <label for="form-user-name"></label>
+        <input id="form-user-name" name="user_name" value="<%= user.escape('user_name') %>">
     </div>
     <div class="user-input">
       <label for="form-email"></label>
-        <input id="form-email" name="user[email]" value="<%= user.escape('email') %>">
+        <input id="form-email" name="user_email" value="<%= user.escape('email') %>">
     </div>
-    <div class="user-input">
+    <div class="">
       <label for="form-picture"></label>
         <input type="file" name="picture" id="input-picture-file" value="">
-    </div>
-    <div class="user-input">
-      <label for="form-password"></label>
-        <input type ="password" id="form-password" name="user[password]" value="" placeholder="Password">
     </div>
     <div class="picture-preview">
         <img src="" id="picture-preview"/>
     </div>
+    <button class="change-photo">Change Photo</button>
+
     <div class="submit">
       <button>Submit</button>
     </div>

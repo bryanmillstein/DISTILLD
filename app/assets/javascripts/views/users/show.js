@@ -14,6 +14,7 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
   },
 
   render: function () {
+    this.formView = null
     var message
 
     if (this.model.get('is_current_user')) {
@@ -58,7 +59,7 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
   addPostForm: function () {
     if (!this.formView) {
       var post = new DISTILLD.Models.Post();
-      this.formView = new DISTILLD.Views.PostForm({ model: post, collection: this.posts, user: this.model });
+      this.formView = new DISTILLD.Views.PostForm({ model: post, collection: this.posts, fetch: this.model });
       this.addSubview('.post-form', this.formView);
     }
   },
