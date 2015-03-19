@@ -804,30 +804,53 @@ body {
 }
 
 .comment-content {
+
 }
 
 .comments > li {
   background: #E0E4CC;
   margin: 30px 10px;
   width: 250px;
-  display: block;
+  /*display: block;*/
   height: auto;
-
 }
 
-.comment-content > p {
-  color: black;
-  font-size: 16px;
-
+.comment-content .comment-items {
+  float: left;
+  margin: 5px 50px 5px 0;
 }
 
 .comment-content .user-name {
+  float: left;
   color: blue;
+  font-size: 14px;
+  margin: 0;
 }
 
 .comment-content .comment-body {
+  display: block;
+  float: left;
+  font-size: 14px;
+  margin: 0 0 0 10px;
 }
 
-.comment-content button {
+.comment-content .bottom-elements {
+  display: block;
+  margin: 50px 0 0 0;
+}
+
+.comment-content .time-stamp {
+  float: left;
   font-size: 12px;
+  margin: 0 10px 0 5px;
+
+
+}
+
+.comment-content .destroy-comment {
+  float: left;
+  font-size: 12px;
+
+
+
 }

@@ -1,6 +1,10 @@
 <section class="comment-content group">
-  <p class="user-name"><a href="#users/<%= comment.escape('user_id') %>"><%= comment.escape('user_name') %></a>:</p>
-  <p class="comment-body"><%= comment.escape('body') %></p>
-  <p class="time-stamp"><%= comment.escape('time_ago') %></p>
-  <button class="destroy-comment"></button>
+  <div class="comment-items">
+    <a href="#users/<%= comment.escape('user_id') %>" class="user-name"><%= comment.escape('user_name') %>:</a>
+    <p class="comment-body"><%= comment.escape('body') %></p>
+  </div>
+  <div class="bottom-elements">
+    <p class="time-stamp"><%= comment.escape('time_ago') %></p>
+    <button class="destroy-comment"></button>
+  </div>
 </section>
