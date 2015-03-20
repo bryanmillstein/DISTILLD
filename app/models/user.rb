@@ -16,6 +16,7 @@ class User < ActiveRecord::Base
   attr_reader :password
 
   has_many :posts
+  has_many :whiskys
   has_many :comments
   has_many :toasts,
     class_name: 'Toast',

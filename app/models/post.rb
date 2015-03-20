@@ -14,6 +14,8 @@ class Post < ActiveRecord::Base
     class_name: "Toast",
     foreign_key: :post_id
 
+  has_many :whiskys
+
   has_many :toasters, through: :toasts, source: :user
 
   has_attached_file :picture, styles: { medium: "50x50<" }
