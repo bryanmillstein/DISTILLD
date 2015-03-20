@@ -18,7 +18,9 @@ class User < ActiveRecord::Base
   has_many :posts
   has_many :comments
   has_many :toasts,
-    class_name: 'Toast'
+    class_name: 'Toast',
+    foreign_key: :user_id
+
   has_many :friendships,
     class_name: "Friendship"
 

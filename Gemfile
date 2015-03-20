@@ -13,6 +13,7 @@ gem 'bcrypt', '~> 3.1.7', require: 'bcrypt'
 gem 'rspec', "~> 3.1.0"
 gem 'backbone-on-rails'
 gem 'pg_search'
+gem "kaminari"
 gem 'paperclip', '~> 4.2'
 gem 'aws-sdk'
 gem 'figaro'

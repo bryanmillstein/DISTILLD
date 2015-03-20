@@ -3,7 +3,8 @@ module Api
   class PostsController < ApplicationController
 
     def index
-      @posts = Post.get_friends_posts(current_user)
+      @current_user = current_user
+      @posts = Post.get_friends_posts(current_user, params[:page])
       render :posts
     end
 

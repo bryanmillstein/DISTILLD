@@ -8,9 +8,9 @@ DISTILLD.Views.PostsIndex = Backbone.CompositeView.extend({
   },
 
   initialize: function (options) {
-    this.users = options.users
-    this.listenTo(this.collection, 'sync', this.render);
-    this.listenTo(this.users, 'sync', this.render);
+    this.bindScroll();
+    this.collection.pageNum = 1;
+    this.listenTo(this.collection, 'add', this.render);
   },
 
   render: function () {
@@ -19,6 +19,35 @@ DISTILLD.Views.PostsIndex = Backbone.CompositeView.extend({
 
     this.renderPosts();
     return this;
+  },
+
+  bindScroll: function () {
+    $(window).on("scroll", this.handleScroll.bind(this));
+  },
+
+  handleScroll: function (event) {
+    var $doc = $(document);
+    var scrolledDist = $doc.height() - window.innerHeight - $doc.scrollTop();
+
+    if (scrolledDist < 300) {
+      this.nextPageInfiniteScroll();
+    }
+  },
+
+  nextPageInfiniteScroll: function () {
+    if (this.requestingNextPage) return;
+
+    this.requestingNextPage = true;
+    this.collection.fetch({
+      remove: false,
+      data: {
+        page: this.collection.pageNum + 1
+      },
+      success: function () {
+        this.requestingNextPage = false;
+        this.collection.pageNum++;
+      }.bind(this)
+    });
   },
 
   renderPosts: function () {

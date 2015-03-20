@@ -15,7 +15,7 @@ DISTILLD.Routers.Router = Backbone.Router.extend({
     var friendsPosts = new DISTILLD.Collections.Posts();
     friendsPosts.fetch();
 
-    var feedView = new DISTILLD.Views.PostsIndex({ collection: friendsPosts, users: DISTILLD.Collections.users });
+    var feedView = new DISTILLD.Views.PostsIndex({ collection: friendsPosts, });
 
     this._swapView(feedView);
   },
