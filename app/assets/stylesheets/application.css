@@ -921,12 +921,3 @@ body {
   font-size: 36px;
   border-bottom: 1px solid gray;
 }
-
-
-
-
-<section class="whisky-items">
-  <p class="whisky-name"><%= whisky.escape('name') %></p>
-  <p class="whisky-brand"><%= whisky.escape('brand') %></p>
-  <p class="whisky-style"><%= whisky.escape('style') %></p>
-</section>
