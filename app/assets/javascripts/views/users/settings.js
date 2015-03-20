@@ -11,7 +11,10 @@ DISTILLD.Views.UserSettings = Backbone.View.extend({
   events: {
     "click .submit": "submit",
     "change #input-picture-file": "changePicture",
-    "click .change-photo": "uploadPhoto"
+    "change #input-background-picture-file": "changeBackgroundPicture",
+    "click .change-photo": "uploadPhoto",
+    "click .change-background-photo": "uploadBackgroundPhoto"
+
   },
 
   render: function () {
@@ -39,6 +42,11 @@ DISTILLD.Views.UserSettings = Backbone.View.extend({
     this.$("#input-picture-file").trigger("click");
   },
 
+  uploadBackgroundPhoto: function (event) {
+    event.preventDefault();
+    this.$("#input-background-picture-file").trigger("click");
+  },
+
   changePicture: function (event) {
     var file = event.currentTarget.files[0],
         fileReader = new FileReader(),
@@ -47,6 +55,18 @@ DISTILLD.Views.UserSettings = Backbone.View.extend({
     fileReader.onloadend = function () {
       that.model.set("picture", fileReader.result);
       that.previewPic(fileReader.result);
+    };
+
+    fileReader.readAsDataURL(file);
+  },
+
+  changeBackgroundPicture: function (event) {
+    var file = event.currentTarget.files[0],
+        fileReader = new FileReader(),
+        that = this;
+
+    fileReader.onloadend = function () {
+      that.model.set("background_picture", fileReader.result);
     };
 
     fileReader.readAsDataURL(file);

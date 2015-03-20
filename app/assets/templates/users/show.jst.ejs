@@ -1,6 +1,10 @@
 <section class="user-show">
-  <img class="profile-picture" src="<%= user.escape('picture_url') %>"/>
-  <p class="user-name"><%= user.escape('user_name') %></p>
+  <img class="background-profile-picture" src="<%= user.escape('background_picture_url') %>"/>
+  <div class="profile-basics group">
+    <img class="profile-picture" src="<%= user.escape('picture_url') %>"/>
+    <p class="user-name"><%= user.escape('user_name') %></p>
+    <p class="friend-count"><a href="#/users/<%= user.id %>/friends"><%= user.escape('friend_count') %> Friends</a></p>
+  </div>
   <% if (user.escape('is_current_user')) { %>
     <button class="get-form">Have a drink?</button>
     <form class="post-form"></form>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150319023815) do
+ActiveRecord::Schema.define(version: 20150319233825) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,16 +59,20 @@ ActiveRecord::Schema.define(version: 20150319023815) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "user_name",            null: false
-    t.string   "email",                null: false
-    t.string   "password_digest",      null: false
-    t.string   "session_token",        null: false
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.string   "user_name",                       null: false
+    t.string   "email",                           null: false
+    t.string   "password_digest",                 null: false
+    t.string   "session_token",                   null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
     t.string   "picture_file_name"
     t.string   "picture_content_type"
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
+    t.string   "background_picture_file_name"
+    t.string   "background_picture_content_type"
+    t.integer  "background_picture_file_size"
+    t.datetime "background_picture_updated_at"
   end
 
   add_index "users", ["session_token"], name: "index_users_on_session_token", using: :btree

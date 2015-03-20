@@ -8,6 +8,9 @@ class User < ActiveRecord::Base
   has_attached_file :picture, styles: { medium: "100x100>", profile_pic: "256x256<", thumb: "32x32>" }, default_url: "user_default_:style.png"
   validates_attachment_content_type :picture, content_type: /\Aimage\/.*\Z/
 
+  has_attached_file :background_picture, styles: { medium: "880x200>"}
+  validates_attachment_content_type :background_picture, content_type: /\Aimage\/.*\Z/
+
   after_initialize :ensure_session_token
 
   attr_reader :password
