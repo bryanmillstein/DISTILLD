@@ -21,16 +21,6 @@ class Post < ActiveRecord::Base
 
 
   def self.get_friends_posts(user, page_num)
-    # friends = user.friends.includes(posts: [:comments, :user, :toasts]).page(1).per(5)
-    # friends_posts = []
-    # friends.each do |friend|
-    #   friend.posts.each do |post|
-    #     friends_posts << post
-    #   end
-    # end
-    # return friends_posts
-
-
     friends_ids = []
     user.friends.each do |friend|
       friends_ids << friend.id

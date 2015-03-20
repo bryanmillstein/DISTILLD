@@ -1,5 +1,7 @@
 <section class="user-show">
-  <img class="background-profile-picture" src="<%= user.escape('background_picture_url') %>"/>
+  <div class="background-container">
+    <img class="background-profile-picture" src="<%= user.escape('background_picture_url') %>"/>
+  </div>
   <div class="profile-basics group">
     <img class="profile-picture" src="<%= user.escape('picture_url') %>"/>
     <p class="user-name"><%= user.escape('user_name') %></p>

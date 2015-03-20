@@ -82,7 +82,7 @@ button {
  }
 
 body {
-   background-image: url(http://www.whiskipad.com/wp-content/uploads/2013/07/barrels-background-mono.jpg);
+   /*background-image: url(http://www.whiskipad.com/wp-content/uploads/2013/07/barrels-background-mono.jpg);*/
    background-size: cover;
    background-repeat: no-repeat;
    background-color: #000;
@@ -145,7 +145,7 @@ body {
   border: none;
   border-left: 1px solid lightgray;
   width: 150px;
-  padding: 7px 0 ;
+  padding: 7px 5px ;
 }
 
 .submit > button {
@@ -228,7 +228,7 @@ body {
   border: none;
   border-left: 1px solid lightgray;
   width: 150px;
-  padding: 7px 0;
+  padding: 7px 5px;
 }
 
 .submit > button {
@@ -403,7 +403,7 @@ body {
 
 .background-profile-picture {
   width: 880px;
-  height: 200px;
+  height: 350px;
   margin: 10px;
 }
 

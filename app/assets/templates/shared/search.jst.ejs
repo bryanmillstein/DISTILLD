@@ -1,5 +1,12 @@
 <section class="search-page">
-  <input type="text" class="query" value="<%= collection.query %>" placeholder="Search for friends...">
+  <input type="text" class="query" value="<%= results.query %>" placeholder="Search for friends...">
   <button class="search-button">Search</button>
   <ul class="search-results"></ul>
+  <% if (display) { %>
+    <div>
+      <p>Page: <%= results.pageNum %> of <%= results.total_count %></p>
+      <a class="prev-page" href="javascript:void(0)">Previous</a>
+      <a class="next-page" href="javascript:void(0)">Next</a>
+    </div>
+  <% } %>
 </section>
