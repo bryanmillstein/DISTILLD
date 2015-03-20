@@ -6,7 +6,6 @@ DISTILLD.Views.FriendshipButton = Backbone.View.extend({
   },
 
   initialize: function (options) {
-    // this.listenTo(this.model, 'request', this.render);
     this.fetch = options.fetch;
   },
 

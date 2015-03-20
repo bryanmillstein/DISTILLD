@@ -3,7 +3,7 @@ class Whisky < ActiveRecord::Base
   self.table_name = "whiskys"
 
   belongs_to :post,
-    class_name: "Whisky",
+    class_name: "Post",
     foreign_key: :whisky_id
 
 end

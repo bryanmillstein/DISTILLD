@@ -1,17 +1,23 @@
 <section class="user-show">
-  <div class="background-container">
-    <img class="background-profile-picture" src="<%= user.escape('background_picture_url') %>"/>
-  </div>
+  <img class="background-profile-picture" src="<%= user.escape('background_picture_url') %>"/>
   <div class="profile-basics group">
     <img class="profile-picture" src="<%= user.escape('picture_url') %>"/>
     <p class="user-name"><%= user.escape('user_name') %></p>
-    <p class="friend-count"><a href="#/users/<%= user.id %>/friends">You have <%= user.escape('friend_count') %> Friends</a></p>
+    <% if (!user.get('is_current_user')) { %>
+      <button class="friend-button"></button>
+    <% } %>
+    <% if (user.get('is_current_user')) { %>
+      <p class="friend-count"><a href="#/users/<%= user.id %>/friends">You have <%= user.escape('friend_count') %> Friends</a></p>
+      <p class="whisky-count"><a href="#/users/<%= user.id %>/whiskys">You have <%= user.escape('whisky_count') %> Whiskys</a></p>
+    <% } else { %>
+      <p class="friend-count"><a href="#/users/<%= user.id %>/friends"><%= user.escape('user_name') %> has <%= user.escape('friend_count') %> Friends</a></p>
+      <p class="whisky-count"><a href="#/users/<%= user.id %>/whiskys"><%= user.escape('user_name') %> has <%= user.escape('whisky_count') %> Whiskys</a></p>
+    <% } %>
   </div>
   <% if (user.escape('is_current_user')) { %>
     <button class="get-form">Have a drink?</button>
     <form class="post-form"></form>
   <% } %>
   <h3 class="headline"><%= message %> Recent Activity</h3>
-  <button class="friend-button"></button>
   <ul class="posts"></ul>
 </section>

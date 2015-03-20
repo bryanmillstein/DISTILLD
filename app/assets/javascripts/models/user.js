@@ -18,11 +18,11 @@ DISTILLD.Models.User = Backbone.Model.extend ({
     },
 
     whiskys: function () {
-      if (!this.whiskys) {
-        this.whiskys = new DISTILLD.Collections.Whiskys( [],{ user: this });
+      if (!this._whiskys) {
+        this._whiskys = new DISTILLD.Collections.Whiskys( [],{ user: this });
       }
 
-      return this.whiskys;
+      return this._whiskys;
     },
 
     toJSON: function () {

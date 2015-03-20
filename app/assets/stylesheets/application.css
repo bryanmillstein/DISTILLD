@@ -423,6 +423,21 @@ body {
   right: 50px;
 }
 
+.profile-basics .friend-count:hover {
+  font-weight: bold;
+}
+
+.profile-basics .whisky-count {
+  position: absolute;
+  color: blue;
+  top: 70px;
+  right: 50px;
+}
+
+.profile-basics .whisky-count:hover {
+  font-weight: bold;
+}
+
 .profile-picture {
   background-repeat: no-repeat;
   background-position: 50%;
@@ -451,9 +466,9 @@ body {
 .user-show #remove-friend {
   position: absolute;
   text-align: center;
-  top: 100px;
-  left: 150px;
   background: gray;
+  top: 30px;
+  left: 135px;
   color: white;
   font-size: 36px;
   width: 40px;
@@ -463,9 +478,9 @@ body {
 .user-show #add-friend {
   position: absolute;
   text-align: center;
-  top: 100px;
-  left: 150px;
   background: #FA6900;
+  top: 30px;
+  left: 135px;
   color: white;
   font-size: 36px;
   width: 40px;
@@ -887,3 +902,31 @@ body {
   float: left;
   font-size: 12px;
 }
+
+/*WHISKY INDEX*/
+
+.whisky-items {
+  margin: 25px;
+  border-bottom: 1px solid lightgray;
+}
+
+.whisky-items > p {
+  float: left;
+  margin: 0 10px 0 0;
+  font-size: 18px;
+}
+
+.whisky-headline {
+  margin: 20px;
+  font-size: 36px;
+  border-bottom: 1px solid gray;
+}
+
+
+
+
+<section class="whisky-items">
+  <p class="whisky-name"><%= whisky.escape('name') %></p>
+  <p class="whisky-brand"><%= whisky.escape('brand') %></p>
+  <p class="whisky-style"><%= whisky.escape('style') %></p>
+</section>

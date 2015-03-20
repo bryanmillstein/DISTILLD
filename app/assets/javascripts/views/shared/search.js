@@ -11,7 +11,8 @@ DISTILLD.Views.Search = Backbone.CompositeView.extend({
     "click .search-button": "search",
     "click .next-page": "nextPage",
     "click .prev-page": "prevPage"
-
+    // "click #add-friend": "renderSearch",
+    // "click #remove-friend": "renderSearch"
   },
 
   template: JST["shared/search"],
@@ -23,6 +24,11 @@ DISTILLD.Views.Search = Backbone.CompositeView.extend({
     this.renderSearchResults();
     return this;
   },
+
+  // renderSearch: function (event) {
+  //   event.preventDefault();
+  //   this.$(".search-button").trigger("click");
+  // },
 
   renderSearchResults: function () {
     var container = this.$(".search-results"),

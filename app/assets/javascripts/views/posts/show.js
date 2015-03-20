@@ -58,18 +58,4 @@ DISTILLD.Views.PostShow = Backbone.CompositeView.extend ({
 
   },
 
-
-
-  // addEditForm: function () {
-  //   var formView = new DISTILLD.Views.PostEdit({ model: this.model, collection: this.collection, user: this.user });
-  //   this.addSubview('.edit-form', formView);
-  //
-  // },
-  //
-  // addDeleteButton: function () {
-  //   var formView = new DISTILLD.Views.PostDelete({ model: this.model, collection: this.collection });
-  //   this.addSubview('.delete-btn', formView);
-  //
-  // },
-
 });

@@ -8,6 +8,7 @@ DISTILLD.Routers.Router = Backbone.Router.extend({
     "users/:id": "userShow",
     "search": "search",
     "users/:id/friends": 'friends',
+    "users/:id/whiskys": 'whiskys',
     "users/:id/settings": 'settings'
   },
 
@@ -25,6 +26,16 @@ DISTILLD.Routers.Router = Backbone.Router.extend({
         view = new DISTILLD.Views.UserShow({ model: user, collection: DISTILLD.Collections.users });
 
     this._swapView(view);
+  },
+
+  whiskys: function (id) {
+    var user = DISTILLD.Collections.users.getOrFetch(id);
+    var whiskys = user.whiskys();
+
+    var whiskysView = new DISTILLD.Views.WhiskyIndex({ model: user, collection: whiskys });
+
+
+    this._swapView(whiskysView);
   },
 
   friends: function () {

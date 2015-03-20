@@ -11,7 +11,6 @@ DISTILLD.Views.FriendsIndex = Backbone.CompositeView.extend ({
     var content = this.template({ friends: friends });
     this.$el.html(content);
 
-    // this.friendSearch();
     this.renderFriends();
     return this;
   },
@@ -24,5 +23,5 @@ DISTILLD.Views.FriendsIndex = Backbone.CompositeView.extend ({
     var view = new DISTILLD.Views.FriendShow({ model: friend, collection: this.collection });
     this.addSubview('.friends', view);
   },
-  
+
 });

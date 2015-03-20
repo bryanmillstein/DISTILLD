@@ -10,3 +10,4 @@ module Api
 end
 
 # @whiskys = Whisky.where("name ~ ? OR brand ~ ?", 'm')
+# @whiskys = Whisky.where("name ~ ?" OR "brand ~ ?", 'm')
