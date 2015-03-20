@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     resources :friendships, only: [:create]
     resources :friends, only: [:index]
     get "search", to: "searches#index"
+    get "whisky", to: "whiskys#index"
+
   end
 
 

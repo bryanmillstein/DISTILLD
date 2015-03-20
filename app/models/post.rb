@@ -3,7 +3,7 @@ require 'action_view'
 class Post < ActiveRecord::Base
   include ActionView::Helpers::DateHelper
 
-  validates :user_id, :drink, presence: true
+  validates :user_id, :whisky_id, presence: true
 
   belongs_to :user
   has_many :comments,
@@ -14,7 +14,9 @@ class Post < ActiveRecord::Base
     class_name: "Toast",
     foreign_key: :post_id
 
-  has_many :whiskys
+  belongs_to :whisky,
+    class_name: "Whisky",
+    foreign_key: :whisky_id
 
   has_many :toasters, through: :toasts, source: :user
 
@@ -28,7 +30,7 @@ class Post < ActiveRecord::Base
       friends_ids << friend.id
     end
 
-    Post.includes(:user, :toasters, :toasts, comments: [:user]).where("user_id IN (?)", friends_ids).order(created_at: :desc).page(page_num).per(5)
+    Post.includes(:user, :whisky, :toasters, :toasts, comments: [:user]).where("user_id IN (?)", friends_ids).order(created_at: :desc).page(page_num).per(5)
   end
 
   def time_ago

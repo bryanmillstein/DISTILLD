@@ -17,6 +17,14 @@ DISTILLD.Models.User = Backbone.Model.extend ({
       return this._friends;
     },
 
+    whiskys: function () {
+      if (!this.whiskys) {
+        this.whiskys = new DISTILLD.Collections.Whiskys( [],{ user: this });
+      }
+
+      return this.whiskys;
+    },
+
     toJSON: function () {
       return {
         user: _.clone(this.attributes)
@@ -27,6 +35,11 @@ DISTILLD.Models.User = Backbone.Model.extend ({
       if (response.posts) {
         this.posts().set(response.posts, { parse: true });
         delete response.posts;
+      }
+
+      if (response.whiskys) {
+        this.whiskys().set(response.whiskys);
+        delete response.whiskys;
       }
 
       if (response.friends) {

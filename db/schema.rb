@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150320072205) do
+ActiveRecord::Schema.define(version: 20150320143311) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,7 +41,6 @@ ActiveRecord::Schema.define(version: 20150320072205) do
 
   create_table "posts", force: :cascade do |t|
     t.integer  "user_id",              null: false
-    t.string   "drink",                null: false
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -49,6 +48,7 @@ ActiveRecord::Schema.define(version: 20150320072205) do
     t.string   "picture_content_type"
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
+    t.integer  "whisky_id"
   end
 
   create_table "toasts", force: :cascade do |t|
@@ -79,7 +79,6 @@ ActiveRecord::Schema.define(version: 20150320072205) do
 
   create_table "whiskys", force: :cascade do |t|
     t.string   "name",              null: false
-    t.string   "type",              null: false
     t.string   "brand",             null: false
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -91,8 +90,7 @@ ActiveRecord::Schema.define(version: 20150320072205) do
     t.string   "post_content_type"
     t.integer  "post_file_size"
     t.datetime "post_updated_at"
-    t.integer  "post_id"
-    t.integer  "user_id"
+    t.string   "style"
   end
 
 end
