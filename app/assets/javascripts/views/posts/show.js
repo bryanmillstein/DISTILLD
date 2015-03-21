@@ -2,9 +2,9 @@ DISTILLD.Views.PostShow = Backbone.CompositeView.extend ({
   template: JST['posts/show'],
   className: 'post-display',
   events: {
-    'click #comment-form': 'addCommentForm',
+    'click #comment-form': 'handleCommentForm',
     'click .delete-post': 'destroyPost',
-    'click .edit-post': 'addEditForm',
+    'click .edit-post': 'handleEditForm',
 
   },
 
@@ -39,10 +39,13 @@ DISTILLD.Views.PostShow = Backbone.CompositeView.extend ({
     this.addSubview('.comments', view);
   },
 
-  addCommentForm: function () {
+  handleCommentForm: function () {
     if (!this.formView) {
       this.formView = new DISTILLD.Views.CommentForm({ collection: this.comments, post: this.model, fetch: this.fetch })
       this.addSubview('.comment-form', this.formView);
+    } else {
+      this.removeSubview('.comment-form', this.formView);
+      this.formView = null
     }
   },
 
@@ -52,10 +55,14 @@ DISTILLD.Views.PostShow = Backbone.CompositeView.extend ({
     post.destroy();
   },
 
-  addEditForm: function () {
-    var formView = new DISTILLD.Views.PostEdit({ model: this.model, collection: this.collection, user: this.user });
-    this.addSubview('.edit-form', formView);
-
+  handleEditForm: function () {
+    if (!this.editFormView) {
+      this.editFormView = new DISTILLD.Views.PostEdit({ model: this.model, collection: this.collection, user: this.user });
+      this.addSubview('.edit-form', this.editFormView);
+    } else {
+      this.removeSubview('.edit-form', this.editFormView);
+      this.editFormView = null
+    }
   },
 
 });
