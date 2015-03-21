@@ -24,6 +24,11 @@
  BLUE- #69D2E7
  GRAY- #E0E4CC*/
 
+ /*Bulleit Orange- #E75108
+ Bulleit Green- #76953B*/
+ /*Gray-blue- #274456*/
+
+
 
  /* RESET */
  html, body, header, nav, h1, a,
@@ -82,11 +87,20 @@ button {
  }
 
 body {
-   background-image: url(http://www.whiskipad.com/wp-content/uploads/2013/07/barrels-background-mono.jpg);
+   background: #000 url(http://www.whiskipad.com/wp-content/uploads/2013/07/barrels-background-mono.jpg) no-repeat center center fixed;
    background-size: cover;
-   background-repeat: no-repeat;
-   background-color: #000;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 16px;
+   font-weight: 700;
+   font-style: italic;
  }
+
+
+.error-messages {
+  color: #fff;
+  margin: 150px auto;
+
+}
 
 .sign-in {
   position: relative;
@@ -249,7 +263,7 @@ body {
 }
 
 .new-session a {
-  color: #69D2E7;
+  color: #FA6900;
   font-weight: 900;
 }
 
@@ -259,6 +273,12 @@ body {
 
 .header {
  background: #FA6900;
+ position: fixed;;
+ top: 0;
+ left: 0;
+ right: 0;
+ width: 100%;
+ z-index: 1;
  border-bottom: 1px solid black;
 }
 
@@ -308,7 +328,7 @@ body {
 
 .backdrop {
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 80px;
   background: #E0E4CC;
   width: 900px;
   border: 2px solid gray;
@@ -403,7 +423,7 @@ body {
 
 .background-profile-picture {
   width: 880px;
-  height: 350px;
+  height: 300px;
   margin: 10px;
 }
 

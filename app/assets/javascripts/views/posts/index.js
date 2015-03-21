@@ -1,10 +1,9 @@
 DISTILLD.Views.PostsIndex = Backbone.CompositeView.extend({
   template: JST['posts/index'],
   events: {
-    'click .get-form': 'addPostForm',
+    'click .get-form': 'handlePostForm',
     'click .post-options': 'addCommentForm',
     'click .picture-form': 'addPictureForm',
-
   },
 
   initialize: function (options) {
@@ -61,11 +60,14 @@ DISTILLD.Views.PostsIndex = Backbone.CompositeView.extend({
     this.addSubview('.posts', view);
   },
 
-  addPostForm: function () {
+  handlePostForm: function () {
     if (!this.postFormView) {
       var post = new DISTILLD.Models.Post();
       this.postFormView = new DISTILLD.Views.PostForm({ model: post, fetch: this.collection });
       this.addSubview('.post-form', this.postFormView);
+    } else {
+      this.removeSubview('.post-form', this.postFormView);
+      this.postFormView = null
     }
   },
 })

@@ -3,7 +3,7 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
   template: JST['users/show'],
 
   events: {
-    'click .get-form': 'addPostForm',
+    'click .get-form': 'handlePostForm',
   },
 
   initialize: function () {
@@ -45,11 +45,14 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
     this.addSubview('.posts', view);
   },
 
-  addPostForm: function () {
+  handlePostForm: function () {
     if (!this.formView) {
       var post = new DISTILLD.Models.Post();
       this.formView = new DISTILLD.Views.PostForm({ model: post, collection: this.posts, fetch: this.model });
       this.addSubview('.post-form', this.formView);
+    } else {
+      this.removeSubview('.post-form', this.formView);
+      this.formView = null
     }
   },
 

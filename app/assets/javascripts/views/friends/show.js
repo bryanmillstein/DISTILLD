@@ -1,5 +1,6 @@
 DISTILLD.Views.FriendShow = Backbone.CompositeView.extend ({
   template: JST['friends/show'],
+  tagName: 'li',
 
   initialize: function () {
     this.listenTo(this.model, 'sync', this.render)
