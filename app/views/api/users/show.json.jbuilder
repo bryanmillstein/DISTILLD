@@ -1,9 +1,15 @@
 json.extract! @user, :id, :user_name, :email, :created_at, :updated_at
 json.picture_url image_url(@user.picture.url(:profile_pic))
+
 if @user.background_picture_updated_at
   json.background_picture_url image_url(@user.background_picture.url(:medium))
 end
+
 json.friend_count @user.friends.count
+json.friends @user.friends do |friend|
+  json.extract! friend, :id, :user_name, :email, :created_at, :updated_at
+  json.picture_url image_url(friend.picture.url(:thumb))
+end
 json.whisky_count @user.whiskys.count
 json.is_current_user is_current_user?(@user)
 json.is_friend is_friend(@user)

@@ -38,10 +38,11 @@ DISTILLD.Routers.Router = Backbone.Router.extend({
     this._swapView(whiskysView);
   },
 
-  friends: function () {
-    var friends = new DISTILLD.Collections.Friends();
-    friends.fetch();
-    var friendsView = new DISTILLD.Views.FriendsIndex({ collection: friends });
+  friends: function (id) {
+    var user = DISTILLD.Collections.users.getOrFetch(id);
+    var friends = user.friends();
+
+    var friendsView = new DISTILLD.Views.FriendsIndex({ model: user, collection: friends });
 
     this._swapView(friendsView);
   },

@@ -2,7 +2,7 @@ DISTILLD.Views.FriendsIndex = Backbone.CompositeView.extend ({
   template: JST['friends/index'],
 
   initialize: function () {
-    this.listenTo(this.collection, 'sync', this.render)
+    this.listenTo(this.model, 'sync', this.render)
   },
 
 

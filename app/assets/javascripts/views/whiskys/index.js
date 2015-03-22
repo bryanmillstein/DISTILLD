@@ -1,7 +1,7 @@
 DISTILLD.Views.WhiskyIndex = Backbone.CompositeView.extend({
   template: JST['whiskys/index'],
 
-  initialize: function (options) {
+  initialize: function () {
     this.listenTo(this.model, 'sync', this.render);
   },
 
