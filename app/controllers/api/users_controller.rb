@@ -2,7 +2,8 @@ module Api
   class UsersController < ApplicationController
 
     def show
-      @user = User.includes(:whiskys, posts: [:comments, :whisky]).find(params[:id])
+      @user = User.includes(:whiskys, posts: [:toasts, :toasters, :whisky, comments: [:user]]).find(params[:id])
+
       render :show
     end
 

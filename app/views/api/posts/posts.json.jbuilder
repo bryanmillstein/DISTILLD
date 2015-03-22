@@ -10,7 +10,7 @@ json.array! @posts do |post|
   json.time_ago post.time_ago
 
   if post.picture_updated_at
-    json.post_picture_url image_url(post.picture.url)
+    json.post_picture_url image_url(post.picture.url(:medium))
   end
 
   json.toast_number post.toasts.length

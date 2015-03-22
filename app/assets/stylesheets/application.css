@@ -89,7 +89,7 @@ button {
 body {
    background: #000 url(http://www.whiskipad.com/wp-content/uploads/2013/07/barrels-background-mono.jpg) no-repeat center center fixed;
    background-size: cover;
-   font-family: 'Open Sans', sans-serif;
+   font-family: 'Playfair Display', serif;
    font-size: 16px;
    font-weight: 700;
    font-style: italic;
@@ -352,8 +352,12 @@ body {
   font-weight: bold;
 }
 
-.post-new-form {
+.post-form {
+  transition-duration: 5s;
 
+}
+
+.post-new-form {
 }
 
 .form-fieldset {
@@ -422,8 +426,6 @@ body {
 /*USER SHOW*/
 
 .background-profile-picture {
-  width: 880px;
-  height: 300px;
   margin: 10px;
 }
 

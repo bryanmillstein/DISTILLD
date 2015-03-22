@@ -20,7 +20,7 @@ class Post < ActiveRecord::Base
 
   has_many :toasters, through: :toasts, source: :user
 
-  has_attached_file :picture, styles: { medium: "50x50<" }
+  has_attached_file :picture, styles: { medium: "300" }
   validates_attachment_content_type :picture, content_type: /\Aimage\/.*\Z/
 
 
