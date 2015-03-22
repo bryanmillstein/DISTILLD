@@ -8,7 +8,7 @@ DISTILLD.Views.FriendsIndex = Backbone.CompositeView.extend ({
 
   render: function () {
     var friends = this.collection.length
-    var content = this.template({ friends: friends });
+    var content = this.template({ friends: friends, user: this.model });
     this.$el.html(content);
 
     this.renderFriends();

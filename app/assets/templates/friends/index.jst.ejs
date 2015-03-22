@@ -1,6 +1,10 @@
 <section class="friend-page">
   <h1>Friends</h1>
   <a href="#search">Find a friend</a>
-  <h3>Your Friends (<%= friends %>)</h3>
+  <% if (user.escape('is_current_user')) { %>
+    <h3>Your Friends (<%= friends %>)</h3>
+  <% } else { %>
+    <h3><%= user.escape('user_name') %>'s Friends (<%= friends %>)</h3>
+  <% } %>
   <ul class="friends group"></ul>
 </section>

@@ -1,4 +1,8 @@
-<h1 class="whisky-headline">Your Whiskys</h1>
+<% if (user.escape('is_current_user')) { %>
+  <h1 class="whisky-headline">Your Whiskys</h1>
+<% } else { %>
+  <h1 class="whisky-headline"><%= user.escape('user_name') %>'s Whiskys</h1>
+<% } %>
 
 <ul class="whiskys-list">
 

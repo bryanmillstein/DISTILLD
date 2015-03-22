@@ -6,7 +6,7 @@ DISTILLD.Views.WhiskyIndex = Backbone.CompositeView.extend({
   },
 
   render: function () {
-    var content = this.template();
+    var content = this.template({ user: this.model });
     this.$el.html(content);
 
     this.renderWhiskys();
