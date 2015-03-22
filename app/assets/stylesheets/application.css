@@ -203,7 +203,7 @@ body {
 
 .greeting {
   padding: 0px 5px 10px 5px;
-  font-size: 32px;
+  font-size: 28px;
   border-bottom: 1px solid lightgray;
   color: #FA6900;
 }
@@ -257,7 +257,7 @@ body {
 }
 
 .new-session {
-  margin: 15px 0;
+  margin: 10px 0;
   font-size: 18px;
 
 }
