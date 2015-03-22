@@ -2,12 +2,10 @@ module Api
   class WhiskysController < ApplicationController
 
     def index
-      @whiskys = Whisky.where("name ~ ?", params[:query])
+      @whiskys = Whisky.where("(name ~ ?) OR (brand ~ ?) OR (name ~ ?) OR
+       (brand ~ ?)", params[:query], params[:query], params[:query].upcase, params[:query].upcase)
 
       render :index
     end
   end
 end
-
-# @whiskys = Whisky.where("name ~ ? OR brand ~ ?", 'm')
-# @whiskys = Whisky.where("name ~ ?" OR "brand ~ ?", 'm')
