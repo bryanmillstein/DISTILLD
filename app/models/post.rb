@@ -33,6 +33,13 @@ class Post < ActiveRecord::Base
     Post.includes(:user, :whisky, :toasters, :toasts, comments: [:user]).where("user_id IN (?)", friends_ids).order(created_at: :desc).page(page_num).per(5)
   end
 
+  def self.get_user_posts(user, page_num)
+    @posts = Post.includes(:user, :toasts, :toasters, :whisky, comments: [:user]).where("user_id = (?)", user.id).order(created_at: :desc).page(page_num).per(5)
+
+  end
+
+
+
   def time_ago
     time_ago_in_words(self.created_at)
   end

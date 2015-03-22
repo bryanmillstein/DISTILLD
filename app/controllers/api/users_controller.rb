@@ -2,7 +2,11 @@ module Api
   class UsersController < ApplicationController
 
     def show
-      @user = User.includes(:whiskys, posts: [:toasts, :toasters, :whisky, comments: [:user]]).find(params[:id])
+      # @user = User.includes(:whiskys, posts: [:toasts, :toasters, :whisky, comments: [:user]]).find(1)
+
+@user = User.includes(:whiskys).find(params[:id])
+# users_id = @user.id
+# @posts = Post.includes(:user, :toasts, :toasters, :whisky, comments: [:user]).where("user_id = (?)", users_id).order(created_at: :desc).page(params[:page]).per(5)
 
       render :show
     end

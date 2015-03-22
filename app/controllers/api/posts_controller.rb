@@ -3,7 +3,12 @@ module Api
   class PostsController < ApplicationController
 
     def index
-      @posts = Post.get_friends_posts(current_user, params[:page])
+      if params[:user_id]
+        user = User.find(params[:user_id])
+        @posts = Post.get_user_posts(user, params[:page])
+      else
+        @posts = Post.get_friends_posts(current_user, params[:page])
+      end
       render :posts
     end
 
