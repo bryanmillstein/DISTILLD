@@ -34,8 +34,7 @@ class Post < ActiveRecord::Base
   end
 
   def self.get_user_posts(user, page_num)
-    @posts = Post.includes(:user, :toasts, :toasters, :whisky, comments: [:user]).where("user_id = (?)", user.id).order(created_at: :desc).page(page_num).per(5)
-
+    Post.includes(:user, :toasts, :toasters, :whisky, comments: [:user]).where("user_id = (?)", user.id).order(created_at: :desc).page(page_num).per(5)
   end
 
 
