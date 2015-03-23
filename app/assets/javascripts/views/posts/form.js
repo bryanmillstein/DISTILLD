@@ -7,8 +7,8 @@ DISTILLD.Views.PostForm = Backbone.CompositeView.extend({
     "click .add-photo": "uploadPhoto",
     "keyup .input-whisky-search": "handleInput",
     "click .whisky-choice": "selectWhisky"
-
   },
+
 
   initialize: function (options) {
     this.fetch = options.fetch;
@@ -17,7 +17,18 @@ DISTILLD.Views.PostForm = Backbone.CompositeView.extend({
   render: function () {
     var content = this.template({ post: this.model });
     this.$el.html(content);
+
+    this.placeLocationInput();
     return this;
+  },
+
+  placeLocationInput: function () {
+    var input = document.getElementById('form-location');
+    var options = {
+      types: ['establishment']
+    };
+
+    autocomplete = new google.maps.places.Autocomplete(input, options);
   },
 
   selectWhisky: function (event) {

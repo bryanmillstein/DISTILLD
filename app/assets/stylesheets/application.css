@@ -92,7 +92,7 @@ body {
    font-family: 'Playfair Display', serif;
    font-size: 16px;
    font-weight: 700;
-   font-style: italic;
+   /*font-style: italic;*/
  }
 
 
@@ -301,6 +301,8 @@ body {
   float: left;
   font-size: 28px;
   color: white;
+  font-style: italic;
+
 }
 
 .header-logo:hover {
@@ -329,7 +331,7 @@ body {
 .backdrop {
   margin: 0 auto;
   margin-top: 80px;
-  background: #E0E4CC;
+  background: #FFFFFF;
   width: 900px;
   border: 2px solid gray;
   padding: 0 10px 0 10px;
@@ -733,7 +735,7 @@ body {
 /*POST*/
 
 .post-description {
-  background: white;
+  background: #EFEFEF;
   position: relative;
   margin: 10px;
   padding: 10px 20px;
@@ -768,10 +770,9 @@ body {
 
 .post-body {
   position: relative;
-  background: #E0E4CC;
+  background: #FFFFFF;
   margin: 60px 5px 7px 5px;
-  width: 300px;
-  height: 50px;
+  height: auto;
   padding: 5px 10px;
   border-radius: 2px;
 }
@@ -779,23 +780,22 @@ body {
 .post-description .post-picture {
   margin: 10px 0 10px 12px;
   width: 300px;
-  height: 150px;
 }
 
 .triangle {
   content: "";
   display: block;
   position: absolute;
-  border-bottom: 30px solid #E0E4CC;
-  border-right: 30px solid transparent;
-  border-left: 30px solid transparent;
-  top: 40px;
+  border-bottom: 30px solid #FFFFFF;
+  border-right: 25px solid transparent;
+  border-left: 25px solid transparent;
+  top: 50px;
   left: 75px;
 }
 
 .post-options {
-  background: #FA6900;
-  color: white;
+  background: transparent;
+  color: #000;
   border: 1px solid black;
   padding: 5px 10px;
   font-weight: bold;
@@ -803,10 +803,7 @@ body {
 }
 
 .post-options:hover {
-  background: #69D2E7;
   color: black;
-  border: none;
-
 }
 
 .common-buttons {
@@ -844,9 +841,9 @@ body {
 
 .toast-elements .toasts {
   float: left;
-  background: #FA6900;
   margin: 0 0 0 5px;
-  color: white;
+  cursor: default;
+  color: #000;
   border: 1px solid black;
   padding: 5px 10px;
   font-weight: bold;
@@ -855,9 +852,8 @@ body {
 
 .toast-elements #toasted {
   float: left;
-  background: #FA6900;
   font-weight: bold;
-  color: white;
+  color: #000;
   border: 1px solid black;
   padding: 5px 10px;
   border-radius: 6px;
@@ -865,8 +861,7 @@ body {
 
 .toast-elements #toast {
   float: left;
-  background: #FA6900;
-  color: white;
+  color: #000;
   font-weight: none;
   border: 1px solid black;
   padding: 5px 10px;
@@ -876,18 +871,60 @@ body {
 /*COMMENT*/
 
 .comments {
+  margin: 50px 0 30px;
+}
+
+.comments > li {
+  margin: 0 0 10px;
+  width: 300px;
 }
 
 .comment-content {
+  background: #fff;
+  padding: 10px;
+  height: auto;
+  word-wrap: normal;
+}
+
+.comment-content > a {
+  color: blue;
+  font-size: 14px;
+  margin: 0;
+
+}
+
+.comment-content .comment-body {
+  height: auto;
+  position: relative;
+  font-size: 14px;
+  margin: 0 0 10px;
+}
+
+.comment-content .time-stamp {
+  float: left;
+  margin: 0;
+  font-weight: 400;
+}
+
+.comment-content .destroy-comment {
+  float: right;
+  margin: 0 10px;
+  font-size: 13px;
+}
+
+
+/*.comments {
+}
+
+.comment-content {
+  width: 250px;
+  padding: 5px 10px;
 
 }
 
 .comments > li {
-  background: #E0E4CC;
+  background: #FFFFFF;
   margin: 30px 10px;
-  width: 250px;
-  /*display: block;*/
-  height: auto;
 }
 
 .comment-content .comment-items {
@@ -903,8 +940,8 @@ body {
 }
 
 .comment-content .comment-body {
-  display: block;
-  float: left;
+  height: auto;
+  width: 200px;
   font-size: 14px;
   margin: 0 0 0 10px;
 }
@@ -912,7 +949,7 @@ body {
 .comment-content .bottom-elements {
   display: block;
   /*margin: 50px 0 0 0;*/
-}
+/*}
 
 .comment-content .time-stamp {
   float: left;
@@ -923,7 +960,7 @@ body {
 .comment-content .destroy-comment {
   float: left;
   font-size: 12px;
-}
+}*/
 
 /*WHISKY INDEX*/
 

@@ -8,6 +8,7 @@ end
 json.friend_count @user.friends.count
 json.friends @user.friends do |friend|
   json.extract! friend, :id, :user_name, :email, :created_at, :updated_at
+  json.is_current_user is_current_user?(friend)
   json.picture_url image_url(friend.picture.url(:thumb))
 end
 json.whisky_count @user.whiskys.count

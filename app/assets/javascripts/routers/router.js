@@ -41,10 +41,21 @@ DISTILLD.Routers.Router = Backbone.Router.extend({
   friends: function (id) {
     var user = DISTILLD.Collections.users.getOrFetch(id);
     var friends = user.friends();
-
     var friendsView = new DISTILLD.Views.FriendsIndex({ model: user, collection: friends });
 
+
     this._swapView(friendsView);
+
+    // $.ajax({
+    //   url: 'api/friends',
+    //   method: 'GET'
+    //   data: {
+    //     user_id: id
+    //   },
+    //   success: function () {
+    //     var friendsView = new DISTILLD.Views.FriendsIndex();
+    //   }
+    // });
   },
 
   settings: function (id) {

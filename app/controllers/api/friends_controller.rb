@@ -1,7 +1,13 @@
 module Api
   class FriendsController < ApplicationController
+    # def index
+    #   @friends = current_user.friends
+    #   render :index
+    # end
+
     def index
-      @friends = current_user.friends
+      @user = User.find(params[:id])
+      @friends = @user.friends
       render :index
     end
   end
