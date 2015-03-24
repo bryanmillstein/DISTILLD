@@ -17,8 +17,13 @@ DISTILLD.Views.PostShow = Backbone.CompositeView.extend ({
   },
 
   render: function () {
-    var content = this.template({ post: this.model, user: this.user });
-    this.$el.html(content);
+    if (this.model.get('place_name')) {
+      var content = this.template({ post: this.model, user: this.user, place: true });
+      this.$el.html(content);
+    } else {
+      var content = this.template({ post: this.model, user: this.user, place: null });
+      this.$el.html(content);
+    }
 
     this.renderToast();
     this.renderComments();

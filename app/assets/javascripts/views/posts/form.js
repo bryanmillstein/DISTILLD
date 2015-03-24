@@ -27,28 +27,9 @@ DISTILLD.Views.PostForm = Backbone.CompositeView.extend({
         searchBox = new google.maps.places.Autocomplete(input[0]),
         that = this;
         google.maps.event.addListener(searchBox, 'place_changed', function () {
-          var place = searchBox.getPlace();
-          that.selectLocation(place);
+          that.place = searchBox.getPlace();
         });
 
-  },
-
-  selectLocation: function (place) {
-    var placeId = place.place_id;
-
-    this.model.set({ place_id: placeId });
-  },
-
-  placeRetrieval: function (placeId) {
-    var map = new google.maps.Map(document.getElementById('map'), {} ),
-        request = { placeId: placeId },
-        service = new google.maps.places.PlacesService(map);
-
-    service.getDetails(request, function (place, status) {
-        if (status == google.maps.places.PlacesServiceStatus.OK) {
-          /*do something with place */
-        }
-    });
   },
 
   selectWhisky: function (event) {
@@ -97,10 +78,17 @@ DISTILLD.Views.PostForm = Backbone.CompositeView.extend({
 
   submitPost: function (event) {
     event.preventDefault();
-    var attrs = this.$el.serializeJSON(),
+    var placeId = this.place.place_id
+        place_name = this.place.name,
+        place_formatted_address = this.place.vicinity,
+        body = this.$('#form-textarea').val()
         that = this;
 
-    this.model.set(attrs);
+    this.model.set({ place_id: placeId,
+                     place_name: place_name,
+                     place_formatted_address: place_formatted_address,
+                     body: body});
+
     this.model.save({}, {
       success: function () {
         that.fetch.fetch();

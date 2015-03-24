@@ -4,6 +4,11 @@
     <li class="post-user"><a href="#/users/<%= post.escape('user_id') %>"><%= post.escape('user_name') %></a></li>
     <li>is drinking</li>
     <li><a href="#"><%= post.escape('whisky') %> </a> by <%= post.escape('whisky_brand') %></li>
+    <% if (place) { %>
+      <li> @<a href="#"> <%= post.escape('place_name') %>, </a></li>
+      <li><%= post.escape('place_formatted_address') %></li>
+
+    <% } %>
   </ul>
 
     <p class="post-body"><%= post.escape('body') %>

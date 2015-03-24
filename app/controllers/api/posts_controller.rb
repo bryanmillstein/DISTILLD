@@ -7,7 +7,7 @@ module Api
         user = User.find(params[:user_id])
         @posts = Post.get_user_posts(user, params[:page])
       elsif params[:place_id]
-        @posts = Post.get_place_posts(current_user, params[:placeId], params[:page])
+        @posts = Post.get_place_posts(current_user, params[:place_id], params[:page])
       else
         @posts = Post.get_friends_posts(current_user, params[:page])
       end
@@ -43,7 +43,7 @@ module Api
     private
 
     def post_params
-      params.require(:post).permit(:user_id, :whisky_id, :place_id, :body, :picture)
+      params.require(:post).permit(:user_id, :whisky_id, :place_id, :place_formatted_address, :place_name, :body, :picture)
     end
   end
 end
