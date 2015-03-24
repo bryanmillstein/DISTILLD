@@ -18,17 +18,37 @@ DISTILLD.Views.PostForm = Backbone.CompositeView.extend({
     var content = this.template({ post: this.model });
     this.$el.html(content);
 
-    this.placeLocationInput();
+    this.attachLocationSearchBox();
     return this;
   },
 
-  placeLocationInput: function () {
-    var input = document.getElementById('form-location');
-    var options = {
-      types: ['establishment']
-    };
+  attachLocationSearchBox: function () {
+    var input = this.$('#input-form-location'),
+        searchBox = new google.maps.places.Autocomplete(input[0]),
+        that = this;
+        google.maps.event.addListener(searchBox, 'place_changed', function () {
+          var place = searchBox.getPlace();
+          that.selectLocation(place);
+        });
 
-    autocomplete = new google.maps.places.Autocomplete(input, options);
+  },
+
+  selectLocation: function (place) {
+    var placeId = place.place_id;
+
+    this.model.set({ place_id: placeId });
+  },
+
+  placeRetrieval: function (placeId) {
+    var map = new google.maps.Map(document.getElementById('map'), {} ),
+        request = { placeId: placeId },
+        service = new google.maps.places.PlacesService(map);
+
+    service.getDetails(request, function (place, status) {
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+          /*do something with place */
+        }
+    });
   },
 
   selectWhisky: function (event) {

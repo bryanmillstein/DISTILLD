@@ -355,11 +355,15 @@ body {
 }
 
 .post-form {
-  transition-duration: 5s;
 
 }
 
 .post-new-form {
+  opacity: 0;
+
+}
+
+.post-form {
 }
 
 .form-fieldset {
@@ -912,55 +916,6 @@ body {
   font-size: 13px;
 }
 
-
-/*.comments {
-}
-
-.comment-content {
-  width: 250px;
-  padding: 5px 10px;
-
-}
-
-.comments > li {
-  background: #FFFFFF;
-  margin: 30px 10px;
-}
-
-.comment-content .comment-items {
-  float: left;
-  margin: 5px 100px 5px 0;
-}
-
-.comment-content .user-name {
-  float: left;
-  color: blue;
-  font-size: 14px;
-  margin: 0;
-}
-
-.comment-content .comment-body {
-  height: auto;
-  width: 200px;
-  font-size: 14px;
-  margin: 0 0 0 10px;
-}
-
-.comment-content .bottom-elements {
-  display: block;
-  /*margin: 50px 0 0 0;*/
-/*}
-
-.comment-content .time-stamp {
-  float: left;
-  font-size: 12px;
-  margin: 0 10px 0 5px;
-}
-
-.comment-content .destroy-comment {
-  float: left;
-  font-size: 12px;
-}*/
 
 /*WHISKY INDEX*/
 

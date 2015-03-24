@@ -3,7 +3,7 @@ DISTILLD.Views.PostsIndex = Backbone.CompositeView.extend({
   events: {
     'click .get-form': 'handlePostForm',
     'click .post-options': 'addCommentForm',
-    'click .picture-form': 'addPictureForm',
+    'click .picture-form': 'addPictureForm'
   },
 
   initialize: function (options) {
@@ -58,6 +58,7 @@ DISTILLD.Views.PostsIndex = Backbone.CompositeView.extend({
 
     var view = new DISTILLD.Views.PostShow({ model: post, comments: comments, fetch: this.collection, user: null })
     this.addSubview('.posts', view);
+
   },
 
   handlePostForm: function () {

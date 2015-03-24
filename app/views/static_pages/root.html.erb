@@ -1,7 +1,11 @@
 <div class="backdrop">
-  
-  <div id="main"></div>
+
+  <div id="main">
+  </div>
 </div>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&<%= ENV['GOOGLE_KEY'] %>">
+</script>
 
 <script charset="utf-8">
   $(document).ready(function(){

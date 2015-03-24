@@ -7,6 +7,5 @@ window.DISTILLD = {
   initialize: function(options) {
     new DISTILLD.Routers.Router({ $rootEl: $('#main') });
     Backbone.history.start();
-
   }
 };

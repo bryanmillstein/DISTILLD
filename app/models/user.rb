@@ -17,6 +17,8 @@ class User < ActiveRecord::Base
 
   has_many :posts
   has_many :whiskys, through: :posts, source: :whisky
+  has_many :places, through: :posts, source: :places
+
   has_many :comments
   has_many :toasts,
     class_name: 'Toast',
