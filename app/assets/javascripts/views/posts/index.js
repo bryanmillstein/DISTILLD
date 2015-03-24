@@ -9,7 +9,7 @@ DISTILLD.Views.PostsIndex = Backbone.CompositeView.extend({
   initialize: function (options) {
     this.bindScroll();
     this.collection.pageNum = 1;
-    this.listenTo(this.collection, 'add', this.render);
+    this.listenTo(this.collection, 'add sync', this.render);
   },
 
   render: function () {

@@ -37,7 +37,7 @@ class Post < ActiveRecord::Base
     Post.includes(:user, :toasts, :toasters, :whisky, comments: [:user]).where("user_id = (?)", user.id).order(created_at: :desc).page(page_num).per(5)
   end
 
-  def self.get_places(user, placeId, page_num)
+  def self.get_place_posts(user, placeId, page_num)
     friends_ids = []
     user.friends.each do |friend|
       friends_ids << friend.id
