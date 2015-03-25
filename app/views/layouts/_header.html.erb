@@ -23,7 +23,7 @@
       searchBox = new google.maps.places.Autocomplete(input[0]),
       that = this;
       google.maps.event.addListener(searchBox, 'place_changed', function () {
-        that.place = searchBox.getPlace();
+        var place = searchBox.getPlace();
         var place_id = place.place_id;
         Backbone.history.navigate('places/' + place_id, { trigger: true })
       });
