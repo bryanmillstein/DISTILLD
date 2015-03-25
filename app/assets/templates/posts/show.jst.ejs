@@ -5,7 +5,7 @@
     <li>is drinking</li>
     <li><a href="#"><%= post.escape('whisky') %> </a> by <%= post.escape('whisky_brand') %></li>
     <% if (place) { %>
-      <li> @<a href="#"> <%= post.escape('place_name') %>, </a></li>
+      <li> @<a href="#/places/<%= post.escape('place_id') %>"> <%= post.escape('place_name') %>, </a></li>
       <li><%= post.escape('place_formatted_address') %></li>
 
     <% } %>

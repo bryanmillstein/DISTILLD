@@ -1,6 +1,7 @@
 module Api
   class PlacesController < ApplicationController
-    def index
+    def show
+      @posts = Post.get_place_posts(current_user, params[:place_id], params[:page])
     end
   end
 end

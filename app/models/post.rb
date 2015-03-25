@@ -43,7 +43,7 @@ class Post < ActiveRecord::Base
       friends_ids << friend.id
     end
 
-    Post.includes(:user, :whisky, :toasters, :toasts, comments: [:user]).where("user_id IN (?)", friends_ids).where("place_id IN (?)", 'cat').order(created_at: :desc).page(1).per(5)
+    Post.includes(:user, :whisky, :toasters, :toasts, comments: [:user]).where("user_id IN (?)", friends_ids).where("place_id IN (?)", placeId).order(created_at: :desc).page(page_num).per(10)
   end
 
   def time_ago

@@ -17,7 +17,6 @@ gem "kaminari"
 gem 'paperclip', '~> 4.2'
 gem 'aws-sdk'
 gem 'figaro'
-gem 'yelp', require: 'yelp'
 
 
 group :development, :test do

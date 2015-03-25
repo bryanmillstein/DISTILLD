@@ -9,7 +9,9 @@ DISTILLD.Routers.Router = Backbone.Router.extend({
     "search": "search",
     "users/:id/friends": 'friends',
     "users/:id/whiskys": 'whiskys',
-    "users/:id/settings": 'settings'
+    "users/:id/settings": 'settings',
+    "places/:id": 'places'
+
   },
 
   feed: function () {
@@ -26,6 +28,14 @@ DISTILLD.Routers.Router = Backbone.Router.extend({
         view = new DISTILLD.Views.UserShow({ model: user, collection: DISTILLD.Collections.users });
 
     this._swapView(view);
+  },
+
+  places: function (id) {
+    var placePosts = new DISTILLD.Collections.Places();
+    // placePosts.fetch({ data: { place_id: id }});
+    var placesView = new DISTILLD.Views.PlacesShow({ place_id: id, collection: placePosts });
+
+    this._swapView(placesView);
   },
 
   whiskys: function (id) {
@@ -45,17 +55,6 @@ DISTILLD.Routers.Router = Backbone.Router.extend({
 
 
     this._swapView(friendsView);
-
-    // $.ajax({
-    //   url: 'api/friends',
-    //   method: 'GET'
-    //   data: {
-    //     user_id: id
-    //   },
-    //   success: function () {
-    //     var friendsView = new DISTILLD.Views.FriendsIndex();
-    //   }
-    // });
   },
 
   settings: function (id) {

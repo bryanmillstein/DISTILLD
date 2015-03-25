@@ -6,11 +6,10 @@ module Api
       if params[:user_id]
         user = User.find(params[:user_id])
         @posts = Post.get_user_posts(user, params[:page])
-      elsif params[:place_id]
-        @posts = Post.get_place_posts(current_user, params[:place_id], params[:page])
       else
         @posts = Post.get_friends_posts(current_user, params[:page])
       end
+      
       render :posts
     end
 
