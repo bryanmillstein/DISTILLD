@@ -373,7 +373,6 @@ body {
 }
 
 .post-new-form {
-  opacity: 0;
 
 }
 
@@ -389,8 +388,23 @@ body {
   border: 1px solid black;
 }
 
+.form-fieldset .form-rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  position: absolute;
+  cursor: pointer;
+  font-size: 28px;
+  color: #FA6900;
+}
+
+.form-fieldset .form-rating > span:hover:before,
+.form-fieldset .form-rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
+
 .input {
-  margin: 0 0 10px 0;
+
 }
 
 .input > label {
@@ -405,6 +419,14 @@ body {
   width: 200px;
   padding: 5px;
   border: 1px solid gray;
+}
+
+.input .input-whisky-search {
+  margin: 0 0 5px 0;
+}
+
+.input > .form-textarea {
+  margin: 40px 0 0 0 ;
 }
 
 .input > textarea {
