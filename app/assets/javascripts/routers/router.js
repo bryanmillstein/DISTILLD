@@ -32,7 +32,6 @@ DISTILLD.Routers.Router = Backbone.Router.extend({
 
   places: function (id) {
     var placePosts = new DISTILLD.Collections.Places();
-    // placePosts.fetch({ data: { place_id: id }});
     var placesView = new DISTILLD.Views.PlacesShow({ place_id: id, collection: placePosts });
 
     this._swapView(placesView);

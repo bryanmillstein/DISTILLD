@@ -91,7 +91,7 @@ body {
    background-size: cover;
    font-family: 'Playfair Display', serif;
    font-size: 16px;
-   font-weight: 700;
+   font-weight: 400;
    /*font-style: italic;*/
  }
 
@@ -295,18 +295,20 @@ body {
 .header-nav {
  margin: 0 auto;
  width: 900px;
+ position: relative;
 }
 
 .header-logo {
-  float: left;
-  font-size: 28px;
+  position: absolute;
+  font-size: 32px;
   color: white;
   font-style: italic;
+
 
 }
 
 .header-logo:hover {
-  font-weight: bold;
+  font-weight: 900;
 }
 
 .header-list {
@@ -315,10 +317,22 @@ body {
 
 .header-list > li {
   float: left;
+  margin: 10px 0 0 0;
 }
 
 .header-list > li:hover {
-  font-weight: bold;
+  font-weight: 900;
+}
+
+.header-list .header-input-form-location {
+  background: #FFFFFF;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #000;
+  margin: 5px 100px 0 0;
+
 }
 
 .sign-out {

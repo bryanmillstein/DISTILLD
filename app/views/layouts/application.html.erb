@@ -7,6 +7,9 @@
   <% else %>
     <% api_key = '' %>
   <% end %>
+  
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&<%= ENV['GOOGLE_KEY'] %>">
+  </script>
 
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:700italic,600,400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -26,6 +29,7 @@
   <% end %>
 
 <%= yield %>
+
 
 </body>
 </html>

@@ -2,6 +2,9 @@
   <nav class="header-nav group">
     <h1 class="header-logo"><a href="">DISTILLD</a></h1>
     <ul class="header-list group">
+      <li class="input">
+          <input type="text" class="header-input-form-location" name="location" placeholder="Search for drinking spots..."value=""></input>
+      </li>
       <li><a href="#/users/<%= current_user.id %>"><%= current_user.user_name %></li></a>
       <li><a href="/#/users/<%= current_user.id %>/friends">Friends</a></li>
       <li><a href="#/users/<%= current_user.id %>/settings">Settings</a></li>
@@ -14,3 +17,16 @@
       </li>
   </nav>
 </header>
+
+<script charset="utf-8">
+  var input = this.$('.header-input-form-location'),
+      searchBox = new google.maps.places.Autocomplete(input[0]),
+      that = this;
+      google.maps.event.addListener(searchBox, 'place_changed', function () {
+        that.place = searchBox.getPlace();
+        var place_id = place.place_id;
+        Backbone.history.navigate('places/' + place_id, { trigger: true })
+      });
+
+
+</script>
