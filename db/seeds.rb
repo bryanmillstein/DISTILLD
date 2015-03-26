@@ -76,10 +76,20 @@ u19 = User.create!(email: "bobby18@gmail.com", user_name: "bobby", password: "pa
 u20 = User.create!(email: "bobby19@gmail.com", user_name: "bobby", password: "password")
 
 f1 = u1.friendships.create!({ friend_id: u2.id })
+f1 = u2.friendships.create!({ friend_id: u1.id })
+
 f2 = u1.friendships.create!({ friend_id: u3.id })
+f2 = u3.friendships.create!({ friend_id: u1.id })
+
 f3 = u1.friendships.create!({ friend_id: u4.id })
-f4 = u1.friendships.create!({ friend_id: u5.id })
+f3 = u4.friendships.create!({ friend_id: u1.id })
+
+f4 = u5.friendships.create!({ friend_id: u5.id })
+f4 = u1.friendships.create!({ friend_id: u1.id })
+
 f5 = u1.friendships.create!({ friend_id: u6.id })
+f5 = u6.friendships.create!({ friend_id: u1.id })
+
 
 p1 = u5.posts.create!(whisky_id: d1.id, body: "Great after a long day.", place_id: "ChIJUyBYF5pZwokRFbcKzOSr-Yo", place_name: "Cosi", place_formatted_address: "53 East 8th Street, New York, NY 10003, United States")
 p2 = u6.posts.create!(whisky_id: d2.id, body: "Best whisky_id ever.", place_id: "ChIJUyBYF5pZwokRFbcKzOSr-Yo", place_name: "Cosi", place_formatted_address: "53 East 8th Street, New York, NY 10003, United States")

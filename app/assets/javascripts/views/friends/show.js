@@ -10,7 +10,9 @@ DISTILLD.Views.FriendShow = Backbone.CompositeView.extend ({
     var content = this.template({ friend: this.model });
     this.$el.html(content);
 
-    this.friendStatus();
+    if (!this.model.get('is_current_user')) {
+      this.friendStatus();
+    }
 
     return this;
   },

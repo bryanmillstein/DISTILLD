@@ -3,7 +3,7 @@ module Api
 
     def show
       @user = User.includes(:whiskys).find(params[:id])
-      
+
       users_id = @user.id
       @posts = Post.includes(:user, :toasts, :toasters, :whisky, comments: [:user])
         .where("user_id = (?)", users_id).order(created_at: :desc).page(1).per(5)
