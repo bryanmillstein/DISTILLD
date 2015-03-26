@@ -84,8 +84,8 @@ f2 = u3.friendships.create!({ friend_id: u1.id })
 f3 = u1.friendships.create!({ friend_id: u4.id })
 f3 = u4.friendships.create!({ friend_id: u1.id })
 
-f4 = u5.friendships.create!({ friend_id: u5.id })
-f4 = u1.friendships.create!({ friend_id: u1.id })
+f4 = u1.friendships.create!({ friend_id: u5.id })
+f4 = u5.friendships.create!({ friend_id: u1.id })
 
 f5 = u1.friendships.create!({ friend_id: u6.id })
 f5 = u6.friendships.create!({ friend_id: u1.id })

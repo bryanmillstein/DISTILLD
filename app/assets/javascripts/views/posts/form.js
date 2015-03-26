@@ -54,6 +54,7 @@ DISTILLD.Views.PostForm = Backbone.CompositeView.extend({
     var val = this.$('.input-whisky-search').val(),
         upcase = val.charAt(0).toUpperCase() + val.substring(1),
         that = this;
+        
     if (val.length > 1) {
       $.ajax({
         url: "api/whisky",
