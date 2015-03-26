@@ -397,11 +397,13 @@ body {
   color: #FA6900;
 }
 
+
 .form-fieldset .form-rating > span:hover:before,
 .form-fieldset .form-rating > span:hover ~ span:before {
    content: "\2605";
    position: absolute;
 }
+
 
 .input {
 

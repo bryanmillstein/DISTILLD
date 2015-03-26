@@ -6,7 +6,8 @@ DISTILLD.Views.PostForm = Backbone.CompositeView.extend({
     "change #input-picture-file": "changePicture",
     "click .add-photo": "uploadPhoto",
     "keyup .input-whisky-search": "handleInput",
-    "click .whisky-choice": "selectWhisky"
+    "click .whisky-choice": "selectWhisky",
+    "click span": "handleRating"
   },
 
 
@@ -20,6 +21,13 @@ DISTILLD.Views.PostForm = Backbone.CompositeView.extend({
 
     this.attachLocationSearchBox();
     return this;
+  },
+
+  handleRating: function (event) {
+    var star = $(event.currentTarget),
+        starId = star.data('id');
+
+    debugger
   },
 
   attachLocationSearchBox: function () {

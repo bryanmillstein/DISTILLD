@@ -10,11 +10,11 @@ Rails.application.routes.draw do
     resources :users, only: [:show, :update]
     resources :posts, only: [:create, :update, :destroy, :index]
     resources :comments, only: [:create, :update, :destroy]
+    resources :whisky, only: [:show, :index]
     resources :toasts, only: [:create]
     resources :friendships, only: [:create]
     resources :friends, only: [:index]
     get "search", to: "searches#index"
-    get "whisky", to: "whiskys#index"
     get "places", to: "places#show"
 
 

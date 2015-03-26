@@ -1,5 +1,5 @@
 json.array! @posts do |post|
-  json.extract! post, :id, :user_id, :body, :place_id, :place_name, :place_formatted_address, :created_at, :updated_at
+  json.extract! post, :id, :user_id, :body, :whisky_id, :place_id, :place_name, :place_formatted_address, :created_at, :updated_at
   json.whisky post.whisky.name
   json.whisky_brand post.whisky.brand
   json.whisky_style post.whisky.style

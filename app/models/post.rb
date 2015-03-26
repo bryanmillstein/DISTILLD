@@ -46,6 +46,16 @@ class Post < ActiveRecord::Base
     Post.includes(:user, :whisky, :toasters, :toasts, comments: [:user]).where("user_id IN (?)", friends_ids).where("place_id IN (?)", placeId).order(created_at: :desc).page(page_num).per(10)
   end
 
+  def self.get_whisky_posts(user, whiskyId, page_num)
+    friends_ids = []
+    user.friends.each do |friend|
+      friends_ids << friend.id
+    end
+
+    Post.includes(:user, :toasters, :toasts, comments: [:user]).where("user_id IN (?)", friends_ids).where("whisky_id IN (?)", whiskyId).order(created_at: :desc).page(page_num).per(10)
+
+  end
+
   def time_ago
     time_ago_in_words(self.created_at)
   end
