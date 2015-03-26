@@ -1,1 +1,5 @@
-<a href="#/users/<%=post.escape('user_id') %>"><%= post.escape('user_name') %></a> @ <%= post.escape('place_name') %>
+<a href="#/users/<%=post.escape('user_id') %>"><%= post.escape('user_name') %></a>
+<% if (post.escape('place_name')) { %>
+  <p>@ <%= post.escape('place_name') %></p>
+
+<% } %>
