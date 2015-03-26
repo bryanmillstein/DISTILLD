@@ -51,16 +51,19 @@ DISTILLD.Views.PostForm = Backbone.CompositeView.extend({
   },
 
   handleInput: function () {
-    var val = this.$('.input-whisky-search').val();
-    var that = this;
-
-    $.ajax({
-      url: "api/whisky",
-      dataType: "json",
-      method: "GET",
-      data: { query: val },
-      success: this.renderWhisksy.bind(this)
-    });
+    var val = this.$('.input-whisky-search').val(),
+        upcase = val.charAt(0).toUpperCase() + val.substring(1),
+        that = this;
+    if (val.length > 1) {
+      $.ajax({
+        url: "api/whisky",
+        dataType: "json",
+        method: "GET",
+        data: { query: val,
+                upcase: upcase },
+        success: this.renderWhisksy.bind(this)
+      });
+    }
   },
 
   renderWhisksy: function (whiskys) {

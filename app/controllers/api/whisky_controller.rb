@@ -3,7 +3,7 @@ module Api
 
     def index
       @whiskys = Whisky.where("(name ~ ?) OR (brand ~ ?) OR (name ~ ?) OR
-       (brand ~ ?)", params[:query], params[:query], params[:query].upcase, params[:query].upcase)
+       (brand ~ ?)", params[:query], params[:query], params[:upcase], params[:upcase]).page().per(5)
 
       render :index
     end
