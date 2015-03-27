@@ -997,8 +997,123 @@ body {
   font-size: 18px;
 }
 
-.whisky-headline {
+.whisky-title .whisky-name {
+  float: left;
   margin: 20px;
   font-size: 36px;
-  border-bottom: 1px solid gray;
+}
+
+.whisky-title > p {
+  float: left;
+  margin-top: 40px;
+  font-style: italic;
+}
+
+.whisky-posts > li {
+  border-bottom: 1px solid #EFEFEF;
+  padding: 15px 0;
+
+}
+
+.whisky-post-item > img {
+  float: left;
+
+}
+
+.whisky-post-item > p {
+  float: left;
+  margin: 10px;
+
+}
+
+.whisky-post-item > p > a {
+  color: blue;
+}
+
+/*PLACE SHOW*/
+
+.place-elements {
+  position: relative;
+}
+
+.place-elements .place-details {
+  margin: 10px 0 0 0;
+  width: 500px;
+  border: 1px solid transparent;
+
+  border-radius: 3px;
+
+}
+
+.place-details > h2 {
+  float: left;
+  font-size: 50px;
+  margin-right: 10px;
+  padding: 10px 0 0 10px;
+
+}
+
+.place-details #place-icon {
+  width: auto;
+  height: 25px;
+  margin-left: 5px;
+
+}
+
+.place-details .open-status {
+  margin: 39px 0 0 0;
+  font-size: 18px;
+}
+
+.place-details #status-open {
+  color: #FA6900;
+  font-weight: 700;
+}
+
+.place-details #status-closed {
+  color: #EFEFEF;
+  font-weight: 700;
+
+}
+
+.place-details #now {
+  float: left;
+  margin-right: 5px;
+}
+
+
+.place-details .contact-info {
+  margin: 15px 30px;
+
+}
+
+.friend-posts {
+  border-top: 1px solid #EFEFEF;
+  padding: 15px;
+  font-size: 18px;
+}
+
+.place-posts {
+  padding: 15px;
+}
+
+.place-posts > li {
+  border-bottom: 1px solid #EFEFEF;
+  padding-bottom: 15px;
+
+}
+
+.place-post-item > img {
+  float: left;
+
+}
+
+.place-post-item > p {
+  float: left;
+  margin: 10px;
+
+}
+
+.place-post-item > p > a {
+  color: blue;
 }

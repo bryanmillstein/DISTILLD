@@ -9,7 +9,7 @@ DISTILLD.Views.PlaceItem = Backbone.View.extend({
   render: function () {
     var content = this.template({ post: this.model });
     this.$el.html(content);
-    
+
     return this;
   }
 

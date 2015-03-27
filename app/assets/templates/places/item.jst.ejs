@@ -1,1 +1,4 @@
-<a href="#users/<%= post.escape('user_id') %>"><%= post.escape('user_name') %></a> had <%= post.escape('whisky') %>
+<section class="place-post-item group">
+  <img class="friend-picture" src="<%= post.escape('user_picture_url') %>">
+  <p><a href="#users/<%= post.escape('user_id') %>"><%= post.escape('user_name') %></a> had <a href="#whisky/<%= post.escape('whisky_id') %>"><%= post.escape('whisky') %></a> on <%= post.escape('date') %></p>
+</section>

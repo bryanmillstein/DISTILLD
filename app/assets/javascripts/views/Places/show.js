@@ -10,16 +10,17 @@ DISTILLD.Views.PlacesShow = Backbone.CompositeView.extend({
   },
 
   render: function () {
+    var map = new google.maps.Map(document.getElementById('map'), {} );
+
     if (!this.place) {
-      var map = new google.maps.Map(document.getElementById('map'), {} ),
-          request = { placeId: this.placeId },
+      var request = { placeId: this.placeId },
           service = new google.maps.places.PlacesService(map),
           that = this;
 
       service.getDetails(request, function (place, status) {
           that.place = place;
           if (status == google.maps.places.PlacesServiceStatus.OK) {
-            var content = that.template({ place: that.place });
+            var content = that.template({ place: that.place, postCount: that.collection.length });
             that.$el.html(content);
           }
       });
@@ -32,10 +33,10 @@ DISTILLD.Views.PlacesShow = Backbone.CompositeView.extend({
       });
     } else {
 
-      var content = this.template({ place: this.place });
+      var content = this.template({ place: this.place, postCount: this.collection.length });
       this.$el.html(content);
       this.renderPosts();
-      
+
     }
 
 

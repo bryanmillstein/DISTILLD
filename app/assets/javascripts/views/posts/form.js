@@ -54,7 +54,7 @@ DISTILLD.Views.PostForm = Backbone.CompositeView.extend({
     var val = this.$('.input-whisky-search').val(),
         upcase = val.charAt(0).toUpperCase() + val.substring(1),
         that = this;
-        
+
     if (val.length > 1) {
       $.ajax({
         url: "api/whisky",
@@ -90,7 +90,7 @@ DISTILLD.Views.PostForm = Backbone.CompositeView.extend({
 
   submitPost: function (event) {
     event.preventDefault();
-    var placeId = this.place.place_id
+    var placeId = this.place.place_id,
         place_name = this.place.name,
         place_formatted_address = this.place.vicinity,
         body = this.$('#form-textarea').val()

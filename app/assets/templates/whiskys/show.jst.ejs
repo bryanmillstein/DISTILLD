@@ -1,6 +1,11 @@
-<h1>Who's had <%= whisky.escape('name') %>?</h1>
+<section class="whisky-show">
+  <div class="whisky-title group">
+    <h1 class="whisky-name"><%= whisky.escape('name') %></h1><p> from <%= whisky.escape('brand') %></p>
+  </div>
 
+  <h2 class="friend-posts">Friends' Drinks (<%= postCount %>)</h2>
 
-<ul class="whisky-posts">
+  <ul class="whisky-posts">
 
-</ul>
+  </ul>
+</section>

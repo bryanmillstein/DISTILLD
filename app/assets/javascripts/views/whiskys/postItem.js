@@ -1,5 +1,6 @@
 DISTILLD.Views.PostItem = Backbone.View.extend({
   template: JST['whiskys/postItem'],
+  tagName: 'li',
 
   initialize: function () {
     this.listenTo(this.model, 'sync', this.render);

@@ -1,3 +1,19 @@
-<h3>Drinks had @ <%= place.name %></h3>
+<section class="place-elements">
+  <article class="place-details group">
+    <h2 class="place-name"><a href="<%= place.website %>"><%= place.name %></a><img src="<%= place.icon %>" id="place-icon"/></h2>
 
-<ul class="place-posts"></ul>
+    <% if (place.opening_hours.open_now) { %>
+      <div class="open-status">
+        <p id="now">Now: </p><p id="status-open">OPEN</p>
+      </div>
+    <% } else { %>
+      <div class="open-status">
+        <p id="now">Now: </p><p id="status-closed">CLOSED</p>
+      </div>
+    <% } %>
+
+    <p class="contact-info"><%= place.vicinity %> <%= place.formatted_phone_number %></p>
+  </article>
+  <h2 class="friend-posts">Friends' Visits (<%= postCount %>)</h2>
+  <ul class="place-posts"></ul>
+</section>
