@@ -428,6 +428,7 @@ body {
   width: 200px;
   padding: 5px;
   border: 1px solid gray;
+  border-radius: 5px;
 }
 
 .input .input-whisky-search {
@@ -475,7 +476,7 @@ body {
 
 .form-fieldset .add-photo {
   position: absolute;
-  top: 40px;
+  top: 70px;
   left: 300px;
   font-size: 24px;
   color: #FA6900;
@@ -486,7 +487,7 @@ body {
 }
 
 
-.submit > button {
+.submit-post > button {
   background: #FA6900;
   position: absolute;
   top: 70px;
@@ -496,8 +497,12 @@ body {
   padding: 5px 10px;
   font-weight: bold;
   text-align: center;
-  width: 100px
+  width: 100px;
+  border-radius: 5px;
+  margin-top: 45px;
+
 }
+
 
 /*USER SHOW*/
 

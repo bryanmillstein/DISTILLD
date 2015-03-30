@@ -2,7 +2,7 @@ DISTILLD.Views.PostForm = Backbone.CompositeView.extend({
   template: JST['posts/form'],
   tagName: 'form',
   events: {
-    'click .submit': 'submitPost',
+    'click .submit-post': 'submitPost',
     "change #input-picture-file": "changePicture",
     "click .add-photo": "uploadPhoto",
     "keyup .input-whisky-search": "handleInput",
