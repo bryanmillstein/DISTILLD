@@ -9,7 +9,7 @@ module Api
       else
         @posts = Post.get_friends_posts(current_user, params[:page])
       end
-      
+
       render :posts
     end
 
@@ -42,7 +42,7 @@ module Api
     private
 
     def post_params
-      params.require(:post).permit(:user_id, :whisky_id, :place_id, :place_formatted_address, :place_name, :body, :picture)
+      params.require(:post).permit(:user_id, :whisky_id, :rating, :place_id, :place_formatted_address, :place_name, :body, :picture)
     end
   end
 end

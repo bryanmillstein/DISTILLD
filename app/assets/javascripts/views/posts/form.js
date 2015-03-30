@@ -27,7 +27,17 @@ DISTILLD.Views.PostForm = Backbone.CompositeView.extend({
     var star = $(event.currentTarget),
         starId = star.data('id');
 
-    debugger
+    for(var i = 1; i <= 5; i ++) {
+      var star = document.getElementById(i);
+      star.classList.remove('filled');
+    }
+
+    for(var i = 1; i <= starId; i ++) {
+      var star = document.getElementById(i);
+      star.classList.add('filled');
+    }
+
+    this.model.set({ rating: starId });
   },
 
   attachLocationSearchBox: function () {

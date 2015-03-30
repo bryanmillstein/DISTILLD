@@ -25,9 +25,19 @@ DISTILLD.Views.PostShow = Backbone.CompositeView.extend ({
       this.$el.html(content);
     }
 
+    if (this.model.get('rating')) {
+      this.handleRating();
+    }
+
     this.renderToast();
     this.renderComments();
     return this;
+  },
+
+  handleRating: function () {
+    var ratingView = new DISTILLD.Views.RatingShow ({ model: this.model });
+    this.addSubview('.rating', ratingView);
+
   },
 
   renderToast: function () {

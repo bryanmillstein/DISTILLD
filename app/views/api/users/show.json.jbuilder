@@ -20,7 +20,7 @@ json.whiskys @user.whiskys do |whisky|
 end
 
 json.posts @posts do |post|
-  json.extract! post, :id, :user_id, :body, :place_id, :place_name, :place_formatted_address, :created_at, :updated_at
+  json.extract! post, :id, :user_id, :body, :place_id, :rating, :place_name, :place_formatted_address, :created_at, :updated_at
   json.user_name post.user.user_name
   json.whisky post.whisky.name
   json.whisky_id post.whisky.id

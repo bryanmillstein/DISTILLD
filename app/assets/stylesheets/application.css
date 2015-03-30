@@ -92,7 +92,6 @@ body {
    font-family: 'Playfair Display', serif;
    font-size: 16px;
    font-weight: 400;
-   /*font-style: italic;*/
  }
 
 
@@ -391,12 +390,18 @@ body {
 }
 
 .form-fieldset .form-rating {
-  unicode-bidi: bidi-override;
   direction: rtl;
   position: absolute;
   cursor: pointer;
   font-size: 28px;
   color: #FA6900;
+  top: 70px;
+  left: 35px;
+}
+
+.form-fieldset .form-rating .filled:before {
+   content: "\2605";
+   position: absolute;
 }
 
 
@@ -452,7 +457,7 @@ body {
 
 
 .input > .form-textarea {
-  margin: 40px 0 20px 0 ;
+  margin: 15px 0 20px 0 ;
 }
 
 .input > textarea {
@@ -483,6 +488,9 @@ body {
 
 .submit > button {
   background: #FA6900;
+  position: absolute;
+  top: 70px;
+  left: 300px;
   color: white;
   border: 1px solid black;
   padding: 5px 10px;
@@ -824,6 +832,26 @@ body {
   top: 10px;
 }
 
+.rating {
+  display: block;
+  float: left;
+  margin: 10px 0 0 20px;
+  height: 20px;
+}
+
+.rating .rating-display {
+  direction: rtl;
+
+  font-size: 28px;
+  color: #FA6900;
+}
+
+.rating .rating-display .filled:before {
+   content: "\2605";
+   position: absolute;
+}
+
+
 .post-items {
   position: relative;
   margin: 10px 0 0 45px;
@@ -839,6 +867,15 @@ body {
   color: blue;
 }
 
+.post-body {
+  position: relative;
+  background: #FFFFFF;
+  margin: 80px 5px 7px 5px;
+  height: auto;
+  padding: 5px 10px;
+  border-radius: 2px;
+}
+
 .post-body:before {
   content: "";
   display: block;
@@ -848,15 +885,6 @@ body {
   border-left: 25px solid transparent;
   top: -20px;
   left: 75px;
-}
-
-.post-body {
-  position: relative;
-  background: #FFFFFF;
-  margin: 60px 5px 7px 5px;
-  height: auto;
-  padding: 5px 10px;
-  border-radius: 2px;
 }
 
 .post-description .post-picture {
