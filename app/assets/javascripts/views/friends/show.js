@@ -2,7 +2,8 @@ DISTILLD.Views.FriendShow = Backbone.CompositeView.extend ({
   template: JST['friends/show'],
   tagName: 'li',
 
-  initialize: function () {
+  initialize: function (options) {
+    this.fetch = options.fetch
     this.listenTo(this.model, 'sync', this.render)
   },
 
@@ -18,7 +19,7 @@ DISTILLD.Views.FriendShow = Backbone.CompositeView.extend ({
   },
 
   friendStatus: function () {
-    var view = new DISTILLD.Views.FriendshipButton({ model: this.model, fetch: this.collection });
+    var view = new DISTILLD.Views.FriendshipButton({ model: this.model, fetch: this.fetch });
     this.addSubview('.friend-button', view);
   }
 

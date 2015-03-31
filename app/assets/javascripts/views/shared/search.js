@@ -34,7 +34,7 @@ DISTILLD.Views.Search = Backbone.CompositeView.extend({
     var container = this.$(".search-results"),
         that = this;
     this.searchResults.each(function (model) {
-      var view = new DISTILLD.Views.FriendShow({ model: model, collection: that.searchResults });
+      var view = new DISTILLD.Views.FriendShow({ model: model, fetch: that.searchResults });
       that.addSubview('.search-results', view);
     });
   },
