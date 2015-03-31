@@ -10,14 +10,14 @@ DISTILLD.Views.Search = Backbone.CompositeView.extend({
   events: {
     "click .search-button": "search",
     "click .next-page": "nextPage",
-    "click .prev-page": "prevPage"
-    // "click #add-friend": "renderSearch",
-    // "click #remove-friend": "renderSearch"
+    "click .prev-page": "prevPage",
   },
 
   template: JST["shared/search"],
 
   render: function () {
+
+
     var content = this.template({ results: this.searchResults, display: this.pageDisplay });
     this.$el.html(content);
 
@@ -27,7 +27,9 @@ DISTILLD.Views.Search = Backbone.CompositeView.extend({
 
   // renderSearch: function (event) {
   //   event.preventDefault();
-  //   this.$(".search-button").trigger("click");
+  //   if (document.getElementById('search-input').value) {
+  //     this.$(".search-button").trigger("click");
+  //   }
   // },
 
   renderSearchResults: function () {

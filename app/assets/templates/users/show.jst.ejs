@@ -7,12 +7,29 @@
       <button class="friend-button"></button>
     <% } %>
     <% if (user.get('is_current_user')) { %>
-      <p class="friend-count"><a href="#/users/<%= user.id %>/friends">You have <%= user.escape('friend_count') %> Friends</a></p>
-      <p class="whisky-count"><a href="#/users/<%= user.id %>/whiskys">You have <%= user.escape('whisky_count') %> Whiskys</a></p>
-    <% } else { %>
-      <p class="friend-count"><a href="#/users/<%= user.id %>/friends"><%= user.escape('user_name') %> has <%= user.escape('friend_count') %> Friends</a></p>
-      <p class="whisky-count"><a href="#/users/<%= user.id %>/whiskys"><%= user.escape('user_name') %> has <%= user.escape('whisky_count') %> Whiskys</a></p>
+      <% if (user.escape('friend_count') == 1 ) { %>
+        <p class="friend-count"><a href="#/users/<%= user.id %>/friends">You have 1 Friend</a></p>
+      <% } else { %>
+          <p class="friend-count"><a href="#/users/<%= user.id %>/friends"><%= user.escape('user_name') %> has <%= user.escape('friend_count') %> Friends</a></p>
+          <% } %>
+      <% if (user.escape('whisky_count') == 1 ) { %>
+        <p class="whisky-count"><a href="#/users/<%= user.id %>/whiskys">You have 1 Whisky</a></p>
+      <% } else { %>
+        <p class="whisky-count"><a href="#/users/<%= user.id %>/whiskys"><%= user.escape('user_name') %> has <%= user.escape('whisky_count') %> Whiskys</a></p>
     <% } %>
+    <% } else { %>
+      <% if (user.escape('friend_count') == 1 ) { %>
+        <p class="friend-count"><a href="#/users/<%= user.id %>/friends"><%= user.escape('user_name') %> has 1 Friend</a></p>
+      <% } else { %>
+          <p class="friend-count"><a href="#/users/<%= user.id %>/friends"><%= user.escape('user_name') %> has <%= user.escape('friend_count') %> Friends</a></p>
+          <% } %>
+      <% if (user.escape('whisky_count') == 1 ) { %>
+        <p class="whisky-count"><a href="#/users/<%= user.id %>/whiskys"><%= user.escape('user_name') %> has 1 Whisky</a></p>
+      <% } else { %>
+        <p class="whisky-count"><a href="#/users/<%= user.id %>/whiskys"><%= user.escape('user_name') %> has <%= user.escape('whisky_count') %> Whiskys</a></p>
+    <% } %>
+  <% } %>
+
   </div>
   <% if (user.escape('is_current_user')) { %>
     <button class="get-form">Have a drink?</button>

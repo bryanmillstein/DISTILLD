@@ -389,16 +389,6 @@ body {
   border: 1px solid black;
 }
 
-/*.form-fieldset .form-rating {
-  direction: rtl;
-  position: absolute;
-  cursor: pointer;
-  font-size: 28px;
-  color: #FA6900;
-  top: 70px;
-  left: 35px;
-}*/
-
 .form-fieldset .form-rating {
   direction: rtl;
   float: left;
@@ -483,15 +473,6 @@ body {
   display: none;
 }
 
-
-/*.form-fieldset .add-photo {
-  position: absolute;
-  top: 70px;
-  left: 300px;
-  font-size: 24px;
-  color: #FA6900;
-}*/
-
 .form-fieldset .add-photo {
   float: left;
   font-size: 24px;
@@ -503,22 +484,6 @@ body {
 .form-fieldset .add-photo:hover {
   font-weight: bold;
 }
-
-
-/*.submit-post > button {
-  background: #FA6900;
-  position: absolute;
-  top: 70px;
-  left: 300px;
-  color: white;
-  border: 1px solid black;
-  padding: 5px 10px;
-  font-weight: bold;
-  text-align: center;
-  width: 100px;
-  border-radius: 5px;
-  margin-top: 45px;
-}*/
 
 .submit-post > button {
   background: #FA6900;
@@ -718,13 +683,32 @@ body {
 .friends-group {
 }
 
+.friend-search-link {
+  text-align: center;
+  background: #FA6900;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  width: 500px;
+  margin: 20px 0 10px 25px;
+  border-radius: 5px;
+
+}
+
+
 .friend-entry {
   position: relative;
   border-bottom: 1px solid gray;
   padding: 10px 0 10px 10px;
   margin: 0 50px;
+  cursor: pointer;
 
 }
+
+.friend-entry:hover {
+  background: #EFEFEF;
+}
+
 
 .friend-entry:first-child {
   border-top: 2px solid gray;
