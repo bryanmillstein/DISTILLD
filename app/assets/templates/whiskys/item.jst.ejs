@@ -1,4 +1,6 @@
 <section class="whisky-items group">
-  <p class="whisky-name"><%= whisky.escape('name') %></p>
+  <a href="#/whisky/<%= whisky.id %>">
+    <p class="whisky-name"><%= whisky.escape('name') %></p>
+  </a>
   <p class="whisky-brand"><%= whisky.escape('brand') %></p>
 </section>

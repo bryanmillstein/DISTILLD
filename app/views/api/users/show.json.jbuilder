@@ -18,7 +18,7 @@ json.is_current_user is_current_user?(@user)
 json.is_friend is_friend(@user)
 
 json.whiskys @user.whiskys do |whisky|
-  json.extract! whisky, :name, :style, :brand
+  json.extract! whisky, :id, :name, :style, :brand
 end
 
 json.posts @posts do |post|
