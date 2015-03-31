@@ -5,9 +5,15 @@
       <li class="input">
           <input type="text" class="header-input-form-location" name="location" placeholder="Search for drinking spots..."value=""></input>
       </li>
-      <li><a href="#/users/<%= current_user.id %>"><%= current_user.user_name %></li></a>
-      <li><a href="/#/users/<%= current_user.id %>/friends">Friends</a></li>
-      <li><a href="#/users/<%= current_user.id %>/settings">Settings</a></li>
+        <li>
+          <div class="name-items">
+            <a href="#/users/<%= current_user.id %>" class="user-name"><%= current_user.user_name %></a>
+            <ul class="dropdown">
+              <li><a href="/#/users/<%= current_user.id %>/friends">Friends</a></li>
+              <li><a href="#/users/<%= current_user.id %>/settings">Settings</a></li>
+            </ul>
+          </div>
+        </li>
       <li>
         <form action="<%= session_url %>" method="post">
           <%= auth_form %>
@@ -15,6 +21,7 @@
           <button class="sign-out">Sign Out</button>
         </form>
       </li>
+    </ul>
   </nav>
 </header>
 

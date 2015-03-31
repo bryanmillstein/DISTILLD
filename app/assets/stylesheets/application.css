@@ -286,6 +286,43 @@ body {
  padding: 10px 10px;
 }
 
+.name-items {
+
+}
+
+.name-items:hover {
+  height: 100px;
+  position: absolute;
+}
+
+.name-items .dropdown {
+  display: none;
+}
+
+.name-items:hover > .dropdown {
+  display: block;
+  float: right;
+  position: absolute;
+  margin: 11px 0;
+  background: #EFEFEF;
+  border: 1px solid #000;
+  width: 225px;
+  font-size: 20px;
+}
+
+.name-items > .dropdown > li:first-child {
+  border-bottom: 1px solid #000;
+}
+
+.name-items .user-name {
+  display: block;
+  font-weight: normal;
+  font-size: 24px;
+  margin: 0;
+  padding: 9px 10px 0 0;
+}
+
+
 .header form {
  display: block;
  padding: 10px 10px;
@@ -302,8 +339,6 @@ body {
   font-size: 32px;
   color: white;
   font-style: italic;
-
-
 }
 
 .header-logo:hover {
@@ -320,7 +355,7 @@ body {
 }
 
 .header-list > li:hover {
-  font-weight: 900;
+
 }
 
 .header-list .header-input-form-location {
@@ -330,12 +365,13 @@ body {
   border-radius: 5px;
   font-size: 14px;
   color: #000;
-  margin: 5px 100px 0 0;
+  margin: 11px 160px 0 0;
 
 }
 
 .sign-out {
   color: black;
+  font-size: 24px;
 }
 
 
