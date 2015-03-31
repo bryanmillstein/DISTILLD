@@ -9,6 +9,14 @@ DISTILLD.Models.Post = Backbone.Model.extend ({
     return this._comments;
   },
 
+  toasters: function () {
+    if (!this.toasters) {
+      this.toasters = new DISTILLD.Collections.Toasters( [], { post: this });
+    }
+
+    return this._comments;
+  },
+
   toJSON: function () {
     return {
       post: _.clone(this.attributes)
@@ -19,6 +27,11 @@ DISTILLD.Models.Post = Backbone.Model.extend ({
     if (response.comments) {
       this.comments().set(response.comments);
       delete response.comments;
+    }
+
+    if (response.toasters) {
+      this.toasters().set(response.toasters);
+      delete response.toasters;
     }
 
     if (response.user_name) {

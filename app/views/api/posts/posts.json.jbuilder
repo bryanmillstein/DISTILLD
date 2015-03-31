@@ -21,6 +21,12 @@ json.array! @posts do |post|
     json.user_picture_url image_url(toast.user.picture.url(:thumb))
   end
 
+  json.toasts post.toasters do |toaster|
+    json.toaster_picture_url image_url(toaster.picture.url(:thumb))
+    json.toaster_user_id toaster.id
+
+  end
+
 
     json.comments post.comments do |comment|
       json.extract! comment, :id, :user_id, :post_id, :body, :created_at, :updated_at

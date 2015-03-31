@@ -4,5 +4,10 @@
   <% } else { %>
     <button id="toast">Toast</button>
     <% } %>
-  <article class="toasts" id ="change-toast"><%= toasts %> toasts</article>
+    <% if (toasts > 0) { %>
+      <article class="toasts" id ="change-toast"><%= toasts %></article>
+      <ul class="toasters">
+
+      </ul>
+    <% } %>
 </section>

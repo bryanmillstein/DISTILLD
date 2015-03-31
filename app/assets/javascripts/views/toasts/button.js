@@ -1,4 +1,4 @@
-DISTILLD.Views.ToastButton = Backbone.View.extend({
+DISTILLD.Views.ToastButton = Backbone.CompositeView.extend({
   template: JST['toasts/button'],
   tagName: 'form',
   events: {
@@ -23,8 +23,14 @@ DISTILLD.Views.ToastButton = Backbone.View.extend({
     var content = this.template({ toasted: toasted, toasts: this.toasts });
     this.$el.html(content);
 
-
+    // this.addToasters();
     return this;
+  },
+
+  addToasters: function () {
+    var toasterView = new DISTILLD.Views.ToasterIndex({ collection: this.collection, model: this.model });
+    this.addSubview('.toasters', toasterView);
+
   },
 
   changeToastStatus: function () {

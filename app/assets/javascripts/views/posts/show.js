@@ -41,7 +41,8 @@ DISTILLD.Views.PostShow = Backbone.CompositeView.extend ({
   },
 
   renderToast: function () {
-    var view = new DISTILLD.Views.ToastButton({ model: this.model });
+    var toasters = this.model.toasters();
+    var view = new DISTILLD.Views.ToastButton({ model: this.model, collection: toasters });
     this.addSubview('.toast-button', view);
   },
 

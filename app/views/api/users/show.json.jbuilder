@@ -48,4 +48,9 @@ json.posts @posts do |post|
     json.extract! toast, :id, :user_id, :post_id, :created_at, :updated_at
     json.user_picture_url image_url(toast.user.picture.url)
   end
+
+  json.toasts post.toasters do |toaster|
+    json.toaster_picture_url image_url(toaster.picture.url(:thumb))
+    json.toaster_user_id image_url(toaster.id)
+  end
 end
