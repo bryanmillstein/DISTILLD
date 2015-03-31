@@ -384,12 +384,12 @@ body {
   position: relative;
   margin: 20px 0 0 10px;
   padding: 20px;
-  width: 500px;
+  width: 600px;
   background: white;
   border: 1px solid black;
 }
 
-.form-fieldset .form-rating {
+/*.form-fieldset .form-rating {
   direction: rtl;
   position: absolute;
   cursor: pointer;
@@ -397,6 +397,16 @@ body {
   color: #FA6900;
   top: 70px;
   left: 35px;
+}*/
+
+.form-fieldset .form-rating {
+  direction: rtl;
+  float: left;
+  display: block;
+  cursor: pointer;
+  font-size: 28px;
+  color: #FA6900;
+  margin: -25px 5px;
 }
 
 .form-fieldset .form-rating .filled:before {
@@ -474,12 +484,20 @@ body {
 }
 
 
-.form-fieldset .add-photo {
+/*.form-fieldset .add-photo {
   position: absolute;
   top: 70px;
   left: 300px;
   font-size: 24px;
   color: #FA6900;
+}*/
+
+.form-fieldset .add-photo {
+  float: left;
+  font-size: 24px;
+  color: #FA6900;
+  margin: 10px 0 0 40px;
+
 }
 
 .form-fieldset .add-photo:hover {
@@ -487,7 +505,7 @@ body {
 }
 
 
-.submit-post > button {
+/*.submit-post > button {
   background: #FA6900;
   position: absolute;
   top: 70px;
@@ -500,7 +518,19 @@ body {
   width: 100px;
   border-radius: 5px;
   margin-top: 45px;
+}*/
 
+.submit-post > button {
+  background: #FA6900;
+  float: left;
+  color: white;
+  border: 1px solid black;
+  padding: 5px 10px;
+  font-weight: bold;
+  text-align: center;
+  width: 200px;
+  border-radius: 5px;
+  margin: 10px 0 0 165px;
 }
 
 
