@@ -602,8 +602,7 @@ body {
   top: 30px;
   left: 135px;
   color: white;
-  font-size: 36px;
-  width: 40px;
+  padding: 5px 10px;
   border-radius: 5px;
 }
 
@@ -614,8 +613,7 @@ body {
   top: 30px;
   left: 135px;
   color: white;
-  font-size: 36px;
-  width: 40px;
+  padding: 5px 10px;
   border-radius: 5px;
 }
 
@@ -762,24 +760,22 @@ body {
 .friend-entry #remove-friend {
   position: absolute;
   text-align: center;
-  top: 10px;
-  left: 740px;
+  top: 20px;
+  left: 650px;
   background: gray;
   color: white;
-  font-size: 36px;
-  width: 40px;
+  padding: 5px 10px;
   border-radius: 5px;
 }
 
 .friend-entry #add-friend {
   position: absolute;
   text-align: center;
-  top: 10px;
-  left: 740px;
+  top: 20px;
+  left: 650px;
   background: #FA6900;
   color: white;
-  font-size: 36px;
-  width: 40px;
+  padding: 5px 10px;
   border-radius: 5px;
 }
 

@@ -74,7 +74,7 @@ DISTILLD.Views.WhiskySuggestionForm = Backbone.CompositeView.extend({
 
     this.model.set({ body: body,
                      whisky_id: this.whisky_id });
-    debugger
+
     this.model.save({}, {
       success: function () {
         Backbone.history.navigate('whisky/' + that.whisky_id, { trigger: true })
