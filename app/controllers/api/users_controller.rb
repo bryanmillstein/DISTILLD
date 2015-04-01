@@ -1,6 +1,14 @@
 module Api
   class UsersController < ApplicationController
 
+    def index
+      @users = User.where("(user_name ~ ?) OR (user_name ~ ?) OR (user_name ~ ?)", params[:query], params[:upcase], params[:lowercase])
+
+
+      render :index
+    end
+
+
     def show
       @user = User.includes(:whiskys).find(params[:id])
 

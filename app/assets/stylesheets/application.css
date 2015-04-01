@@ -730,7 +730,7 @@ body {
 
 .friend-entry {
   position: relative;
-  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
   padding: 10px 0 10px 10px;
   margin: 0 50px;
   cursor: pointer;
@@ -742,13 +742,8 @@ body {
 }
 
 
-.friend-entry:first-child {
-  border-top: 2px solid gray;
-
-}
-
 .friend-info {
-  border-right: 2px solid gray;
+  border-right: 1px solid gray;
   width: 300px;
 
 }
@@ -816,11 +811,7 @@ body {
 
 .search-page > input {
   padding: 5px;
-}
-
-.friend-info {
-  border-right: 2px solid gray;
-  width: 300px;
+  border-radius: 5px;
 }
 
 .search-entry #remove-friend {

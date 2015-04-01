@@ -9,6 +9,8 @@ DISTILLD.Views.Search = Backbone.CompositeView.extend({
 
   events: {
     "click .search-button": "search",
+    "keyup #search-input": "handleInput",
+    "click .user-choice": "selectUser",
     "click .next-page": "nextPage",
     "click .prev-page": "prevPage",
   },
@@ -16,8 +18,6 @@ DISTILLD.Views.Search = Backbone.CompositeView.extend({
   template: JST["shared/search"],
 
   render: function () {
-
-
     var content = this.template({ results: this.searchResults, display: this.pageDisplay });
     this.$el.html(content);
 
@@ -41,6 +41,54 @@ DISTILLD.Views.Search = Backbone.CompositeView.extend({
     });
   },
 
+  selectUser: function (event) {
+    var choice = $(event.currentTarget);
+    // var userId = choice.data('id');
+    var content = choice.html();
+
+    // this.model.set({ recipient_id: friendId });
+    this.$('.users').empty();
+    document.getElementById('search-input').value = content
+    /* Change class of submit button so it is toggled from hidden after user selects friend. */
+  },
+
+  handleInput: function () {
+    var val = this.$('#search-input').val(),
+        upcase = val.charAt(0).toUpperCase() + val.substring(1),
+        lowercase = val.toLowerCase(),
+        that = this;
+    if (val.length > 1) {
+      $.ajax({
+        url: "api/users",
+        dataType: "json",
+        method: "GET",
+        data: { query: val,
+                upcase: upcase,
+                lowercase: lowercase },
+        success: this.renderUser.bind(this)
+      });
+    }
+  },
+
+  renderUser: function (users) {
+    this.$('.users').empty();
+
+    for (var i = 0; i < users.length; i++) {
+      var user = users[i];
+
+      var $li = $("<li class='user-choice'></li>");
+      $li.append(user.user_name);
+      $li.data('id', user.id)
+
+      this.$('.users').append($li);
+    }
+  },
+
+  addUser: function (user) {
+    var view = new DISTILLD.Views.FriendItem({ model: user });
+    this.addSubview('.users', view);
+  },
+
   search: function (event) {
     event.preventDefault();
     this.pageDisplay = true;
@@ -56,6 +104,7 @@ DISTILLD.Views.Search = Backbone.CompositeView.extend({
   },
 
   nextPage: function (event) {
+    if (this.searchResults.count = 5) {
       this.searchResults.fetch({
         data: {
           query: this.searchResults.query,
@@ -64,7 +113,8 @@ DISTILLD.Views.Search = Backbone.CompositeView.extend({
         success: function () {
           this.searchResults.pageNum = this.searchResults.pageNum + 1;
         }.bind(this)
-    });
+      });
+    }
   },
 
   prevPage: function (event) {
