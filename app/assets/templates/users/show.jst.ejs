@@ -34,6 +34,9 @@
   <% if (user.escape('is_current_user')) { %>
     <button class="get-form">Have a drink?</button>
     <div class="post-form"></div>
+  <% } else { %>
+    <button class="get-suggestion-form">Have a recommendation?</button>
+    <div class="suggestion-form"></div>
   <% } %>
   <h3 class="headline"><%= message %> Recent Activity</h3>
   <ul class="posts"></ul>

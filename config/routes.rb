@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     resources :toasts, only: [:create]
     resources :friendships, only: [:create]
     resources :friends, only: [:index]
+    resources :suggestions, only: [:index, :create, :update, :destroy]
     get "search", to: "searches#index"
     get "places", to: "places#show"
 

@@ -27,6 +27,14 @@ class User < ActiveRecord::Base
 
   has_many :friends, through: :friendships, source: :friend
 
+  has_many :suggestions,
+    class_name: 'Suggestion',
+    foreign_key: :user_id
+
+  has_many :received_suggestions,
+    class_name: 'Suggestion',
+    foreign_key: :recipient_id
+
 
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)

@@ -4,6 +4,9 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
 
   events: {
     'click .get-form': 'handlePostForm',
+    'click .get-suggestion-form': 'handleSuggestionForm'
+
+
   },
 
   initialize: function () {
@@ -85,6 +88,17 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
     } else {
       this.removeSubview('.post-form', this.formView);
       this.formView = null
+    }
+  },
+
+  handleSuggestionForm: function () {
+    if (!this.suggestionFormView) {
+      var suggestion = new DISTILLD.Models.Suggestion();
+      this.suggestionFormView = new DISTILLD.Views.SuggestionForm({ model: suggestion, user_id: this.model.id });
+      this.addSubview('.suggestion-form', this.suggestionFormView);
+    } else {
+      this.removeSubview('.suggestion-form', this.suggestionFormView);
+      this.suggestionFormView = null
     }
   },
 
