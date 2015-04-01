@@ -17,6 +17,8 @@ Rails.application.routes.draw do
     resources :suggestions, only: [:index, :create, :update, :destroy]
     get "search", to: "searches#index"
     get "places", to: "places#show"
+    get "friend", to: "friend#index"
+
 
 
   end

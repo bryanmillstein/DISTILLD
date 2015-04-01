@@ -27,7 +27,7 @@ module Api
     private
 
     def suggestion_params
-      params.require(:suggestion).permit(:user_id, :whisky_id, :body, :recipient_id)
+      params.require(:suggestion).permit(:whisky_id, :body, :recipient_id)
     end
   end
 end
