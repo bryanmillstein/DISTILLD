@@ -9,6 +9,14 @@ DISTILLD.Models.User = Backbone.Model.extend ({
       return this._posts;
     },
 
+    suggestions: function () {
+      if (!this._suggestions) {
+        this._suggestions = new DISTILLD.Collections.Suggestions( [],{ user: this });
+      }
+
+      return this._suggestions;
+    },
+
     friends: function () {
       if (!this._friends) {
         this._friends = new DISTILLD.Collections.Friends( [],{ user: this });
@@ -35,6 +43,11 @@ DISTILLD.Models.User = Backbone.Model.extend ({
       if (response.posts) {
         this.posts().set(response.posts, { parse: true });
         delete response.posts;
+      }
+
+      if (response.suggestions) {
+        this.suggestions().set(response.suggestions, { parse: true });
+        delete response.suggestions;
       }
 
       if (response.whiskys) {

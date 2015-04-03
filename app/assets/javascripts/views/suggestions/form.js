@@ -20,23 +20,6 @@ DISTILLD.Views.SuggestionForm = Backbone.CompositeView.extend({
     return this;
   },
 
-  // handleRating: function (event) {
-  //   var star = $(event.currentTarget),
-  //       starId = star.data('id');
-  //
-  //   for(var i = 1; i <= 5; i ++) {
-  //     var star = document.getElementById(i);
-  //     star.classList.remove('filled');
-  //   }
-  //
-  //   for(var i = 1; i <= starId; i ++) {
-  //     var star = document.getElementById(i);
-  //     star.classList.add('filled');
-  //   }
-  //
-  //   this.model.set({ rating: starId });
-  // },
-
   selectWhisky: function (event) {
     var choice = $(event.currentTarget);
     var whiskyId = choice.data('id');
@@ -95,6 +78,7 @@ DISTILLD.Views.SuggestionForm = Backbone.CompositeView.extend({
 
     this.model.save({}, {
       success: function () {
+        var button = document.getElementById('get-suggestion');
       }
     });
   },

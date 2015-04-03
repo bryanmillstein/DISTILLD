@@ -1,6 +1,10 @@
-<section class="friend-entry">
-  <article class="friend-info">
-    <img class="friend-picture" src="<%= friend.escape('picture_url') %>">
-    <a id="friend-name" href="#users/<%= friend.id %>"><%= friend.escape('user_name') %></a>
-  </article>
+<section class="whisky-items group">
+  <a href="#/whisky/<%= suggestion.escape('whisky_id') %>">
+    <p class="whisky-name"><%= suggestion.escape('whisky_name') %></p>
+  </a>
+  <p class="whisky-brand">from <%= suggestion.escape('whisky_brand') %></p>
+  <a href="#/users/<%= suggestion.escape('user_id') %>">
+    <p class="suggester"><%= suggestion.escape('suggester_name') %></p>
+  </a>
+
 </section>

@@ -1,16 +1,37 @@
 DISTILLD.Views.WhiskyIndex = Backbone.CompositeView.extend({
   template: JST['whiskys/index'],
 
-  initialize: function () {
+  events: {
+    "click #whisky-headline": "showSuggestionsFalse",
+    "click #whisky-suggestions": "showSuggestionsTrue"
+  },
+
+  initialize: function (options) {
+    this.suggestions = options.suggestions;
+    this.showSuggestions = false;
     this.listenTo(this.model, 'sync', this.render);
   },
 
   render: function () {
-    var content = this.template({ user: this.model });
+    var content = this.template({ user: this.model, suggestion: this.showSuggestions });
     this.$el.html(content);
 
-    this.renderWhiskys();
+    if (this.showSuggestions) {
+      this.renderSuggestions();
+    } else {
+      this.renderWhiskys();
+    }
     return this;
+  },
+
+  showSuggestionsTrue: function () {
+    this.showSuggestions = true;
+    this.render();
+  },
+
+  showSuggestionsFalse: function () {
+    this.showSuggestions = false;
+    this.render();
   },
 
   renderWhiskys: function () {
@@ -19,6 +40,15 @@ DISTILLD.Views.WhiskyIndex = Backbone.CompositeView.extend({
 
   addWhisky: function (whisky) {
     var view = new DISTILLD.Views.WhiskyItem({ model: whisky })
+    this.addSubview('.whiskys-list', view);
+  },
+
+  renderSuggestions: function () {
+    this.suggestions.each(this.addSuggestion.bind(this));
+  },
+
+  addSuggestion: function (suggestion) {
+    var view = new DISTILLD.Views.SuggestionItem({ model: suggestion })
     this.addSubview('.whiskys-list', view);
   },
 

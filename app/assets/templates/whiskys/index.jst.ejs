@@ -1,9 +1,28 @@
-<% if (user.escape('is_current_user')) { %>
-  <h1 class="whisky-headline">Your Whiskys</h1>
-<% } else { %>
-  <h1 class="whisky-headline"><%= user.escape('user_name') %>'s Whiskys</h1>
-<% } %>
+<section class="whisky-options group">
 
+  <% if (user.escape('is_current_user')) { %>
+    <% if (!suggestion) { %>
+      <h1 id="whisky-headline" class="highlight-header">Your Whiskys</h1>
+    <% } else { %>
+      <h1 id="whisky-headline">Your Whiskys</h1>
+    <% } %>
+  <% } else { %>
+    <% if (!suggestion) { %>
+      <h1 id="whisky-headline" class="highlight-header"><%= user.escape('user_name') %>'s Whiskys</h1>
+    <% } else { %>
+      <h1 id="whisky-headline"><%= user.escape('user_name') %>'s Whiskys</h1>
+    <% } %>
+  <% } %>
+
+
+  <% if (suggestion) { %>
+    <h1 id="whisky-suggestions" class="highlight-header">Friends' Suggestions </h1>
+  <% } else { %>
+    <h1 id="whisky-suggestions">Friends' Suggestions </h1>
+  <% } %>
+
+
+</section>
 <ul class="whiskys-list">
 
 </ul>

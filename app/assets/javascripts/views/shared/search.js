@@ -10,7 +10,7 @@ DISTILLD.Views.Search = Backbone.CompositeView.extend({
   events: {
     "click .search-button": "search",
     "keyup #search-input": "handleInput",
-    "click .user-choice": "selectUser",
+    "click .user-entry": "selectUser",
     "click .next-page": "nextPage",
     "click .prev-page": "prevPage",
   },
@@ -43,12 +43,12 @@ DISTILLD.Views.Search = Backbone.CompositeView.extend({
 
   selectUser: function (event) {
     var choice = $(event.currentTarget);
-    // var userId = choice.data('id');
-    var content = choice.html();
-
+    var content = choice.data('name')
     // this.model.set({ recipient_id: friendId });
     this.$('.users').empty();
     document.getElementById('search-input').value = content
+    this.$('.search-button').trigger("click");
+
     /* Change class of submit button so it is toggled from hidden after user selects friend. */
   },
 
@@ -74,18 +74,12 @@ DISTILLD.Views.Search = Backbone.CompositeView.extend({
     this.$('.users').empty();
 
     for (var i = 0; i < users.length; i++) {
-      var user = users[i];
-
-      var $li = $("<li class='user-choice'></li>");
-      $li.append(user.user_name);
-      $li.data('id', user.id)
-
-      this.$('.users').append($li);
+      this.addUser(users[i]);
     }
   },
 
   addUser: function (user) {
-    var view = new DISTILLD.Views.FriendItem({ model: user });
+    var view = new DISTILLD.Views.UserItem({ model: user });
     this.addSubview('.users', view);
   },
 

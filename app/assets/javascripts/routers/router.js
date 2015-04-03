@@ -50,8 +50,9 @@ DISTILLD.Routers.Router = Backbone.Router.extend({
   whiskys: function (id) {
     var user = DISTILLD.Collections.users.getOrFetch(id);
     var whiskys = user.whiskys();
+    var suggestions = user.suggestions();
 
-    var whiskysView = new DISTILLD.Views.WhiskyIndex({ model: user, collection: whiskys });
+    var whiskysView = new DISTILLD.Views.WhiskyIndex({ model: user, collection: whiskys, suggestions: suggestions });
 
 
     this._swapView(whiskysView);

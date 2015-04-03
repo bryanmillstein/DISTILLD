@@ -1,3 +1,6 @@
-<li>
-  <h4><a href="#/users/<%=model.id%>"><%= model.escape('user_name') %></a></h4>
-</li>
+<section class="user-entry" data-name="<%= user.user_name %>" data-id="<%= user.id %>">
+  <article class="user-info group">
+    <img class="friend-picture" src="<%= user.picture_url %>">
+    <p id="user-choice"><%= user.user_name %></a></p>
+  </article>
+</section>

@@ -10,7 +10,7 @@ module Api
 
 
     def show
-      @user = User.includes(:whiskys).find(params[:id])
+      @user = User.includes(:whiskys, received_suggestions: [:whisky, :user]).find(params[:id])
 
       users_id = @user.id
       @posts = Post.includes(:user, :toasts, :toasters, :whisky, comments: [:user])

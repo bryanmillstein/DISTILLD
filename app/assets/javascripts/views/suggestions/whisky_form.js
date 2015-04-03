@@ -2,14 +2,16 @@ DISTILLD.Views.WhiskySuggestionForm = Backbone.CompositeView.extend({
   template: JST['suggestions/whisky_form'],
   tagName: 'form',
   events: {
-    'click .submit-suggestion': 'submitSuggestion',
+    'click #reccomendation-button': 'submitSuggestion',
     "keyup .input-friend-search": "handleInput",
-    "click .friend-choice": "selectFriend",
+    "click .user-entry": "selectFriend",
+
   },
 
 
   initialize: function (options) {
-    this.whisky_id = options.whisky_id;
+    this.whisky = options.whisky;
+    this.listenTo(this.model, 'sync', this.render);
   },
 
   render: function () {
@@ -22,12 +24,15 @@ DISTILLD.Views.WhiskySuggestionForm = Backbone.CompositeView.extend({
   selectFriend: function (event) {
     var choice = $(event.currentTarget);
     var friendId = choice.data('id');
-    var content = choice.html();
+    var content = choice.data('name')
+
 
     this.model.set({ recipient_id: friendId });
-    this.$('.friends').empty();
+    this.$('.friend-choices').empty();
     document.getElementById('form-friend').value = content
-    /* Change class of submit button so it is toggled from hidden after user selects friend. */
+    var toggleButton = document.getElementById('reccomendation-button');
+    toggleButton.classList.add('highlight-button');
+
   },
 
   handleInput: function () {
@@ -49,22 +54,16 @@ DISTILLD.Views.WhiskySuggestionForm = Backbone.CompositeView.extend({
   },
 
   renderFriend: function (friends) {
-    this.$('.friends').empty();
+    this.$('.friend-choices').empty();
 
     for (var i = 0; i < friends.length; i++) {
-      var friend = friends[i];
-
-      var $li = $("<li class='friend-choice'></li>");
-      $li.append(friend.user_name);
-      $li.data('id', friend.id)
-
-      this.$('.friends').append($li);
+      this.addFriend(friends[i]);
     }
   },
 
   addFriend: function (friend) {
-    var view = new DISTILLD.Views.FriendItem({ model: friend });
-    this.addSubview('.friends', view);
+    var view = new DISTILLD.Views.UserItem({ model: friend });
+    this.addSubview('.friend-choices', view);
   },
 
   submitSuggestion: function (event) {
@@ -73,11 +72,11 @@ DISTILLD.Views.WhiskySuggestionForm = Backbone.CompositeView.extend({
         that = this;
 
     this.model.set({ body: body,
-                     whisky_id: this.whisky_id });
+                     whisky_id: this.whisky.id });
 
     this.model.save({}, {
       success: function () {
-        Backbone.history.navigate('whisky/' + that.whisky_id, { trigger: true })
+        that.whisky.fetch();
       }
     });
   },

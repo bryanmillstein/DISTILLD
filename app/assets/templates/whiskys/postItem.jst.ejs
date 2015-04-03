@@ -2,6 +2,6 @@
   <img class="friend-picture" src="<%= post.escape('user_picture_url') %>">
   <p><a href="#users/<%= post.escape('user_id') %>"><%= post.escape('user_name') %></a>
     <% if (post.escape('place_name')) { %>
-    had one at <a href="#place/<%= post.escape('place_id') %>"><%= post.escape('place_name') %></a>
+    had one at <a href="#places/<%= post.escape('place_id') %>"><%= post.escape('place_name') %></a>
     <% } %> on <%= post.escape('date') %></p>
 </section>

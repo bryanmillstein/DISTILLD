@@ -21,6 +21,14 @@ json.whiskys @user.whiskys do |whisky|
   json.extract! whisky, :id, :name, :style, :brand
 end
 
+json.suggestions @user.received_suggestions do |suggestion|
+  json.extract! suggestion, :id, :recipient_id, :user_id, :whisky_id, :created_at
+  json.whisky_name suggestion.whisky.name
+  json.whisky_brand suggestion.whisky.brand
+  json.suggester_name suggestion.user.user_name
+
+end
+
 json.posts @posts do |post|
   json.extract! post, :id, :user_id, :body, :place_id, :rating, :place_name, :place_formatted_address, :created_at, :updated_at
   json.user_name post.user.user_name

@@ -9,4 +9,8 @@ class Suggestion < ActiveRecord::Base
     class_name: 'User',
     foreign_key: :recipient_id
 
+  belongs_to :whisky,
+    class_name: "Whisky",
+    foreign_key: :whisky_id
+
 end

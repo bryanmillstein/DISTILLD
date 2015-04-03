@@ -20,7 +20,7 @@ DISTILLD.Views.WhiskyShow = Backbone.CompositeView.extend({
 
   addSuggestionForm: function () {
     var suggestion = new DISTILLD.Models.Suggestion();
-    var suggestionFormView = new DISTILLD.Views.WhiskySuggestionForm({ model: suggestion, whisky_id: this.model.id });
+    var suggestionFormView = new DISTILLD.Views.WhiskySuggestionForm({ model: suggestion, whisky: this.model });
 
     this.addSubview('.suggestion-form', suggestionFormView);
   },
