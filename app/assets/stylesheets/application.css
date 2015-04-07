@@ -305,7 +305,7 @@ body {
   display: block;
   float: right;
   position: absolute;
-  margin: 11px 0;
+  margin: 3px 0;
   background: #EFEFEF;
   border: 1px solid #000;
   width: 225px;
@@ -314,6 +314,10 @@ body {
 
 .name-items > .dropdown > li:first-child {
   border-bottom: 1px solid #000;
+}
+
+.name-items > .dropdown > li:last-child {
+  border-top: 1px solid #000;
 }
 
 .name-items .user-name {
@@ -599,6 +603,18 @@ body {
   cursor: pointer;
 
 }
+
+.get-suggestion-form {
+  background: #FA6900;
+  margin: 10px 10px 10px 25px;
+  color: white;
+  border: 1px solid black;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+
+}
+
 
 .user-name {
   font-weight: 900;
@@ -1144,6 +1160,25 @@ body {
   border-radius: 5px;
   cursor: pointer;
 
+}
+
+/* SUGGESTION FORM */
+
+.suggestion-new-form {
+
+}
+
+
+.submit-suggestion > button {
+  background: #FA6900;
+  color: white;
+  padding: 5px 5px;
+  font-weight: bold;
+  width: 145px;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /* SUGGESTION ITEM */
