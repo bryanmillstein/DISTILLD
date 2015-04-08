@@ -94,7 +94,7 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
   handleSuggestionForm: function () {
     if (!this.suggestionFormView) {
       var suggestion = new DISTILLD.Models.Suggestion();
-      this.suggestionFormView = new DISTILLD.Views.SuggestionForm({ model: suggestion, user_id: this.model.id });
+      this.suggestionFormView = new DISTILLD.Views.SuggestionForm({ model: suggestion, user: this.model, user_id: this.model.id });
       this.addSubview('.suggestion-form', this.suggestionFormView);
     } else {
       this.removeSubview('.suggestion-form', this.suggestionFormView);

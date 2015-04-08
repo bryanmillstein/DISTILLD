@@ -26,9 +26,21 @@ DISTILLD.Views.CommentForm = Backbone.View.extend ({
 
     this.model.save({}, {
       success: function () {
+        /* Add success message display */
+        var body = $('#main'),
+            message = '<div class="success-message-display"><p id="success-message">Comment Added!<p><div>';
+
+        body.append(message);
+        window.setTimeout(_.bind(that.removeMessage, that), 2000);
+
         that.fetch.fetch();
       }
     });
+  },
+
+  removeMessage: function () {
+    var message = $('.success-message-display');
+    message.remove();
   }
 
 });

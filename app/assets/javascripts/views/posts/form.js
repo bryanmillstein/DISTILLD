@@ -132,11 +132,11 @@ DISTILLD.Views.PostForm = Backbone.CompositeView.extend({
       success: function () {
         /* Add success message display */
         var body = $('#main'),
-            message = '<div class="success-message-display"><p id="success-message">Post Made Successfully!<p><div>';
+            message = '<div class="success-message-display"><p id="success-message">Post Added!<p><div>';
 
         body.append(message);
-        var messageDom = $('.success-message-display');
         window.setTimeout(_.bind(that.removeMessage, that), 2000);
+
         that.fetch.fetch();
       }
     });

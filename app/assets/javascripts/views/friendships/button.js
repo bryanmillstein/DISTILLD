@@ -35,10 +35,22 @@ DISTILLD.Views.FriendshipButton = Backbone.View.extend({
         friend_id: friendId,
       },
       success: function () {
+        /* Add success message display */
+        var body = $('#main'),
+            message = '<div class="success-message-display"><p id="success-message">Updated!<p><div>';
+
+        body.append(message);
+        window.setTimeout(_.bind(that.removeMessage, that), 2000);
+
         that.fetch.fetch();
       }
     });
 
+  },
+
+  removeMessage: function () {
+    var message = $('.success-message-display');
+    message.remove();
   }
 
 });

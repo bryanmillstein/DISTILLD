@@ -11,6 +11,8 @@ DISTILLD.Views.SuggestionForm = Backbone.CompositeView.extend({
 
   initialize: function (options) {
     this.user_id = options.user_id;
+    this.user = options.user;
+
   },
 
   render: function () {
@@ -78,9 +80,21 @@ DISTILLD.Views.SuggestionForm = Backbone.CompositeView.extend({
 
     this.model.save({}, {
       success: function () {
-        var button = document.getElementById('get-suggestion');
+        /* Add success message display */
+        var body = $('#main'),
+            message = '<div class="suggestion-message-display"><p id="success-message">Recommended! View on friend\'s whisky page.<p><div>';
+
+        body.append(message);
+        window.setTimeout(_.bind(that.removeMessage, that), 4000);
+
+        that.user.fetch();
       }
     });
   },
+
+  removeMessage: function () {
+    var message = $('.suggestion-message-display');
+    message.remove();
+  }
 
 });

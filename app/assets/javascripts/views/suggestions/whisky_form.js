@@ -76,9 +76,21 @@ DISTILLD.Views.WhiskySuggestionForm = Backbone.CompositeView.extend({
 
     this.model.save({}, {
       success: function () {
+        /* Add success message display */
+        var body = $('#main'),
+            message = '<div class="suggestion-message-display"><p id="success-message">Recommended! View on friend\'s whisky page.<p><div>';
+
+        body.append(message);
+        window.setTimeout(_.bind(that.removeMessage, that), 4000);
+
         that.whisky.fetch();
       }
     });
   },
+
+  removeMessage: function () {
+    var message = $('.suggestion-message-display');
+    message.remove();
+  }
 
 });
