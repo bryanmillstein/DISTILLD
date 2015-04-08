@@ -98,26 +98,6 @@ DISTILLD.Views.PostForm = Backbone.CompositeView.extend({
     this.addSubview('.whiskys', view);
   },
 
-  submitPost: function (event) {
-    event.preventDefault();
-    var placeId = this.place.place_id,
-        place_name = this.place.name,
-        place_formatted_address = this.place.vicinity,
-        body = this.$('.form-textarea').val(),
-        that = this;
-
-    this.model.set({ place_id: placeId,
-                     place_name: place_name,
-                     place_formatted_address: place_formatted_address,
-                     body: body});
-
-    this.model.save({}, {
-      success: function () {
-        that.fetch.fetch();
-      }
-    });
-  },
-
   uploadPhoto: function (event) {
     event.preventDefault();
     this.$("#input-picture-file").trigger("click");
@@ -133,6 +113,38 @@ DISTILLD.Views.PostForm = Backbone.CompositeView.extend({
     };
 
     fileReader.readAsDataURL(file);
+  },
+
+  submitPost: function (event) {
+    event.preventDefault();
+    var placeId = this.place.place_id,
+        place_name = this.place.name,
+        place_formatted_address = this.place.vicinity,
+        body = this.$('.form-textarea').val(),
+        that = this;
+
+    this.model.set({ place_id: placeId,
+                     place_name: place_name,
+                     place_formatted_address: place_formatted_address,
+                     body: body});
+
+    this.model.save({}, {
+      success: function () {
+        /* Add success message display */
+        var body = $('#main'),
+            message = '<div class="success-message-display"><p id="success-message">Post Made Successfully!<p><div>';
+
+        body.append(message);
+        var messageDom = $('.success-message-display');
+        window.setTimeout(_.bind(that.removeMessage, that), 2000);
+        that.fetch.fetch();
+      }
+    });
+  },
+
+  removeMessage: function () {
+    var message = $('.success-message-display');
+    message.remove();
   }
 
 });
