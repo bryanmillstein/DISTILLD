@@ -35,6 +35,22 @@ class User < ActiveRecord::Base
     class_name: 'Suggestion',
     foreign_key: :recipient_id
 
+    def self.from_omniauth(auth)
+      where(email: auth.info.email).first_or_initialize.tap do |user|
+        user.provider = auth.provider
+        user.uid = auth.uid
+        user.state = auth.state
+        user.code = auth.code
+        user.user_name = auth.info.name
+        user.oauth_token = auth.credentials.token
+        user.oauth_expires_at = Time.at(auth.credentials.expires_at)
+        user.email = auth.info.email
+        user.password_digest = BCrypt::Password.create('catdog')
+
+        user.save!
+      end
+    end
+
 
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)

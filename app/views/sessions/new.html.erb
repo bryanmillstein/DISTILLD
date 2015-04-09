@@ -2,6 +2,8 @@
   <ul class="sign-in-elements">
     <h1 class="greeting">Log in to DISTILLD</h1>
 
+    <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
+
     <form action="<%= session_url %>" method="post" class="session-new-form group">
         <%= auth_form %>
       <fieldset class="session-form-fieldset">

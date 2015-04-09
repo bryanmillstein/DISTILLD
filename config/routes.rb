@@ -5,6 +5,9 @@ Rails.application.routes.draw do
 
   resource :session
 
+  get 'auth/:provider/callback', to: 'googles#create'
+  get 'auth/failure', to: redirect('/')
+
 
   namespace :api, defaults: { format: :json } do
     resources :users, only: [:show, :update, :index]

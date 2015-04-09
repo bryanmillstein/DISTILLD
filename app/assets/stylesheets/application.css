@@ -407,8 +407,8 @@ body {
   border-radius: 5px;
   font-size: 14px;
   color: #000;
-  margin: 11px 160px 0 0;
-
+  margin: 5px 160px 0 0;
+  width: 240px;
 }
 
 .sign-out {

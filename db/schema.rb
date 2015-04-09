@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150401013006) do
+ActiveRecord::Schema.define(version: 20150409022625) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -86,6 +86,12 @@ ActiveRecord::Schema.define(version: 20150401013006) do
     t.string   "background_picture_content_type"
     t.integer  "background_picture_file_size"
     t.datetime "background_picture_updated_at"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
+    t.string   "state"
+    t.string   "code"
   end
 
   add_index "users", ["session_token"], name: "index_users_on_session_token", using: :btree

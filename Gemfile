@@ -17,6 +17,7 @@ gem "kaminari"
 gem 'paperclip', '~> 4.2'
 gem 'aws-sdk'
 gem 'figaro'
+gem "omniauth-google-oauth2"
 
 
 group :development, :test do
