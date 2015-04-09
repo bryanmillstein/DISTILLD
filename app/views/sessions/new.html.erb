@@ -2,7 +2,7 @@
   <ul class="sign-in-elements">
     <h1 class="greeting">Log in to DISTILLD</h1>
 
-    <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
+    <button id="guest-sign-in">Guest Tour</button>
 
     <form action="<%= session_url %>" method="post" class="session-new-form group">
         <%= auth_form %>
@@ -13,12 +13,16 @@
         <div class="session-input">
             <input type ="password" id="form-password" name="user[password]" value="" placeholder="Password">
         </div>
-        <div class="submit">
+        <div class="submit-new-user">
           <button>Log In</button>
         </div>
       </fieldset>
     </form>
 
     <p class="new-user">Not yet a user? <a href="/users/new">Sign Up</a></p>
+    <p>
+      OR
+    </p>
+    <a href="/auth/google_oauth2" id="google-sign-in"><img src="https://developers.google.com/accounts/images/sign-in-with-google.png" alt="" /></a>
   </ul>
 </section>
