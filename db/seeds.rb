@@ -54,7 +54,7 @@ d28 = Whisky.create!(name: "Bulleit rye whisky_id", style: "Bourbon", brand: "Bu
 d29 = Whisky.create!(name: "Four Roses Mariage Collection", style: "Bourbon", brand: "Four Roses")
 d30 = Whisky.create!(name: "Hudson Baby Bourbon", style: "Bourbon", brand: "Hudson Baby Bourbon")
 
-u1 = User.create!(email: "bryanmillstein@gmail.com", user_name: "Bryan Millstein", password: "password")
+u1 = User.create!(email: "bryan@gmail.com", user_name: "Bryan Millstein", password: "password")
 u2 = User.create!(email: "bobby1@gmail.com", user_name: "bobby", password: "password")
 u4 = User.create!(email: "bobby2@gmail.com", user_name: "kevin", password: "password")
 u3 = User.create!(email: "bobby3@gmail.com", user_name: "george", password: "password")

@@ -55,7 +55,7 @@ class User < ActiveRecord::Base
       create! do |user|
         user.provider = auth["provider"]
         user.uid = auth["uid"]
-        user.name = auth["info"]["name"]
+        user.name = auth["info"]["user_name"]
         user.email = auth["info"]["email"]
 
         user.password_digest = BCrypt::Password.create('catdog')
