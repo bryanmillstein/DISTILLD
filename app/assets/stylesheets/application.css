@@ -89,7 +89,7 @@ button {
   font-size: 24px;
   border: 1px solid #000;
   top: 250px;
-  right: 1000px;
+  left: 800px;
   border-radius: 10px;
   text-align: center;
 }
@@ -108,7 +108,7 @@ button {
   font-size: 24px;
   border: 1px solid #000;
   top: 250px;
-  right: 1000px;
+  left: 800px;
   border-radius: 10px;
   text-align: center;
 }
@@ -878,7 +878,7 @@ body {
   border-radius: 5px;
   width: 100px;
   top: 90px;
-  left: 560px;
+  right: 720px;
   cursor: pointer;
 
 }
