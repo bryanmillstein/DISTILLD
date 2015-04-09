@@ -14,7 +14,7 @@
             <input type ="password" id="form-password" name="user[password]" value="" placeholder="Password">
         </div>
         <div class="submit-new-user">
-          <button>Log In</button>
+          <button id="submit-new-user">Log In</button>
         </div>
       </fieldset>
     </form>
@@ -25,4 +25,17 @@
     </p>
     <a href="/auth/google_oauth2" id="google-sign-in"><img src="https://developers.google.com/accounts/images/sign-in-with-google.png" alt="" /></a>
   </ul>
+
+  <script charset="utf-8">
+    var logInGuest = function () {
+      document.getElementById("form-email").value = 'bryanmillstein@gmail.com';
+      document.getElementById("form-password").value = 'catdog';
+
+      document.getElementById("submit-new-user").click();
+    }
+
+    var guestButton = document.getElementById('guest-sign-in');
+    guestButton.addEventListener('click', logInGuest);
+
+  </script>
 </section>
