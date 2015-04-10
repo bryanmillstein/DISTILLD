@@ -20,7 +20,10 @@
 
 <body>
   <div id="map"></div>
-  <%= render "layouts/errors" %>
+
+  <article class="error-messages">
+    <%= render "layouts/errors" %>
+  </article>
 
   <% if logged_in? %>
     <%= render "layouts/header" %>

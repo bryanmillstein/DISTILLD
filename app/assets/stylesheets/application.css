@@ -130,12 +130,30 @@ body {
    font-weight: 400;
  }
 
+ .error-messages {
+   color: #FFF;
+   font-size: 20px;
+   position: fixed;
 
-.error-messages {
-  color: #fff;
-  margin: 150px auto;
+   border-radius: 5px;
+   top: 50px;
+   left: 33%;
 
 }
+
+/*.error-messages:after {
+    color: #FA6900;
+    box-shadow: whitesmoke;
+    font-weight: bolder;
+    border: 1px solid;
+    padding: 5px 10px;
+    position: fixed;
+    background: lightgray;
+    border-radius: 5px;
+    top: 50px;
+    left: 33%;
+
+}*/
 
 .sign-in {
   position: relative;
