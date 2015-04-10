@@ -6,11 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-# User.delete_all
-# Post.delete_all
-# Friendship.delete_all
-# Comment.delete_all
-# Toast.delete_all
+User.delete_all
+Post.delete_all
+Friendship.delete_all
+Comment.delete_all
+Toast.delete_all
 Whisky.delete_all
 
 d1 = Whisky.create!(name: "1608", style: "Irish", brand: "Bushmills")
@@ -55,10 +55,12 @@ d29 = Whisky.create!(name: "Four Roses Mariage Collection", style: "Bourbon", br
 d30 = Whisky.create!(name: "Hudson Baby Bourbon", style: "Bourbon", brand: "Hudson Baby Bourbon")
 
 u1 = User.create!(email: "bryan@gmail.com", user_name: "Bryan Millstein", password: "password")
-u2 = User.create!(email: "bobby1@gmail.com", user_name: "Garrett Hays", password: "password")
-u3 = User.create!(email: "bobby2@gmail.com", user_name: "Taylor Garcia", password: "password")
-u4 = User.create!(email: "bobby3@gmail.com", user_name: "Scott Booth", password: "password")
-u5 = User.create!(email: "bobby4@gmail.com", user_name: "Kevin Kashou", password: "password")
+u2 = User.create!(email: "bobby1@gmail.com", user_name: "Matthew Millstein", password: "password")
+u3 = User.create!(email: "bobby1@gmail.com", user_name: "Wendy Millstein", password: "password")
+u4 = User.create!(email: "bobby1@gmail.com", user_name: "Garrett Hays", password: "password")
+u5 = User.create!(email: "bobby2@gmail.com", user_name: "Taylor Garcia", password: "password")
+u6 = User.create!(email: "bobby3@gmail.com", user_name: "Scott Booth", password: "password")
+u7 = User.create!(email: "bobby4@gmail.com", user_name: "Kevin Kashou", password: "password")
 
 
 f1 = u1.friendships.create!({ friend_id: u2.id })
