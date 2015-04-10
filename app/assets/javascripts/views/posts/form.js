@@ -110,6 +110,11 @@ DISTILLD.Views.PostForm = Backbone.CompositeView.extend({
 
     fileReader.onloadend = function () {
       that.model.set("picture", fileReader.result);
+      var body = $('html'),
+          message = '<div class="success-message-display"><p id="success-message">Photo Added!</p></div>';
+
+      body.append(message);
+      window.setTimeout(_.bind(that.removeMessage, that), 1500);
     };
 
     fileReader.readAsDataURL(file);
@@ -131,8 +136,8 @@ DISTILLD.Views.PostForm = Backbone.CompositeView.extend({
     this.model.save({}, {
       success: function () {
         /* Add success message display */
-        var body = $('#main'),
-            message = '<div class="success-message-display"><p id="success-message">Post Added!<p><div>';
+        var body = $('html'),
+            message = '<div class="success-message-display"><p id="success-message">Post Added!</p></div>';
 
         body.append(message);
         window.setTimeout(_.bind(that.removeMessage, that), 2000);
