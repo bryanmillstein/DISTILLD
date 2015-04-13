@@ -122,10 +122,18 @@ DISTILLD.Views.PostForm = Backbone.CompositeView.extend({
 
   submitPost: function (event) {
     event.preventDefault();
-    var placeId = this.place.place_id,
-        place_name = this.place.name,
-        place_formatted_address = this.place.vicinity,
-        body = this.$('.form-textarea').val(),
+
+    if (placeId) {
+      var placeId = this.place.place_id,
+          place_name = this.place.name,
+          place_formatted_address = this.place.vicinity;
+    } else {
+      var placeId = null,
+          place_name = null,
+          place_formatted_address = null;
+    }
+
+    var body = this.$('.form-textarea').val(),
         that = this;
 
     this.model.set({ place_id: placeId,
