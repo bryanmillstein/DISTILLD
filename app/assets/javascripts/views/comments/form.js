@@ -28,7 +28,7 @@ DISTILLD.Views.CommentForm = Backbone.View.extend ({
       success: function () {
         /* Add success message display */
         var body = $('#main'),
-            message = '<div class="success-message-display"><p id="success-message">Comment Added!<p><div>';
+            message = '<div class="success-message-display"><p id="success-message-comment">Comment Added!<p><div>';
 
         body.append(message);
         window.setTimeout(_.bind(that.removeMessage, that), 2000);

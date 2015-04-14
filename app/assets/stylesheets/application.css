@@ -87,8 +87,8 @@ button {
 
 .success-message-display {
   position: fixed;
-  width: 430px;
-  height: 152px;
+  width: 300px;
+  height: 100px;
   background: #FA6900;
   font-size: 24px;
   border: 1px solid #000;
@@ -99,8 +99,14 @@ button {
 }
 
 .success-message-display #success-message {
-  padding-top: 45px;
+  padding-top: 30px;
   font-size: 48px;
+  color: #fff;
+}
+
+.success-message-display #success-message-comment {
+  padding-top: 30px;
+  font-size: 34px;
   color: #fff;
 }
 
@@ -471,7 +477,7 @@ body {
   background: #FA6900;
   border: 1px solid #000;
   top: 160px;
-  left: 0%;
+  left: 70%;
   border-radius: 10px;
   text-align: center;
 }
@@ -661,7 +667,7 @@ body {
   background: #FA6900;
   border: 1px solid #000;
   top: 160px;
-  left: 0%;
+  left: 70%;
   border-radius: 10px;
   text-align: center;
 }
@@ -883,7 +889,7 @@ body {
   background: #FA6900;
   border: 1px solid #000;
   top: 160px;
-  left: 0%;
+  left: 70%;
   border-radius: 10px;
   text-align: center;
 }
@@ -1367,7 +1373,7 @@ body {
   background: #FA6900;
   border: 1px solid #000;
   top: 160px;
-  left: 0%;
+  left: 70%;
   border-radius: 10px;
   text-align: center;
 }
