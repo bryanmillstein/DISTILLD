@@ -521,11 +521,6 @@ body {
   font-weight: bold;
   font-size: 20px;
   cursor: pointer;
-
-}
-
-.post-form {
-
 }
 
 .post-new-form {
@@ -1021,7 +1016,7 @@ body {
   color: white;
   padding: 5px 10px;
   font-weight: bold;
-  margin: 28px 310px 40px 0;
+  margin: -34px 310px 15px 0;
   border-radius: 5px;
   width: 100px;
   cursor: pointer;
@@ -1029,8 +1024,6 @@ body {
 }
 
 .search-page > input {
-  float: left;
-
   padding: 5px;
   border-radius: 5px;
   margin: 30px 20px 5px 20px;
