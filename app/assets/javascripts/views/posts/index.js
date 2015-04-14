@@ -3,7 +3,8 @@ DISTILLD.Views.PostsIndex = Backbone.CompositeView.extend({
   events: {
     'click .get-form': 'handlePostForm',
     'click .post-options': 'addCommentForm',
-    'click .picture-form': 'addPictureForm'
+    'click .picture-form': 'addPictureForm',
+    'click .tour-guide-feed-close': 'closeFeedTour'
   },
 
   initialize: function (options) {
@@ -71,4 +72,8 @@ DISTILLD.Views.PostsIndex = Backbone.CompositeView.extend({
       this.postFormView = null
     }
   },
+
+  closeFeedTour: function () {
+    $('.tour-guide-feed')[0].classList.add('hidden');
+  }
 })

@@ -4,8 +4,8 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
 
   events: {
     'click .get-form': 'handlePostForm',
-    'click .get-suggestion-form': 'handleSuggestionForm'
-
+    'click .get-suggestion-form': 'handleSuggestionForm',
+    'click .tour-guide-user-close': 'closeUserTour'
 
   },
 
@@ -106,5 +106,9 @@ DISTILLD.Views.UserShow = Backbone.CompositeView.extend({
     var view = new DISTILLD.Views.FriendshipButton({ model: this.model, fetch: this.model });
     this.addSubview('.friend-button', view);
   },
+
+  closeUserTour: function () {
+    $('.tour-guide-user')[0].classList.add('hidden');
+  }
 
 });

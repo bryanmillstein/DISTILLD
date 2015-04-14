@@ -55,12 +55,12 @@ d29 = Whisky.create!(name: "Four Roses Mariage Collection", style: "Bourbon", br
 d30 = Whisky.create!(name: "Hudson Baby Bourbon", style: "Bourbon", brand: "Hudson Baby Bourbon")
 
 u1 = User.create!(email: "bryan@gmail.com", user_name: "Bryan Millstein", password: "password")
-u2 = User.create!(email: "bobby1@gmail.com", user_name: "Matthew Millstein", password: "password")
-u3 = User.create!(email: "bobby1@gmail.com", user_name: "Wendy Millstein", password: "password")
-u4 = User.create!(email: "bobby1@gmail.com", user_name: "Garrett Hays", password: "password")
-u5 = User.create!(email: "bobby2@gmail.com", user_name: "Taylor Garcia", password: "password")
-u6 = User.create!(email: "bobby3@gmail.com", user_name: "Scott Booth", password: "password")
-u7 = User.create!(email: "bobby4@gmail.com", user_name: "Kevin Kashou", password: "password")
+u2 = User.create!(email: "matthew@gmail.com", user_name: "Matthew Millstein", password: "password")
+u3 = User.create!(email: "wendy@gmail.com", user_name: "Wendy Millstein", password: "password")
+u4 = User.create!(email: "garrett@gmail.com", user_name: "Garrett Hays", password: "password")
+u5 = User.create!(email: "taylor@gmail.com", user_name: "Taylor Garcia", password: "password")
+u6 = User.create!(email: "scott@gmail.com", user_name: "Scott Booth", password: "password")
+u7 = User.create!(email: "kevin@gmail.com", user_name: "Kevin Kashou", password: "password")
 
 
 f1 = u1.friendships.create!({ friend_id: u2.id })

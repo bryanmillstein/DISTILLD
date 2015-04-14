@@ -1,6 +1,10 @@
 DISTILLD.Views.FriendsIndex = Backbone.CompositeView.extend ({
   template: JST['friends/index'],
 
+  events: {
+    "click .tour-guide-friend-close": "closeFriendsTour"
+  },
+
   initialize: function () {
     this.listenTo(this.model, 'sync', this.render)
   },
@@ -23,5 +27,10 @@ DISTILLD.Views.FriendsIndex = Backbone.CompositeView.extend ({
       var view = new DISTILLD.Views.FriendShow({ model: friend, collection: this.collection, fetch: this.model });
       this.addSubview('.friends-list', view);
   },
+
+  closeFriendsTour: function () {
+    $('.tour-guide-friend')[0].classList.add('hidden');
+
+  }
 
 });

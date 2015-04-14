@@ -148,7 +148,7 @@ DISTILLD.Views.PostForm = Backbone.CompositeView.extend({
             message = '<div class="success-message-display"><p id="success-message">Post Added!</p></div>';
 
         body.append(message);
-        window.setTimeout(_.bind(that.removeMessage, that), 2000);
+        // window.setTimeout(_.bind(that.removeMessage, that), 2000);
 
         that.fetch.fetch();
       }

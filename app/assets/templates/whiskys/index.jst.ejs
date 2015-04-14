@@ -1,5 +1,10 @@
 <section class="whisky-options group">
-
+  <section class="tour-guide-whisky">
+    <article class="tour-guide-message">
+      This is your whisky page. It will show the whiskys you've had. Click the link on the right to view suggestions your friends have made to you.
+    </article>
+    <button class="tour-guide-whisky-close">Close</button>
+  </section>
   <% if (user.escape('is_current_user')) { %>
     <% if (!suggestion) { %>
       <h1 id="whisky-headline" class="highlight-header">Your Whiskys</h1>

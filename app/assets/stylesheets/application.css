@@ -81,6 +81,10 @@ button {
 
 }
 
+.hidden {
+  display: none;
+}
+
 .success-message-display {
   position: fixed;
   width: 430px;
@@ -429,7 +433,7 @@ body {
   border-radius: 5px;
   font-size: 14px;
   color: #000;
-  margin: 5px 160px 0 0;
+  margin: 12px 135px 0 0;
   width: 240px;
 }
 
@@ -441,7 +445,7 @@ body {
 }
 
 
-/* CONTENT */
+/* FEED */
 
 .backdrop {
   margin: 0 auto;
@@ -456,6 +460,43 @@ body {
   padding: 5px 0 0 10px;
   font-size: 24px;
   border-bottom: 1px solid gray;
+}
+
+.tour-guide-feed {
+  position: fixed;
+  z-index: 1;
+  width: 330px;
+  height: 240px;
+  padding: 10px;
+  background: #FA6900;
+  border: 1px solid #000;
+  top: 160px;
+  left: 0%;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.tour-guide-feed .tour-guide-message {
+  margin-bottom: 40px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.tour-guide-feed .tour-guide-feed-close {
+  font-size: 10px;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+}
+
+.tour-guide-feed .tour-guide-feed-close:hover {
+  font-size: 10px;
+  color: #FA6900;
+  border-radius: 5px;
+  border: 1px solid #FA6900;
+  background: #fff;
+  padding: 5px 10px;
 }
 
 /* FORM */
@@ -609,6 +650,43 @@ body {
 
 .background-profile-picture {
   margin: 10px;
+}
+
+.tour-guide-user {
+  position: fixed;
+  z-index: 1;
+  width: 330px;
+  height: 240px;
+  padding: 10px;
+  background: #FA6900;
+  border: 1px solid #000;
+  top: 160px;
+  left: 0%;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.tour-guide-user .tour-guide-message {
+  margin-bottom: 48px;
+  font-size: 24px;
+  color: #fff;
+}
+
+.tour-guide-user .tour-guide-user-close {
+  font-size: 10px;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+}
+
+.tour-guide-user .tour-guide-user-close:hover {
+  font-size: 10px;
+  color: #FA6900;
+  border-radius: 5px;
+  border: 1px solid #FA6900;
+  background: #fff;
+  padding: 5px 10px;
 }
 
 .profile-basics {
@@ -794,6 +872,43 @@ body {
 
 .friend-page {
 
+}
+
+.tour-guide-friend {
+  position: fixed;
+  z-index: 1;
+  width: 315px;
+  height: 240px;
+  padding: 10px;
+  background: #FA6900;
+  border: 1px solid #000;
+  top: 160px;
+  left: 0%;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.tour-guide-friend .tour-guide-message {
+  margin-bottom: 48px;
+  font-size: 24px;
+  color: #fff;
+}
+
+.tour-guide-friend .tour-guide-friend-close {
+  font-size: 10px;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+}
+
+.tour-guide-friend .tour-guide-friend-close:hover {
+  font-size: 10px;
+  color: #FA6900;
+  border-radius: 5px;
+  border: 1px solid #FA6900;
+  background: #fff;
+  padding: 5px 10px;
 }
 
 .friend-page > h1 {
@@ -1242,6 +1357,43 @@ body {
 }
 
 /*WHISKY INDEX*/
+
+.tour-guide-whisky {
+  position: fixed;
+  z-index: 1;
+  width: 330px;
+  height: 240px;
+  padding: 10px;
+  background: #FA6900;
+  border: 1px solid #000;
+  top: 160px;
+  left: 0%;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.tour-guide-whisky .tour-guide-message {
+  margin-bottom: 48px;
+  font-size: 24px;
+  color: #fff;
+}
+
+.tour-guide-whisky .tour-guide-whisky-close {
+  font-size: 10px;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+}
+
+.tour-guide-whisky .tour-guide-whisky-close:hover {
+  font-size: 10px;
+  color: #FA6900;
+  border-radius: 5px;
+  border: 1px solid #FA6900;
+  background: #fff;
+  padding: 5px 10px;
+}
 
 .whisky-options {
   margin: 40px 0 5px 30px;

@@ -3,7 +3,8 @@ DISTILLD.Views.WhiskyIndex = Backbone.CompositeView.extend({
 
   events: {
     "click #whisky-headline": "showSuggestionsFalse",
-    "click #whisky-suggestions": "showSuggestionsTrue"
+    "click #whisky-suggestions": "showSuggestionsTrue",
+    "click .tour-guide-whisky-close": "closeWhiskyTour"
   },
 
   initialize: function (options) {
@@ -52,6 +53,10 @@ DISTILLD.Views.WhiskyIndex = Backbone.CompositeView.extend({
     this.addSubview('.whiskys-list', view);
   },
 
+  closeWhiskyTour: function () {
+    $('.tour-guide-whisky')[0].classList.add('hidden');
+
+  }
 
 
 });
