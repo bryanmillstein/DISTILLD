@@ -381,6 +381,10 @@ body {
   font-size: 20px;
 }
 
+.name-items > .dropdown > li:hover {
+  background: darkgray;
+}
+
 .name-items > .dropdown > li:first-child {
   border-bottom: 1px solid #000;
 }
