@@ -17,10 +17,14 @@
     <% if (post.escape('post_picture_url')) { %>
       <img class="post-picture" src="<%= post.escape('post_picture_url') %>"/>
     <% } %>
-    <div class="common-buttons group">
-      <button class="post-options" id="comment-form">Comment</button>
-      <button class="toast-button"></button>
+    <div class="comment-transition">
+      <div class="common-buttons group">
+        <button class="post-options" id="comment-form">Comment</button>
+        <button class="toast-button"></button>
+      </div>
+      <div class="comment-form"></div>
     </div>
+
     <p class="time-stamp"><%= post.escape('time_ago') %> ago</p>
     <div class="user-buttons group">
       <% if (user && user.escape('is_current_user')) { %>
@@ -30,5 +34,4 @@
       <% } %>
     </div>
     <ul class="comments"></ul>
-    <form class="comment-form" action="index.html" method="post"></form>
 </section>

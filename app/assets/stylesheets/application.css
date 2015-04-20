@@ -523,12 +523,30 @@ body {
   cursor: pointer;
 }
 
-.post-new-form {
+.get-form:active + .post-form {
+  opacity: 0;
+  transition: opacity 200ms ease-out;
 
 }
 
 .post-form {
+  opacity: 1;
+  transition: opacity 200ms ease-in;
+
 }
+
+.common-buttons:active ~ .comment-form {
+  opacity: 0;
+  transition: opacity 200ms ease-out;
+
+}
+
+.comment-form {
+  opacity: 1;
+  transition: opacity 200ms ease-in;
+
+}
+
 
 .form-fieldset {
   position: relative;
