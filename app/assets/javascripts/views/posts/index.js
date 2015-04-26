@@ -8,6 +8,7 @@ DISTILLD.Views.PostsIndex = Backbone.CompositeView.extend({
   },
 
   initialize: function (options) {
+    this.showFeedTour = true;
     this.bindScroll();
     this.collection.pageNum = 1;
     this.listenTo(this.collection, 'add sync', this.render);
@@ -18,6 +19,11 @@ DISTILLD.Views.PostsIndex = Backbone.CompositeView.extend({
     this.$el.html(content);
 
     this.renderPosts();
+
+    if (!this.showFeedTour) {
+      this.closeFeedTour();
+    }
+
     return this;
   },
 
@@ -75,5 +81,6 @@ DISTILLD.Views.PostsIndex = Backbone.CompositeView.extend({
 
   closeFeedTour: function () {
     $('.tour-guide-feed')[0].classList.add('hidden');
+    this.showFeedTour = false;
   }
-})
+});
