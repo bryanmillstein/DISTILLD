@@ -123,7 +123,7 @@ DISTILLD.Views.PostForm = Backbone.CompositeView.extend({
   submitPost: function (event) {
     event.preventDefault();
 
-    if (placeId) {
+    if (this.place) {
       var placeId = this.place.place_id,
           place_name = this.place.name,
           place_formatted_address = this.place.vicinity;

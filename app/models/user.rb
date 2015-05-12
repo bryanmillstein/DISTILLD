@@ -35,17 +35,17 @@ class User < ActiveRecord::Base
     class_name: 'Suggestion',
     foreign_key: :recipient_id
 
-    def self.create_with_omniauth(auth)
-      create! do |user|
-        user.provider = auth["provider"]
-        user.uid = auth["uid"]
-        user.user_name = auth["info"]["name"]
-        user.email = auth["info"]["email"]
+  def self.create_with_omniauth(auth)
+    create! do |user|
+      user.provider = auth["provider"]
+      user.uid = auth["uid"]
+      user.user_name = auth["info"]["name"]
+      user.email = auth["info"]["email"]
 
-        user.password_digest = BCrypt::Password.create('catdog')
+      user.password_digest = BCrypt::Password.create('catdog')
 
-      end
     end
+  end
 
 
   def self.find_by_credentials(email, password)

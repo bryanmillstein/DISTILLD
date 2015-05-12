@@ -19,6 +19,7 @@ DISTILLD.Views.PlacesShow = Backbone.CompositeView.extend({
 
       service.getDetails(request, function (place, status) {
           that.place = place;
+
           if (status == google.maps.places.PlacesServiceStatus.OK) {
             var content = that.template({ place: that.place, postCount: that.collection.length });
             that.$el.html(content);
