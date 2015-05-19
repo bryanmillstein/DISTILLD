@@ -5,7 +5,7 @@
 </div>
 
 <script charset="utf-8">
-  $(document).ready(function(){
+  $(window).load(function(){
     DISTILLD.initialize({
       currentUserId: <%= current_user.try(:id) || "null" %>
     });
