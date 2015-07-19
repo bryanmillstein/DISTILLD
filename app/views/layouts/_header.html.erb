@@ -23,6 +23,24 @@
         </form>
       </li>
     </ul>
+    <ul class="mobile-header-list group">
+        <li>
+          <div class="name-items">
+            <a class="user-name"><%= current_user.user_name %></a>
+            <ul class="dropdown hidden">
+              <li><a href="/#/users/<%= current_user.id %>/whiskys">Whiskys</a></li>
+              <li><a href="/#/users/<%= current_user.id %>/friends">Friends</a></li>
+              <li><a href="#/users/<%= current_user.id %>/settings">Settings</a></li>
+            </ul>
+          </div>
+        </li>
+        <script type="text/javascript">
+        function toggleNavShow (){
+          $('.dropdown')[1].classList.toggle('dropdown-show')
+          };
+          $('.user-name')[1].addEventListener('click', toggleNavShow)
+        </script>
+    </ul>
   </nav>
 </header>
 
