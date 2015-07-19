@@ -86,7 +86,7 @@ button {
     display: none;
   }
 
-  .tour-guide-feed {
+  .tour {
     display: none
   }
 }
@@ -430,6 +430,7 @@ body {
     font-size: 20px;
   }
 
+
   .name-items > .dropdown > li:hover {
     background: darkgray;
   }
@@ -448,6 +449,7 @@ body {
     font-size: 24px;
     margin-left: 200px;
     padding: 16px;
+    cursor: pointer;
   }
 }
 
@@ -1300,11 +1302,20 @@ body {
   left: 75px;
 }
 
-.post-description .post-picture {
-  margin: 10px 0 10px 12px;
-  width: 300px;
+
+@media (min-width: 401px) {
+  .post-description .post-picture {
+    margin: 10px 0 10px 12px;
+    width: 300px;
+  }
 }
 
+@media (max-width: 400px) {
+  .post-description .post-picture {
+    margin: 10px 0 10px 5px;
+    width: 240px;
+  }
+}
 .post-options {
   background: transparent;
   color: #000;
